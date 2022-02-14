@@ -686,10 +686,11 @@ GameObject:
   m_Component:
   - component: {fileID: 594688619258453291}
   - component: {fileID: 594688619258453292}
+  - component: {fileID: 181486014076582932}
   - component: {fileID: 594688619258453290}
   m_Layer: 0
   m_Name: PlayingCard
-  m_TagString: Untagged
+  m_TagString: PlayingCard
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -764,6 +765,19 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &181486014076582932
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 594688619258453293}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.75, y: 6, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &594688619258453290
 MonoBehaviour:
   m_ObjectHideFlags: 0
