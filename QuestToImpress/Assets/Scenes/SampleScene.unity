@@ -318,8 +318,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -390.65, y: -189.29}
-  m_SizeDelta: {x: 178.51819, y: 153.21664}
+  m_AnchoredPosition: {x: -286.17, y: -164.7}
+  m_SizeDelta: {x: 95.70973, y: 87.83908}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &496497792
 MonoBehaviour:
@@ -572,11 +572,12 @@ MonoBehaviour:
   playingCards: []
   cardsInHand: []
   cardPrefab: {fileID: 594688619258453293, guid: 43486f821e9d6734b86e5ab715947c1a, type: 3}
-  handSlot1: {fileID: 1177640902}
-  handSlot2: {fileID: 1340645401}
-  handSlot3: {fileID: 375458401}
-  handSlot4: {fileID: 326474284}
-  handSlot5: {fileID: 536778034}
+  handSlots:
+  - {fileID: 1177640902}
+  - {fileID: 1340645401}
+  - {fileID: 375458401}
+  - {fileID: 326474284}
+  - {fileID: 536778034}
 --- !u!4 &930703938
 Transform:
   m_ObjectHideFlags: 0
