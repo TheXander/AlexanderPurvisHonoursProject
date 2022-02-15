@@ -320,8 +320,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -264.65, y: -151.48}
-  m_SizeDelta: {x: -528.2903, y: -302.16092}
+  m_AnchoredPosition: {x: -481.9, y: -245.7}
+  m_SizeDelta: {x: -962.86646, y: -490.51825}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &496497792
 MonoBehaviour:
@@ -575,13 +575,15 @@ MonoBehaviour:
   standeredPlayerDeck: []
   activePlayerDeck: []
   cardsInHand: []
-  cardPrefab: {fileID: 594688619258453293, guid: 43486f821e9d6734b86e5ab715947c1a, type: 3}
   handSlots:
   - {fileID: 1177640902}
   - {fileID: 1340645401}
   - {fileID: 375458401}
   - {fileID: 326474284}
   - {fileID: 536778034}
+  cardPrefab: {fileID: 594688619258453293, guid: 43486f821e9d6734b86e5ab715947c1a, type: 3}
+  playerHonourDisplay: {fileID: 0}
+  enemyHonourDisplay: {fileID: 0}
 --- !u!4 &930703938
 Transform:
   m_ObjectHideFlags: 0
@@ -776,8 +778,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -253.3, y: 140}
-  m_SizeDelta: {x: -524, y: -265}
+  m_AnchoredPosition: {x: -487.8, y: 261.9}
+  m_SizeDelta: {x: -993.04675, y: -508.7566}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1217575187
 MonoBehaviour:
@@ -1041,8 +1043,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 255, y: 140}
-  m_SizeDelta: {x: -524, y: -265}
+  m_AnchoredPosition: {x: 481.6, y: 253.8}
+  m_SizeDelta: {x: -986.8913, y: -507.52542}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1877532524
 MonoBehaviour:

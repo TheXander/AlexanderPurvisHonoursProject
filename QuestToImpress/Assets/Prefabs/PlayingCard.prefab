@@ -794,6 +794,7 @@ MonoBehaviour:
   cardCost: {fileID: 594688618452462227}
   cardDamage: {fileID: 594688618732226785}
   cardQuote: {fileID: 594688618067148393}
+  cardSource: {fileID: 3658413861439596855}
   cost: 0
   damage: 0
 --- !u!1 &1529314498258463902
@@ -894,7 +895,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Card Name
+  m_text: Source
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -929,7 +930,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 4
-  m_VerticalAlignment: 256
+  m_VerticalAlignment: 1024
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -957,7 +958,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 8.856943, y: 1.9536242, z: 8.4064455, w: 2.4762392}
+  m_margin: {x: 8.613336, y: 1.9536242, z: 8.4064455, w: 2.4762392}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0

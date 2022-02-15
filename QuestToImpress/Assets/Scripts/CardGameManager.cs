@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class CardGameManager : MonoBehaviour
 {
@@ -12,11 +13,20 @@ public class CardGameManager : MonoBehaviour
     public List<GameObject> handSlots = new List<GameObject>();
     public GameObject cardPrefab;
 
+    public TMP_Text playerHonourDisplay;
+    public TMP_Text enemyHonourDisplay;
+
+    int playerHonour = 30;
+    int enemyHonour = 20;
+
 
     private void Start()
     {
         LoadCSVFile();
         SetUpPlayerDeck();
+
+        playerHonourDisplay.text = playerHonour.ToString();
+        enemyHonourDisplay.text = enemyHonour.ToString();
     }
 
     private void Update()
@@ -48,16 +58,17 @@ public class CardGameManager : MonoBehaviour
             int cost = int.Parse(data[i]["Cost"].ToString(), System.Globalization.NumberStyles.Integer);
             int damage = int.Parse(data[i]["Damage"].ToString(), System.Globalization.NumberStyles.Integer);
             string quote = data[i]["Quote"].ToString();
+            string source = data[i]["Source"].ToString();
 
-            CaptureCardFromCSV(nameData, cost, damage, quote);
+            CaptureCardFromCSV(nameData, cost, damage, quote, source);
         }
 
         AddCardsToDeck();
     }
 
-    void CaptureCardFromCSV(string nameData, int cost, int damage, string quote)
+    void CaptureCardFromCSV(string nameData, int cost, int damage, string quote, string source)
     {
-        CardInfo newCard = new CardInfo(nameData, cost, damage, quote);
+        CardInfo newCard = new CardInfo(nameData, cost, damage, quote, source);
         playingCards.Add(newCard);
     }
 
@@ -68,8 +79,9 @@ public class CardGameManager : MonoBehaviour
 
     void SetUpPlayerDeck() 
     {
-
         activePlayerDeck = standeredPlayerDeck;
+
+        DeckShuffler.Shuffle(activePlayerDeck);
     }
 
     public void DrawCard()
@@ -86,9 +98,13 @@ public class CardGameManager : MonoBehaviour
 
     void AddCardData(GameObject Card) 
     {
-        CardInfo cardData = playingCards[cardsInHand.Count];
-        Card.GetComponent<PlayingCardControls>().setUpCard(cardData.cardName, cardData.cardCost, cardData.cardDamage, cardData.cardQuote);
+        CardInfo cardData = activePlayerDeck[0];
+       
+
+        Card.GetComponent<PlayingCardControls>().setUpCard(cardData.cardName, cardData.cardCost, cardData.cardDamage, cardData.cardQuote, cardData.cardSource);
         cardsInHand.Add(Card);
+
+        activePlayerDeck.Remove(cardData);
     }
 
     void SetUpCardTransform(GameObject Card)
@@ -125,6 +141,12 @@ public class CardGameManager : MonoBehaviour
 
     public void PlayCard(GameObject cardToPlay)
     {
+        playerHonour -= cardToPlay.GetComponent<PlayingCardControls>().cost;
+        enemyHonour -= cardToPlay.GetComponent<PlayingCardControls>().damage;
+
+        playerHonourDisplay.text = playerHonour.ToString();
+        enemyHonourDisplay.text = enemyHonour.ToString();
+
         cardsInHand.Remove(cardToPlay);
         Destroy(cardToPlay);
         Sorthand();
