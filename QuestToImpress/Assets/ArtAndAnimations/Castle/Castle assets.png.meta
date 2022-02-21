@@ -1,0 +1,1204 @@
+fileFormatVersion: 2
+guid: c060bfec13dadd249a83c6c1444b9872
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -3857142707931143976
+    second: Castle assets_0
+  - first:
+      213: -7867169769395276411
+    second: Castle assets_1
+  - first:
+      213: 4363157825114384493
+    second: Castle assets_2
+  - first:
+      213: 8961630251218866832
+    second: Castle assets_3
+  - first:
+      213: 47330300631130170
+    second: Castle assets_4
+  - first:
+      213: 3709786037956946338
+    second: Castle assets_5
+  - first:
+      213: -7028626456391958147
+    second: Castle assets_6
+  - first:
+      213: -4412829437195877465
+    second: Castle assets_7
+  - first:
+      213: 5742272549805322828
+    second: Castle assets_8
+  - first:
+      213: 252242698757382309
+    second: Castle assets_9
+  - first:
+      213: -7180710902215913753
+    second: Castle assets_10
+  - first:
+      213: -3628507612723472290
+    second: Castle assets_11
+  - first:
+      213: -1785444167634645759
+    second: Castle assets_12
+  - first:
+      213: -1727709775502109431
+    second: Castle assets_13
+  - first:
+      213: -8434411978901373123
+    second: Castle assets_14
+  - first:
+      213: -8132360886531584678
+    second: Castle assets_15
+  - first:
+      213: 8463815683291479110
+    second: Castle assets_16
+  - first:
+      213: 884079292341906910
+    second: Castle assets_17
+  - first:
+      213: -9172560332190728657
+    second: Castle assets_18
+  - first:
+      213: -1942194484285475359
+    second: Castle assets_19
+  - first:
+      213: -6116460782453628996
+    second: Castle assets_20
+  - first:
+      213: 7658825086459166749
+    second: Castle assets_21
+  - first:
+      213: -5127303078025889949
+    second: Castle assets_22
+  - first:
+      213: -8642412689979186369
+    second: Castle assets_23
+  - first:
+      213: -6869358198891290947
+    second: Castle assets_24
+  - first:
+      213: 6547682748715294426
+    second: Castle assets_25
+  - first:
+      213: 8694309096746511157
+    second: Castle assets_26
+  - first:
+      213: 2675152738419078962
+    second: Castle assets_27
+  - first:
+      213: 8531214031462612276
+    second: Castle assets_28
+  - first:
+      213: 7373249173260510326
+    second: Castle assets_29
+  - first:
+      213: -2215737012540026433
+    second: Castle assets_30
+  - first:
+      213: 3838432808293210690
+    second: Castle assets_31
+  - first:
+      213: 8789255695248465798
+    second: Castle assets_32
+  - first:
+      213: 4394085024599147929
+    second: Castle assets_33
+  - first:
+      213: 3077747428208150100
+    second: Castle assets_34
+  - first:
+      213: 8754424225701729581
+    second: Castle assets_35
+  - first:
+      213: 8162515916008114769
+    second: Castle assets_36
+  - first:
+      213: -4759874535832077658
+    second: Castle assets_0
+  - first:
+      213: 6900263710679036462
+    second: Castle assets_1
+  - first:
+      213: 868685001849671989
+    second: Castle assets_2
+  - first:
+      213: -8400606730767242214
+    second: Castle assets_3
+  - first:
+      213: -1823928565813724553
+    second: Castle assets_4
+  - first:
+      213: -5168906560655405633
+    second: Castle assets_5
+  - first:
+      213: 2330594807911562218
+    second: Castle assets_6
+  - first:
+      213: -2968207147172981970
+    second: Castle assets_7
+  - first:
+      213: 896906172603495276
+    second: Castle assets_8
+  - first:
+      213: 8404839530327873838
+    second: Castle assets_9
+  - first:
+      213: -6003489388282547060
+    second: Castle assets_10
+  - first:
+      213: -4271129513758422887
+    second: Castle assets_11
+  - first:
+      213: 6021214017651632884
+    second: Castle assets_12
+  - first:
+      213: -1389120756389466786
+    second: Castle assets_13
+  - first:
+      213: -6128646340036487959
+    second: Castle assets_14
+  - first:
+      213: -737148147733658661
+    second: Castle assets_15
+  - first:
+      213: 3207720207971201985
+    second: Castle assets_16
+  - first:
+      213: 8372803195463015674
+    second: Castle assets_17
+  - first:
+      213: -2991695431169254838
+    second: Castle assets_18
+  - first:
+      213: 7372425367206682523
+    second: Castle assets_19
+  - first:
+      213: -8608357407977792099
+    second: Castle assets_20
+  - first:
+      213: -5478619422879982092
+    second: Castle assets_21
+  - first:
+      213: 8341418495657857720
+    second: Castle assets_22
+  - first:
+      213: 1194535271992347271
+    second: Castle assets_23
+  - first:
+      213: 608518961474582465
+    second: Castle assets_24
+  - first:
+      213: 6294058206475847593
+    second: Castle assets_25
+  - first:
+      213: 6359432162825015065
+    second: Castle assets_26
+  - first:
+      213: -8917317020105094503
+    second: Castle assets_27
+  - first:
+      213: -1065683852328522179
+    second: Castle assets_28
+  - first:
+      213: 4212249352574757716
+    second: Castle assets_29
+  - first:
+      213: -1326527497940324341
+    second: Castle assets_30
+  - first:
+      213: 6275985537260001074
+    second: Castle assets_31
+  - first:
+      213: -1296180055167102071
+    second: Castle assets_32
+  - first:
+      213: 829762756132834429
+    second: Castle assets_33
+  - first:
+      213: -4861218415146329577
+    second: Castle assets_37
+  - first:
+      213: 446352032808275917
+    second: Castle assets_38
+  - first:
+      213: -1803930459879334628
+    second: Castle assets_39
+  - first:
+      213: -220920202911521869
+    second: Castle assets_40
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Castle assets_0
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 326
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6aa3d4c145781fdb0800000000000000
+      internalID: -4759874535832077658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle assets_1
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 326
+        width: 29
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e22fa832949a2cf50800000000000000
+      internalID: 6900263710679036462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle assets_2
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 330
+        width: 26
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53195fc18603e0c00800000000000000
+      internalID: 868685001849671989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle assets_3
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 327
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a1cecdacfac0b6b80800000000000000
+      internalID: -8400606730767242214
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle assets_4
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 327
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77a3cfa02aa10b6e0800000000000000
+      internalID: -1823928565813724553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle assets_5
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 327
+        width: 4
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fbdc2fe7eda5448b0800000000000000
+      internalID: -5168906560655405633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle assets_6
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 327
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aeb30f831afe75020800000000000000
+      internalID: 2330594807911562218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle assets_7
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 327
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e239afc635fcec6d0800000000000000
+      internalID: -2968207147172981970
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle assets_8
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 294
+        width: 29
+        height: 23
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c63f2e67963727c00800000000000000
+      internalID: 896906172603495276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle assets_9
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 294
+        width: 29
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e299a57a50df3a470800000000000000
+      internalID: 8404839530327873838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle assets_10
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 298
+        width: 26
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c84779e85325faca0800000000000000
+      internalID: -6003489388282547060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle assets_11
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 295
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9980ebe2656e9b4c0800000000000000
+      internalID: -4271129513758422887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle assets_12
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 295
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fa6abe4f36af8350800000000000000
+      internalID: 6021214017651632884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle assets_13
+      rect:
+        serializedVersion: 2
+        x: 173
+        y: 295
+        width: 4
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5da84d280ad8bce0800000000000000
+      internalID: -1389120756389466786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle assets_14
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 295
+        width: 10
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9e4902cef9ca2faa0800000000000000
+      internalID: -6128646340036487959
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle assets_15
+      rect:
+        serializedVersion: 2
+        x: 233
+        y: 295
+        width: 12
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd38f7b4aaf15c5f0800000000000000
+      internalID: -737148147733658661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle assets_16
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 242
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c337fea88c148c20800000000000000
+      internalID: 3207720207971201985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle assets_17
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 242
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afc14df252c223470800000000000000
+      internalID: 8372803195463015674
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle assets_18
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 224
+        width: 32
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4a5ff42bdc5b76d0800000000000000
+      internalID: -2991695431169254838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle assets_19
+      rect:
+        serializedVersion: 2
+        x: 230
+        y: 237
+        width: 20
+        height: 5
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9fde698fcd105660800000000000000
+      internalID: 7372425367206682523
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle assets_20
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 226
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9d91e5eb88f88880800000000000000
+      internalID: -8608357407977792099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle assets_21
+      rect:
+        serializedVersion: 2
+        x: 19
+        y: 226
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fddeaf69a808f3b0800000000000000
+      internalID: -5478619422879982092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle assets_22
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b25f845deba2c370800000000000000
+      internalID: 8341418495657857720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle assets_23
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 160
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 78a47ce3087d39010800000000000000
+      internalID: 1194535271992347271
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle assets_24
+      rect:
+        serializedVersion: 2
+        x: 109
+        y: 160
+        width: 7
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c738c975c4e17800800000000000000
+      internalID: 608518961474582465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle assets_25
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 162
+        width: 11
+        height: 30
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a700a8679cf85750800000000000000
+      internalID: 6294058206475847593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle assets_26
+      rect:
+        serializedVersion: 2
+        x: 205
+        y: 174
+        width: 71
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91f016ebbdd314850800000000000000
+      internalID: 6359432162825015065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle assets_27
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 140
+        width: 64
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99a471b8a635f3480800000000000000
+      internalID: -8917317020105094503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle assets_28
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 96
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d3ea61bbe2ee531f0800000000000000
+      internalID: -1065683852328522179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle assets_29
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 131
+        width: 64
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45b669df77ae47a30800000000000000
+      internalID: 4212249352574757716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle assets_30
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 96
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b00ba74d44a379de0800000000000000
+      internalID: -1326527497940324341
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle assets_31
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2371fd33897c81750800000000000000
+      internalID: 6275985537260001074
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle assets_32
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 18
+        width: 78
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98391d67b1b030ee0800000000000000
+      internalID: -1296180055167102071
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle assets_33
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 32
+        width: 64
+        height: 64
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7c852794d8e38b00800000000000000
+      internalID: 829762756132834429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle assets_34
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 32
+        height: 31
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 45608b6bafa56ba20800000000000000
+      internalID: 3077747428208150100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle assets_35
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 16
+        width: 26
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d25960a4376fd7970800000000000000
+      internalID: 8754424225701729581
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle assets_36
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 16
+        width: 26
+        height: 45
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 15ac22f8af4174170800000000000000
+      internalID: 8162515916008114769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle assets_37
+      rect:
+        serializedVersion: 2
+        x: 53
+        y: 96
+        width: 54
+        height: 43
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71a9d957b9b798cb0800000000000000
+      internalID: -4861218415146329577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle assets_38
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 90
+        width: 4
+        height: 50
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dcf8f481fc2c13600800000000000000
+      internalID: 446352032808275917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle assets_39
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 89
+        width: 59
+        height: 4
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1d926bedc627f6e0800000000000000
+      internalID: -1803930459879334628
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Castle assets_40
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 93
+        width: 4
+        height: 47
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b360c5fe322fecf0800000000000000
+      internalID: -220920202911521869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
