@@ -5255,6 +5255,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5276884639038668769, guid: 71d9bbbe418f060408a9c3b642d8c5cf, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5276884639038668770, guid: 71d9bbbe418f060408a9c3b642d8c5cf, type: 3}
+      propertyPath: playerFacingRight
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5276884639038668775, guid: 71d9bbbe418f060408a9c3b642d8c5cf, type: 3}
       propertyPath: m_Name
       value: Player
@@ -5744,6 +5752,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelLoader: {fileID: 1981519620}
   gatewayDestination: 2
+  gatewayOrigin: 4
+  romeoData: {fileID: 11400000, guid: 477729ec08176074185993656ff20221, type: 2}
 --- !u!61 &1740343164
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5809,7 +5819,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8377879395646033648, guid: 51b72aa9b5d8cf84e9252e6555b1deb3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 8377879395646033648, guid: 51b72aa9b5d8cf84e9252e6555b1deb3, type: 3}
       propertyPath: m_LocalRotation.x

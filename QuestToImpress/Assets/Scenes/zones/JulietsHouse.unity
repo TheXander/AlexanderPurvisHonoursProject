@@ -3760,6 +3760,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelLoader: {fileID: 394299221}
   gatewayDestination: 2
+  gatewayOrigin: 9
+  romeoData: {fileID: 11400000, guid: 477729ec08176074185993656ff20221, type: 2}
 --- !u!61 &2024757313
 BoxCollider2D:
   m_ObjectHideFlags: 0

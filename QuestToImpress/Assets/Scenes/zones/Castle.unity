@@ -8299,6 +8299,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerScript: {fileID: 1528740829}
   doorDestination: 6
+  gatewayOrigin: 8
+  romeoData: {fileID: 11400000, guid: 477729ec08176074185993656ff20221, type: 2}
 --- !u!61 &832103257
 BoxCollider2D:
   m_ObjectHideFlags: 0

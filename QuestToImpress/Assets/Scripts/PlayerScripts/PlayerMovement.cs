@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
     public LevelLoader.Levels newDestination = LevelLoader.Levels.City;
     public bool locationSet = false;
 
-    //Animator animator;
+    Animator animator;
     PlayerInputActions playerInputActions;
    
     [SerializeField] private bool playerFacingRight;
@@ -21,18 +21,14 @@ public class PlayerMovement : MonoBehaviour
     private void Awake()
     {
         spriteBody2D = GetComponent<Rigidbody2D>();
-        //animator = GetComponent<Animator>();
+        animator = GetComponent<Animator>();
         playerInputActions = new PlayerInputActions();
    
         playerInputActions.Gameplay.Movment.performed += context => newDirectionInput = context.ReadValue<Vector2>();
         playerInputActions.Gameplay.Movment.canceled += context => newDirectionInput = Vector2.zero;
-      
-        
+             
         // for navagating the city  
-        playerInputActions.Gameplay.EnterDoor.performed += context => EnterDoor();
-
-        Debug.Log("Grrrr");
-       
+        playerInputActions.Gameplay.EnterDoor.performed += context => EnterDoor();      
     }
 
     private void FixedUpdate()
@@ -74,7 +70,7 @@ public class PlayerMovement : MonoBehaviour
              playerFacingRight = true;
           }
        }
-        //animator.SetFloat("playerSpeed", Mathf.Abs(newDirectionInput.x));
+        animator.SetFloat("playerSpeed", Mathf.Abs(newDirectionInput.x));
         
 
     }
@@ -94,6 +90,23 @@ public class PlayerMovement : MonoBehaviour
             levelLoader.LoadLevel(newDestination);
         }       
     }
+
+    public void TurnPlayerLeft()
+    {
+        transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+        playerFacingRight = false;
+    }
+
+
+    public void TurnPlayerRight()
+    {
+        if (transform.localScale.x < 0)
+        {
+            transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);           
+        }
+        playerFacingRight = true;
+    }
+
 
     private void OnEnable()
     {
