@@ -1,7 +1,49 @@
 fileFormatVersion: 2
 guid: e43b33f4506dbf04e9f6a3185c2013bb
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 3147514618009993109
+    second: militaWarrior_0
+  - first:
+      213: -1489779022849161353
+    second: militaWarrior_1
+  - first:
+      213: -7811727992328844572
+    second: militaWarrior_2
+  - first:
+      213: 5228525551848803069
+    second: militaWarrior_3
+  - first:
+      213: -964369241281190250
+    second: militaWarrior_4
+  - first:
+      213: -4867276002416374001
+    second: militaWarrior_5
+  - first:
+      213: -432761644156024318
+    second: militaWarrior_6
+  - first:
+      213: 495876428978376206
+    second: militaWarrior_7
+  - first:
+      213: -9160827891989634397
+    second: militaWarrior_8
+  - first:
+      213: -7543051143507656285
+    second: militaWarrior_9
+  - first:
+      213: 1592061187312236286
+    second: militaWarrior_10
+  - first:
+      213: -2376046813709026615
+    second: militaWarrior_11
+  - first:
+      213: 2547842713874963721
+    second: militaWarrior_12
+  - first:
+      213: 3071844982781136982
+    second: militaWarrior_13
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +83,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +115,327 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: militaWarrior_0
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 73
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59fb5db6ed73eab20800000000000000
+      internalID: 3147514618009993109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: militaWarrior_1
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 73
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7774f353fdd335be0800000000000000
+      internalID: -1489779022849161353
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: militaWarrior_2
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 73
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ea834f77ca279390800000000000000
+      internalID: -7811727992328844572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: militaWarrior_3
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 73
+        width: 18
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfa400999447f8840800000000000000
+      internalID: 5228525551848803069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: militaWarrior_4
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 37
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6962f15d84fdd92f0800000000000000
+      internalID: -964369241281190250
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: militaWarrior_5
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 37
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0f40348346f37cb0800000000000000
+      internalID: -4867276002416374001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: militaWarrior_6
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 37
+        width: 18
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 20a8aa7d3958ef9f0800000000000000
+      internalID: -432761644156024318
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: militaWarrior_7
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 37
+        width: 18
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0eceb12cf4b1e600800000000000000
+      internalID: 495876428978376206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: militaWarrior_8
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 37
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a2a77181933ed080800000000000000
+      internalID: -9160827891989634397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: militaWarrior_9
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 37
+        width: 18
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a14f9423f2b15790800000000000000
+      internalID: -7543051143507656285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: militaWarrior_10
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 1
+        width: 18
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef6be6af633281610800000000000000
+      internalID: 1592061187312236286
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: militaWarrior_11
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 1
+        width: 24
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cabc230306960fd0800000000000000
+      internalID: -2376046813709026615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: militaWarrior_12
+      rect:
+        serializedVersion: 2
+        x: 85
+        y: 1
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90d95100371cb5320800000000000000
+      internalID: 2547842713874963721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: militaWarrior_13
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 1
+        width: 23
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6505cbb8cb261aa20800000000000000
+      internalID: 3071844982781136982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

@@ -1,7 +1,124 @@
 fileFormatVersion: 2
 guid: b2f1740f1819f2446a2c83a8a27e510a
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: 5051830995074474724
+    second: MV-SquireStyleTwo-Transparent_0
+  - first:
+      213: 3518529471534602593
+    second: MV-SquireStyleTwo-Transparent_1
+  - first:
+      213: 3614438994582137383
+    second: MV-SquireStyleTwo-Transparent_2
+  - first:
+      213: -3926330585754965138
+    second: MV-SquireStyleTwo-Transparent_3
+  - first:
+      213: -2799475499764653675
+    second: MV-SquireStyleTwo-Transparent_4
+  - first:
+      213: -6799970421058739984
+    second: MV-SquireStyleTwo-Transparent_5
+  - first:
+      213: 2436392780926762962
+    second: MV-SquireStyleTwo-Transparent_6
+  - first:
+      213: 8484531168389641011
+    second: MV-SquireStyleTwo-Transparent_7
+  - first:
+      213: 6722427327634239615
+    second: MV-SquireStyleTwo-Transparent_8
+  - first:
+      213: 9096197704106656375
+    second: MV-SquireStyleTwo-Transparent_9
+  - first:
+      213: 6560552663218482728
+    second: MV-SquireStyleTwo-Transparent_10
+  - first:
+      213: -5290076029708057348
+    second: MV-SquireStyleTwo-Transparent_11
+  - first:
+      213: -891048737736518522
+    second: MV-SquireStyleTwo-Transparent_12
+  - first:
+      213: -6992525610578758837
+    second: MV-SquireStyleTwo-Transparent_13
+  - first:
+      213: -6746534037539585511
+    second: MV-SquireStyleTwo-Transparent_14
+  - first:
+      213: -1682026747368083830
+    second: MV-SquireStyleTwo-Transparent_15
+  - first:
+      213: -2930113764501405393
+    second: MV-SquireStyleTwo-Transparent_16
+  - first:
+      213: 2119985818789975179
+    second: MV-SquireStyleTwo-Transparent_17
+  - first:
+      213: 4568194460547260388
+    second: MV-SquireStyleTwo-Transparent_18
+  - first:
+      213: -7441846624958052552
+    second: MV-SquireStyleTwo-Transparent_19
+  - first:
+      213: -7490499490122903850
+    second: MV-SquireStyleTwo-Transparent_20
+  - first:
+      213: -6717778477132336945
+    second: MV-SquireStyleTwo-Transparent_21
+  - first:
+      213: 5454965760192599419
+    second: MV-SquireStyleTwo-Transparent_22
+  - first:
+      213: -3236767232457784342
+    second: MV-SquireStyleTwo-Transparent_23
+  - first:
+      213: -3267162922150957883
+    second: MV-SquireStyleTwo-Transparent_24
+  - first:
+      213: 9146625539817327536
+    second: MV-SquireStyleTwo-Transparent_25
+  - first:
+      213: -3620658394398522212
+    second: MV-SquireStyleTwo-Transparent_26
+  - first:
+      213: 3850108449461478867
+    second: MV-SquireStyleTwo-Transparent_27
+  - first:
+      213: 1013262696948952443
+    second: MV-SquireStyleTwo-Transparent_28
+  - first:
+      213: 5790429146246278367
+    second: MV-SquireStyleTwo-Transparent_29
+  - first:
+      213: -6391394940424948245
+    second: MV-SquireStyleTwo-Transparent_30
+  - first:
+      213: -8309221595415941137
+    second: MV-SquireStyleTwo-Transparent_31
+  - first:
+      213: 4811648275307032444
+    second: MV-SquireStyleTwo-Transparent_32
+  - first:
+      213: -8014887706652885191
+    second: MV-SquireStyleTwo-Transparent_33
+  - first:
+      213: 6624320246428134466
+    second: MV-SquireStyleTwo-Transparent_34
+  - first:
+      213: -1124503973138437394
+    second: MV-SquireStyleTwo-Transparent_35
+  - first:
+      213: 6098243705016425203
+    second: MV-SquireStyleTwo-Transparent_36
+  - first:
+      213: 3261598170068959196
+    second: MV-SquireStyleTwo-Transparent_37
+  - first:
+      213: 7604610245017404410
+    second: MV-SquireStyleTwo-Transparent_38
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +158,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +190,852 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: MV-SquireStyleTwo-Transparent_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 288
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e2e8b63685bb1640800000000000000
+      internalID: 5051830995074474724
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MV-SquireStyleTwo-Transparent_1
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 288
+        width: 19
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 169109299e354d030800000000000000
+      internalID: 3518529471534602593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MV-SquireStyleTwo-Transparent_2
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 288
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72a636e8d11192230800000000000000
+      internalID: 3614438994582137383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MV-SquireStyleTwo-Transparent_3
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 288
+        width: 19
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6be255822fd289c0800000000000000
+      internalID: -3926330585754965138
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MV-SquireStyleTwo-Transparent_4
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 240
+        width: 23
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5916e1f7dd34629d0800000000000000
+      internalID: -2799475499764653675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MV-SquireStyleTwo-Transparent_5
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 242
+        width: 20
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f061a90ee6a1a1a0800000000000000
+      internalID: -6799970421058739984
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MV-SquireStyleTwo-Transparent_6
+      rect:
+        serializedVersion: 2
+        x: 110
+        y: 241
+        width: 20
+        height: 24
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2df3770635ecfc120800000000000000
+      internalID: 2436392780926762962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MV-SquireStyleTwo-Transparent_7
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 240
+        width: 21
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3333899052c1fb570800000000000000
+      internalID: 8484531168389641011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MV-SquireStyleTwo-Transparent_8
+      rect:
+        serializedVersion: 2
+        x: 210
+        y: 242
+        width: 18
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f70740c990cda4d50800000000000000
+      internalID: 6722427327634239615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MV-SquireStyleTwo-Transparent_9
+      rect:
+        serializedVersion: 2
+        x: 255
+        y: 242
+        width: 21
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77240004e9f2c3e70800000000000000
+      internalID: 9096197704106656375
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MV-SquireStyleTwo-Transparent_10
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 192
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 82e616d43e3cb0b50800000000000000
+      internalID: 6560552663218482728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MV-SquireStyleTwo-Transparent_11
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 192
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cf4417601efd596b0800000000000000
+      internalID: -5290076029708057348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MV-SquireStyleTwo-Transparent_12
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 192
+        width: 24
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68497add4eb52a3f0800000000000000
+      internalID: -891048737736518522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MV-SquireStyleTwo-Transparent_13
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 201
+        width: 16
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b43b1a2510f85fe90800000000000000
+      internalID: -6992525610578758837
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MV-SquireStyleTwo-Transparent_14
+      rect:
+        serializedVersion: 2
+        x: 150
+        y: 192
+        width: 36
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9120f5b990f7f52a0800000000000000
+      internalID: -6746534037539585511
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MV-SquireStyleTwo-Transparent_15
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 192
+        width: 27
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a8e6b64c59d38a8e0800000000000000
+      internalID: -1682026747368083830
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MV-SquireStyleTwo-Transparent_16
+      rect:
+        serializedVersion: 2
+        x: 248
+        y: 192
+        width: 25
+        height: 33
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f21496b3e052657d0800000000000000
+      internalID: -2930113764501405393
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MV-SquireStyleTwo-Transparent_17
+      rect:
+        serializedVersion: 2
+        x: 10
+        y: 144
+        width: 21
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8497d9bed3bb6d10800000000000000
+      internalID: 2119985818789975179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MV-SquireStyleTwo-Transparent_18
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 144
+        width: 22
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ef93d598ac756f30800000000000000
+      internalID: 4568194460547260388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MV-SquireStyleTwo-Transparent_19
+      rect:
+        serializedVersion: 2
+        x: 105
+        y: 144
+        width: 35
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8378f665cef39b890800000000000000
+      internalID: -7441846624958052552
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MV-SquireStyleTwo-Transparent_20
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 144
+        width: 38
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6decafc66666c0890800000000000000
+      internalID: -7490499490122903850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MV-SquireStyleTwo-Transparent_21
+      rect:
+        serializedVersion: 2
+        x: 202
+        y: 144
+        width: 36
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc033ce3118a5c2a0800000000000000
+      internalID: -6717778477132336945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MV-SquireStyleTwo-Transparent_22
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 144
+        width: 24
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b75d23e057ee3bb40800000000000000
+      internalID: 5454965760192599419
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MV-SquireStyleTwo-Transparent_23
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 96
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae3cab8e951b413d0800000000000000
+      internalID: -3236767232457784342
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MV-SquireStyleTwo-Transparent_24
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 96
+        width: 22
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cc6dd9e1a4b8a2d0800000000000000
+      internalID: -3267162922150957883
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MV-SquireStyleTwo-Transparent_25
+      rect:
+        serializedVersion: 2
+        x: 97
+        y: 96
+        width: 46
+        height: 34
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0bbc352b7775fee70800000000000000
+      internalID: 9146625539817327536
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MV-SquireStyleTwo-Transparent_26
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 96
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9407d49f56d0cdc0800000000000000
+      internalID: -3620658394398522212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MV-SquireStyleTwo-Transparent_27
+      rect:
+        serializedVersion: 2
+        x: 149
+        y: 110
+        width: 42
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d5a1ec6c355e6530800000000000000
+      internalID: 3850108449461478867
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MV-SquireStyleTwo-Transparent_28
+      rect:
+        serializedVersion: 2
+        x: 193
+        y: 96
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7debcbed05df0e00800000000000000
+      internalID: 1013262696948952443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MV-SquireStyleTwo-Transparent_29
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 110
+        width: 35
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdce31721acbb5050800000000000000
+      internalID: 5790429146246278367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MV-SquireStyleTwo-Transparent_30
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 96
+        width: 28
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be5fdbc2a243d47a0800000000000000
+      internalID: -6391394940424948245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MV-SquireStyleTwo-Transparent_31
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 48
+        width: 21
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fef6a3dabf6bfac80800000000000000
+      internalID: -8309221595415941137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MV-SquireStyleTwo-Transparent_32
+      rect:
+        serializedVersion: 2
+        x: 59
+        y: 50
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7febc9fc9866c240800000000000000
+      internalID: 4811648275307032444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MV-SquireStyleTwo-Transparent_33
+      rect:
+        serializedVersion: 2
+        x: 108
+        y: 50
+        width: 25
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93f3f42781665c090800000000000000
+      internalID: -8014887706652885191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MV-SquireStyleTwo-Transparent_34
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 48
+        width: 24
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24ce6ceba205eeb50800000000000000
+      internalID: 6624320246428134466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MV-SquireStyleTwo-Transparent_35
+      rect:
+        serializedVersion: 2
+        x: 15
+        y: 0
+        width: 16
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eea61942895f460f0800000000000000
+      internalID: -1124503973138437394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MV-SquireStyleTwo-Transparent_36
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 0
+        width: 21
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3fa144ff65051a450800000000000000
+      internalID: 6098243705016425203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MV-SquireStyleTwo-Transparent_37
+      rect:
+        serializedVersion: 2
+        x: 114
+        y: 0
+        width: 28
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdf36074146834d20800000000000000
+      internalID: 3261598170068959196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: MV-SquireStyleTwo-Transparent_38
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 0
+        width: 29
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af30f851ab0098960800000000000000
+      internalID: 7604610245017404410
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

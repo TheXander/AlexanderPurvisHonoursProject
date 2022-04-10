@@ -1,7 +1,112 @@
 fileFormatVersion: 2
 guid: 80fa1f55737a05e43957f9bd4cfa497c
 TextureImporter:
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      213: -7209967184541132034
+    second: VaiDrogulChar_0
+  - first:
+      213: -4611330159643730538
+    second: VaiDrogulChar_1
+  - first:
+      213: 8999855013988796796
+    second: VaiDrogulChar_2
+  - first:
+      213: -7362866342656798618
+    second: VaiDrogulChar_3
+  - first:
+      213: -5514370656420442950
+    second: VaiDrogulChar_4
+  - first:
+      213: 8185162630128079859
+    second: VaiDrogulChar_5
+  - first:
+      213: 7196294395252545108
+    second: VaiDrogulChar_6
+  - first:
+      213: -4050823341888481675
+    second: VaiDrogulChar_7
+  - first:
+      213: -782185757539999091
+    second: VaiDrogulChar_8
+  - first:
+      213: -4033601045864544334
+    second: VaiDrogulChar_9
+  - first:
+      213: -8476146904776664804
+    second: VaiDrogulChar_10
+  - first:
+      213: -4199882895648399447
+    second: VaiDrogulChar_11
+  - first:
+      213: -235174278510062893
+    second: VaiDrogulChar_12
+  - first:
+      213: -3752703144892831922
+    second: VaiDrogulChar_13
+  - first:
+      213: 4023868411338469028
+    second: VaiDrogulChar_14
+  - first:
+      213: 6033092932671261135
+    second: VaiDrogulChar_15
+  - first:
+      213: 5357059300050532056
+    second: VaiDrogulChar_16
+  - first:
+      213: -4456922646335479852
+    second: VaiDrogulChar_17
+  - first:
+      213: -5599869353621104520
+    second: VaiDrogulChar_18
+  - first:
+      213: 6060661640651207692
+    second: VaiDrogulChar_19
+  - first:
+      213: -34108592647713246
+    second: VaiDrogulChar_20
+  - first:
+      213: 6896540803220212779
+    second: VaiDrogulChar_21
+  - first:
+      213: 9151830536874736812
+    second: VaiDrogulChar_22
+  - first:
+      213: 292469812732698653
+    second: VaiDrogulChar_23
+  - first:
+      213: -9053919352860084476
+    second: VaiDrogulChar_24
+  - first:
+      213: -1226868594616359154
+    second: VaiDrogulChar_25
+  - first:
+      213: -910584268871865117
+    second: VaiDrogulChar_26
+  - first:
+      213: -4836421673857591783
+    second: VaiDrogulChar_27
+  - first:
+      213: 5233147173240813206
+    second: VaiDrogulChar_28
+  - first:
+      213: 7238716430481937146
+    second: VaiDrogulChar_29
+  - first:
+      213: 7159036286143286170
+    second: VaiDrogulChar_30
+  - first:
+      213: 3306083161780672085
+    second: VaiDrogulChar_31
+  - first:
+      213: -357004543552542954
+    second: VaiDrogulChar_32
+  - first:
+      213: -1351122591503859698
+    second: VaiDrogulChar_33
+  - first:
+      213: -1651572824554102964
+    second: VaiDrogulChar_34
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -41,7 +146,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,9 +178,768 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: VaiDrogulChar_0
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 272
+        width: 32
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efad333bb0d01fb90800000000000000
+      internalID: -7209967184541132034
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaiDrogulChar_1
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 272
+        width: 32
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 69dd364d6a34100c0800000000000000
+      internalID: -4611330159643730538
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaiDrogulChar_2
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 272
+        width: 32
+        height: 37
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c7902d2b378e5ec70800000000000000
+      internalID: 8999855013988796796
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaiDrogulChar_3
+      rect:
+        serializedVersion: 2
+        x: 198
+        y: 272
+        width: 32
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 660134d4218d1d990800000000000000
+      internalID: -7362866342656798618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaiDrogulChar_4
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 272
+        width: 32
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abcc838ba150973b0800000000000000
+      internalID: -5514370656420442950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaiDrogulChar_5
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 208
+        width: 29
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f316959b0a879170800000000000000
+      internalID: 8185162630128079859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaiDrogulChar_6
+      rect:
+        serializedVersion: 2
+        x: 69
+        y: 210
+        width: 31
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4569928ff9f5ed360800000000000000
+      internalID: 7196294395252545108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaiDrogulChar_7
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 208
+        width: 28
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57650eaf1a598c7c0800000000000000
+      internalID: -4050823341888481675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaiDrogulChar_8
+      rect:
+        serializedVersion: 2
+        x: 203
+        y: 208
+        width: 23
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d82657d923e1525f0800000000000000
+      internalID: -782185757539999091
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaiDrogulChar_9
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 208
+        width: 15
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b7899f3835c508c0800000000000000
+      internalID: -4033601045864544334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaiDrogulChar_10
+      rect:
+        serializedVersion: 2
+        x: 327
+        y: 208
+        width: 29
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c1992c47c4dae5a80800000000000000
+      internalID: -8476146904776664804
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaiDrogulChar_11
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 210
+        width: 25
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9af53a222c407b5c0800000000000000
+      internalID: -4199882895648399447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaiDrogulChar_12
+      rect:
+        serializedVersion: 2
+        x: 459
+        y: 208
+        width: 23
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d2591d5d3e7cbcf0800000000000000
+      internalID: -235174278510062893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaiDrogulChar_13
+      rect:
+        serializedVersion: 2
+        x: 524
+        y: 208
+        width: 24
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e47eb255f58bbebc0800000000000000
+      internalID: -3752703144892831922
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaiDrogulChar_14
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 144
+        width: 32
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4aeaeb03007a7d730800000000000000
+      internalID: 4023868411338469028
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaiDrogulChar_15
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 144
+        width: 31
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc94accbe0ad9b350800000000000000
+      internalID: 6033092932671261135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaiDrogulChar_16
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 144
+        width: 32
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d6f63cec09185a40800000000000000
+      internalID: 5357059300050532056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaiDrogulChar_17
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 144
+        width: 35
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4df97c98774d522c0800000000000000
+      internalID: -4456922646335479852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaiDrogulChar_18
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 144
+        width: 35
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87851d40e744942b0800000000000000
+      internalID: -5599869353621104520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaiDrogulChar_19
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 144
+        width: 35
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c04f9d2c6abcb1450800000000000000
+      internalID: 6060661640651207692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaiDrogulChar_20
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 144
+        width: 35
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22ec17b6a62d68ff0800000000000000
+      internalID: -34108592647713246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaiDrogulChar_21
+      rect:
+        serializedVersion: 2
+        x: 457
+        y: 144
+        width: 31
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2c8de2325f65bf50800000000000000
+      internalID: 6896540803220212779
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaiDrogulChar_22
+      rect:
+        serializedVersion: 2
+        x: 6
+        y: 80
+        width: 34
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cacbdf28265d10f70800000000000000
+      internalID: 9151830536874736812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaiDrogulChar_23
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 80
+        width: 30
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d10257fbebf0f0400800000000000000
+      internalID: 292469812732698653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaiDrogulChar_24
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 80
+        width: 29
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4077dbb71540a5280800000000000000
+      internalID: -9053919352860084476
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaiDrogulChar_25
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 80
+        width: 29
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e072fcf638949fee0800000000000000
+      internalID: -1226868594616359154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaiDrogulChar_26
+      rect:
+        serializedVersion: 2
+        x: 249
+        y: 80
+        width: 60
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ec65d39e64fc53f0800000000000000
+      internalID: -910584268871865117
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaiDrogulChar_27
+      rect:
+        serializedVersion: 2
+        x: 313
+        y: 80
+        width: 59
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 916d7b1bc1491ecb0800000000000000
+      internalID: -4836421673857591783
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaiDrogulChar_28
+      rect:
+        serializedVersion: 2
+        x: 382
+        y: 80
+        width: 55
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 696bb5ea0afdf9840800000000000000
+      internalID: 5233147173240813206
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaiDrogulChar_29
+      rect:
+        serializedVersion: 2
+        x: 456
+        y: 80
+        width: 32
+        height: 38
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af2d8acbd36157460800000000000000
+      internalID: 7238716430481937146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaiDrogulChar_30
+      rect:
+        serializedVersion: 2
+        x: 9
+        y: 18
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9bc3b172910a5360800000000000000
+      internalID: 7159036286143286170
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaiDrogulChar_31
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 19
+        width: 32
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55656d78e1191ed20800000000000000
+      internalID: 3306083161780672085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaiDrogulChar_32
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 18
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 617a956524aab0bf0800000000000000
+      internalID: -357004543552542954
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaiDrogulChar_33
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 18
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e00486d5929df3de0800000000000000
+      internalID: -1351122591503859698
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: VaiDrogulChar_34
+      rect:
+        serializedVersion: 2
+        x: 265
+        y: 18
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4f93c7344f6419e0800000000000000
+      internalID: -1651572824554102964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []

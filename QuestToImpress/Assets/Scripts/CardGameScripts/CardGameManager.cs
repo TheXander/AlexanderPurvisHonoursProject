@@ -5,6 +5,8 @@ using TMPro;
 
 public class CardGameManager : MonoBehaviour
 {
+    public OpponentResponseManager opponentResponseManager;
+
     public List<CardInfo> playingCards = new List<CardInfo>();
     public List<CardInfo> standeredPlayerDeck = new List<CardInfo>();
     public List<CardInfo> activePlayerDeck = new List<CardInfo>();
@@ -12,12 +14,32 @@ public class CardGameManager : MonoBehaviour
     public List<GameObject> cardsInHand = new List<GameObject>();
     public List<GameObject> handSlots = new List<GameObject>();
     public GameObject cardPrefab;
+    public GameObject magnifiedCardPrefab;
 
     public TMP_Text playerHonourDisplay;
     public TMP_Text enemyHonourDisplay;
 
+    public TMP_Text playerSpeachBubble;
+    public Animator pSpeachBubbleAni;
+    string newsentance;
+
+    float cooldown = 3.2f;
+    float cooldownCounter = 0f;
+    bool bubbleUp = false;
+
     int playerHonour = 30;
     int enemyHonour = 20;
+
+    public Animator playerCostObject;
+    public Animator playerDamageObject;
+
+    int pendingDamageToEnemy;
+    int pendingDamageToPlayer;
+
+    public Animator enemyCostObject;
+    public Animator enemyDamageObject;
+
+    public List<GameObject> magnifiedCards = new List<GameObject>();
 
 
     private void Start()
@@ -39,11 +61,33 @@ public class CardGameManager : MonoBehaviour
             {             
                 if (hit.transform.tag == "PlayingCard")
                 {
-                    PlayCard(hit.transform.gameObject);
+                    if (!hit.transform.GetComponent<OnMouseOverCards>().isDeactivated)
+                    {
+                        PlayCard(hit.transform.gameObject);
+                    }                   
                 }
             }
         }
+
+        if (bubbleUp)
+        {
+            Coundown();
+        }
     }
+
+    void Coundown()
+    {
+        cooldownCounter += Time.deltaTime;
+        if (cooldownCounter >= cooldown)
+        {
+            bubbleUp = false;
+            pSpeachBubbleAni.SetTrigger("Deactivate");
+            playerSpeachBubble.text = "";
+            cooldownCounter = 0;
+        }
+    }
+
+
 
     void LoadCSVFile()
     {
@@ -88,7 +132,7 @@ public class CardGameManager : MonoBehaviour
     {
         if (cardsInHand.Count <= 4)
         {
-            GameObject CardInHand = Instantiate(cardPrefab) as GameObject;
+            GameObject CardInHand = Instantiate(cardPrefab);
 
             SetUpCardTransform(CardInHand);
 
@@ -99,11 +143,10 @@ public class CardGameManager : MonoBehaviour
     void AddCardData(GameObject Card) 
     {
         CardInfo cardData = activePlayerDeck[0];
-       
-
         Card.GetComponent<PlayingCardControls>().setUpCard(cardData.cardName, cardData.cardCost, cardData.cardDamage, cardData.cardQuote, cardData.cardSource);
+        Card.GetComponent<OnMouseOverCards>().cardGameManager = GetComponent<CardGameManager>();
+        
         cardsInHand.Add(Card);
-
         activePlayerDeck.Remove(cardData);
     }
 
@@ -137,26 +180,81 @@ public class CardGameManager : MonoBehaviour
         }
     }
 
-
-
     public void PlayCard(GameObject cardToPlay)
     {
-        playerHonour -= cardToPlay.GetComponent<PlayingCardControls>().cost;
-        enemyHonour -= cardToPlay.GetComponent<PlayingCardControls>().damage;
+        newsentance = cardToPlay.GetComponent<PlayingCardControls>().quote;     
+        pendingDamageToEnemy = cardToPlay.GetComponent<PlayingCardControls>().damage;
+        pendingDamageToPlayer = cardToPlay.GetComponent<PlayingCardControls>().cost;
+        
+        cooldown = (float)(0.06 * (float)newsentance.Length);
 
-        playerHonourDisplay.text = playerHonour.ToString();
-        enemyHonourDisplay.text = enemyHonour.ToString();
-
+        pSpeachBubbleAni.SetTrigger("Activate");
+        
         cardsInHand.Remove(cardToPlay);
         Destroy(cardToPlay);
         Sorthand();
+        DeactivateHand();
     }
 
+    public void StartDialogBoxText()
+    {
+
+        StartCoroutine(AddSentenceToDialogBox(newsentance));
+    }
+
+    public void CardResolution()
+    {
+        if (pendingDamageToPlayer > 0)
+        {
+            playerCostObject.SetTrigger("Activate");
+        }
+
+        if (pendingDamageToEnemy > 0)
+        {
+            playerDamageObject.SetTrigger("Activate");
+        }
+
+        opponentResponseManager.enemyTurn = true;
+    }
+
+    IEnumerator AddSentenceToDialogBox (string sentance)
+    {     
+        playerSpeachBubble.text = "";
+
+        foreach(char letter in sentance)
+        {
+           playerSpeachBubble.text += letter;
+
+            if (letter == sentance[sentance.Length-1])
+            {
+                bubbleUp = true;
+            }
+
+           yield return new WaitForSeconds(0.027f);
+        }
+    }
+
+
+    // damage functions controled through animation
+    public void AsignDamgeToPlayer()
+    {
+        playerHonour -= pendingDamageToPlayer;
+        pendingDamageToPlayer = 0;
+        playerHonourDisplay.text = playerHonour.ToString();
+    }
+
+    public void AsignDamgeToEnemey()
+    {
+       enemyHonour -= pendingDamageToEnemy;
+        pendingDamageToEnemy = 0;
+        enemyHonourDisplay.text = enemyHonour.ToString();
+    }
+
+    // Hand sorting so that cards are in the correct place after a card is played
     void Sorthand()
     {       
        for (int i = 0; i < cardsInHand.Count; i++)
        {
-
             GameObject CardInHand = cardsInHand[i];
 
             switch (i)
@@ -185,6 +283,72 @@ public class CardGameManager : MonoBehaviour
                     print("Error!");
                     break;
             }
+        }
+    }
+
+
+    public void CrateMagnifiedCard(GameObject cardToMagnify)
+    {
+        bool cardExists = false;
+
+        foreach(GameObject card in magnifiedCards)
+        {
+            if (card.GetComponent<PlayingCardControls>().nameOfCard == cardToMagnify.GetComponent<PlayingCardControls>().nameOfCard)
+            {
+                cardExists = true;
+            }
+        }
+
+        if (!cardExists)
+        {
+            GameObject newMagnifiedCard = Instantiate(magnifiedCardPrefab);
+            PlayingCardControls mCardData = cardToMagnify.GetComponent<PlayingCardControls>();
+            newMagnifiedCard.GetComponent<PlayingCardControls>().setUpCard(
+                mCardData.nameOfCard, mCardData.cost, mCardData.damage, mCardData.quote, mCardData.sourseOfCard);
+
+            newMagnifiedCard.transform.position = new Vector3(0.0f, 1.9f, -7.0f);
+            newMagnifiedCard.transform.localScale = new Vector3(0.97f, 0.97f, 0.97f);
+            newMagnifiedCard.transform.rotation = new Quaternion(0, 0, 0, 0);
+            magnifiedCards.Add(newMagnifiedCard);
+        }       
+    }
+
+
+    public void DestroyMagnifiedCard(GameObject MagnifiedcardToDestroy)
+    {
+        foreach (GameObject magnifiedCard in magnifiedCards)
+        {
+            if (magnifiedCard.GetComponent<PlayingCardControls>().nameOfCard == MagnifiedcardToDestroy.GetComponent<PlayingCardControls>().nameOfCard)
+            {
+                magnifiedCards.Remove(magnifiedCard);
+                Destroy(magnifiedCard);
+                break;
+            }
+        }
+    }
+
+    void DeactivateHand()
+    {
+        foreach (GameObject card in cardsInHand)
+        {
+            card.GetComponent<OnMouseOverCards>().isDeactivated = true;
+            card.GetComponent<PlayingCardControls>().TurnOff();
+        }
+
+        foreach(GameObject magnifiedCard in magnifiedCards)
+        {
+            Destroy(magnifiedCard);
+        }
+
+        magnifiedCards = new List<GameObject>();      
+    }
+
+    public void ActivateHand()
+    {
+        foreach (GameObject card in cardsInHand)
+        {
+            card.GetComponent<PlayingCardControls>().TurnOn();
+            card.GetComponent<OnMouseOverCards>().isDeactivated = false;
         }
     }
 }

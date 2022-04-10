@@ -8,15 +8,20 @@ public class PlayerMovement : MonoBehaviour
     public LevelLoader levelLoader;
     public LevelLoader.Levels newDestination = LevelLoader.Levels.City;
     public bool locationSet = false;
-
+    float movmentSpeed = 22.0f;
     Animator animator;
     PlayerInputActions playerInputActions;
    
     [SerializeField] private bool playerFacingRight;
     private Rigidbody2D spriteBody2D;
     private Vector3 velocityZero = Vector3.zero;
-    [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = 0.2f;	// How much to smooth out the movement
+    [Range(0, 1.0f)] [SerializeField] private float m_MovementSmoothing = 0.3f;	// How much to smooth out the movement
     Vector2 newDirectionInput;
+
+    
+    public RomeoData romeoData;
+    public CamPlayerTracking trackingCam;
+    public bool movmentLocked = false;
 
     private void Awake()
     {
@@ -28,12 +33,25 @@ public class PlayerMovement : MonoBehaviour
         playerInputActions.Gameplay.Movment.canceled += context => newDirectionInput = Vector2.zero;
              
         // for navagating the city  
-        playerInputActions.Gameplay.EnterDoor.performed += context => EnterDoor();      
+        playerInputActions.Gameplay.EnterDoor.performed += context => EnterDoor();
+        // interactions
+        playerInputActions.Gameplay.Interact.performed += context => StartEvent();
+
+        if (romeoData.previousLocation == LevelLoader.Levels.CardGame ||
+            romeoData.previousLocation == LevelLoader.Levels.Combat)
+        {
+            transform.position = romeoData.previousPlayerCoordinates;
+            trackingCam.trackingActive = true;
+        }
     }
 
     private void FixedUpdate()
     {
-        MovePlayer();
+        if (!movmentLocked)
+        {
+            MovePlayer();
+        }
+       
     }
 
     private void Update()
@@ -49,11 +67,9 @@ public class PlayerMovement : MonoBehaviour
   
        if (newDirectionInput.x != 0)
        {
-          float movmentSpeed = 18.0f;
+         
           float move;
-
           move = (newDirectionInput.x * Time.fixedDeltaTime) * movmentSpeed;
-
           // Move the character by finding the target velocity
           Vector3 targetVelocity = new Vector2(move * 10f, spriteBody2D.velocity.y);
           // And then smoothing it out and applying it to the character
@@ -70,9 +86,7 @@ public class PlayerMovement : MonoBehaviour
              playerFacingRight = true;
           }
        }
-        animator.SetFloat("playerSpeed", Mathf.Abs(newDirectionInput.x));
-        
-
+        animator.SetFloat("playerSpeed", Mathf.Abs(newDirectionInput.x));     
     }
 
     private void FlipSprite()
@@ -91,6 +105,36 @@ public class PlayerMovement : MonoBehaviour
         }       
     }
 
+    void StartEvent()
+    {
+        if (!movmentLocked)
+        {
+            switch (romeoData.currentEvent)
+            {
+                case RomeoData.Events.CardGame:
+                    if (locationSet)
+                    {
+                        romeoData.previousPlayerCoordinates = transform.position;
+                        levelLoader.LoadLevel(newDestination);
+                    }
+                    break;
+                case RomeoData.Events.Combat:
+                    if (locationSet)
+                    {
+                        romeoData.previousPlayerCoordinates = transform.position;
+                        levelLoader.LoadLevel(newDestination);
+                    }
+                    break;
+                case RomeoData.Events.Dialog:
+                    print("New Dialog Started!");
+                    break;
+                default:
+                    break;
+            }
+        }
+    }
+
+   
     public void TurnPlayerLeft()
     {
         transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);

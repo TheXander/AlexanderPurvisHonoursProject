@@ -41,6 +41,14 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Interact"",
+                    ""type"": ""Button"",
+                    ""id"": ""d8800996-002f-4583-81fb-2c9a7cb28d9a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -131,6 +139,28 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                     ""action"": ""JoyEnterDoor"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3d440e6c-6be9-4592-9197-6c6268dbd5be"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8b201fbb-8eea-452f-afb4-f2b6cc9a569e"",
+                    ""path"": ""<Gamepad>/buttonNorth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Interact"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -142,6 +172,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         m_Gameplay_Movment = m_Gameplay.FindAction("Movment", throwIfNotFound: true);
         m_Gameplay_EnterDoor = m_Gameplay.FindAction("EnterDoor", throwIfNotFound: true);
         m_Gameplay_JoyEnterDoor = m_Gameplay.FindAction("JoyEnterDoor", throwIfNotFound: true);
+        m_Gameplay_Interact = m_Gameplay.FindAction("Interact", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -194,6 +225,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
     private readonly InputAction m_Gameplay_Movment;
     private readonly InputAction m_Gameplay_EnterDoor;
     private readonly InputAction m_Gameplay_JoyEnterDoor;
+    private readonly InputAction m_Gameplay_Interact;
     public struct GameplayActions
     {
         private @PlayerInputActions m_Wrapper;
@@ -201,6 +233,7 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         public InputAction @Movment => m_Wrapper.m_Gameplay_Movment;
         public InputAction @EnterDoor => m_Wrapper.m_Gameplay_EnterDoor;
         public InputAction @JoyEnterDoor => m_Wrapper.m_Gameplay_JoyEnterDoor;
+        public InputAction @Interact => m_Wrapper.m_Gameplay_Interact;
         public InputActionMap Get() { return m_Wrapper.m_Gameplay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -219,6 +252,9 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 @JoyEnterDoor.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnJoyEnterDoor;
                 @JoyEnterDoor.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnJoyEnterDoor;
                 @JoyEnterDoor.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnJoyEnterDoor;
+                @Interact.started -= m_Wrapper.m_GameplayActionsCallbackInterface.OnInteract;
+                @Interact.performed -= m_Wrapper.m_GameplayActionsCallbackInterface.OnInteract;
+                @Interact.canceled -= m_Wrapper.m_GameplayActionsCallbackInterface.OnInteract;
             }
             m_Wrapper.m_GameplayActionsCallbackInterface = instance;
             if (instance != null)
@@ -232,6 +268,9 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
                 @JoyEnterDoor.started += instance.OnJoyEnterDoor;
                 @JoyEnterDoor.performed += instance.OnJoyEnterDoor;
                 @JoyEnterDoor.canceled += instance.OnJoyEnterDoor;
+                @Interact.started += instance.OnInteract;
+                @Interact.performed += instance.OnInteract;
+                @Interact.canceled += instance.OnInteract;
             }
         }
     }
@@ -241,5 +280,6 @@ public class @PlayerInputActions : IInputActionCollection, IDisposable
         void OnMovment(InputAction.CallbackContext context);
         void OnEnterDoor(InputAction.CallbackContext context);
         void OnJoyEnterDoor(InputAction.CallbackContext context);
+        void OnInteract(InputAction.CallbackContext context);
     }
 }
