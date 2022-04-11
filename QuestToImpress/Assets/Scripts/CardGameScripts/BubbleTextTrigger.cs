@@ -6,7 +6,7 @@ public class BubbleTextTrigger : MonoBehaviour
 {
 
     public CardGameManager cardGameManager;
-
+ 
     public void ActivateBubbleText()
     {
         cardGameManager.StartDialogBoxText();

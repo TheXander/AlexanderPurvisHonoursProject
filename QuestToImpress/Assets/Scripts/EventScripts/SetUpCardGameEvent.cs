@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class SetUpCardGameEvent : MonoBehaviour
 {
     public RomeoData romeoData;
-   
+    public CardGameManager cardGameManager;
     // Scenes
     public GameObject cityScene;
     public GameObject graveyardScene;
@@ -18,7 +18,7 @@ public class SetUpCardGameEvent : MonoBehaviour
 
     // Level Loader
     public LevelLoader levelLoader;
-    LevelLoader.Levels returnDestination = LevelLoader.Levels.City;
+    LevelLoader.Levels returnDestination;
 
     // Character Portraits
     public Image PLakeFighter, PTavernFighter, PCityKnight,
@@ -75,7 +75,6 @@ public class SetUpCardGameEvent : MonoBehaviour
                 returnDestination = LevelLoader.Levels.Castle;
                 castleScene.SetActive(true);
                 break;
-
             default:
                 break;
         }
@@ -83,15 +82,11 @@ public class SetUpCardGameEvent : MonoBehaviour
 
     void SetUpOpponent()
     {
-        
-        //, , ,
-                      //  , , ;
-
         switch (romeoData.CurrentCardgame)
         {
             case RomeoData.CardgameEvents.LakeFighter:
                 PLakeFighter.gameObject.SetActive(true);
-                LakeFighter.SetActive(true);
+                LakeFighter.SetActive(true);              
                 break;
             case RomeoData.CardgameEvents.TavernFighter:
                 PTavernFighter.gameObject.SetActive(true);
@@ -116,7 +111,7 @@ public class SetUpCardGameEvent : MonoBehaviour
 
             default:
                 break;
-        }
-
+        }      
+        cardGameManager.LoadEnemyDeckCSVFile(romeoData.CurrentCardgame);
     }
 }

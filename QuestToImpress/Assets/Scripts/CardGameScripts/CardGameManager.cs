@@ -6,10 +6,17 @@ using TMPro;
 public class CardGameManager : MonoBehaviour
 {
     public OpponentResponseManager opponentResponseManager;
-
+    public enum GameOutcomes { Win, Lose, Draw};
+    GameOutcomes gameOutcome;
+    public TMP_Text gameResultText;
+    public RomeoData romeoData;
+    // Player deck
     public List<CardInfo> playingCards = new List<CardInfo>();
     public List<CardInfo> standeredPlayerDeck = new List<CardInfo>();
     public List<CardInfo> activePlayerDeck = new List<CardInfo>();
+
+    // Enemy Deck
+    public List<CardInfo> enemyDecklist = new List<CardInfo>();
 
     public List<GameObject> cardsInHand = new List<GameObject>();
     public List<GameObject> handSlots = new List<GameObject>();
@@ -28,27 +35,28 @@ public class CardGameManager : MonoBehaviour
     bool bubbleUp = false;
 
     int playerHonour = 30;
-    int enemyHonour = 20;
+    public int enemyHonour = 20;
 
     public Animator playerCostObject;
     public Animator playerDamageObject;
 
-    int pendingDamageToEnemy;
-    int pendingDamageToPlayer;
+    public int pendingDamageToEnemy;
+    public int pendingDamageToPlayer;
 
     public Animator enemyCostObject;
     public Animator enemyDamageObject;
 
     public List<GameObject> magnifiedCards = new List<GameObject>();
 
+    public bool gameOver = false;
 
     private void Start()
     {
-        LoadCSVFile();
+        LoadPlayerDeckCSVFile();
         SetUpPlayerDeck();
 
         playerHonourDisplay.text = playerHonour.ToString();
-        enemyHonourDisplay.text = enemyHonour.ToString();
+        enemyHonourDisplay.text = enemyHonour.ToString();       
     }
 
     private void Update()
@@ -88,10 +96,9 @@ public class CardGameManager : MonoBehaviour
     }
 
 
-
-    void LoadCSVFile()
+    void LoadPlayerDeckCSVFile()
     {
-        // clear list cards of cards
+        // clear list of previous cards
         playingCards.Clear();
 
         //Read from CSV file
@@ -213,10 +220,9 @@ public class CardGameManager : MonoBehaviour
         {
             playerDamageObject.SetTrigger("Activate");
         }
-
-        opponentResponseManager.enemyTurn = true;
+            opponentResponseManager.enemyTurn = true;      
     }
-
+   
     IEnumerator AddSentenceToDialogBox (string sentance)
     {     
         playerSpeachBubble.text = "";
@@ -224,14 +230,10 @@ public class CardGameManager : MonoBehaviour
         foreach(char letter in sentance)
         {
            playerSpeachBubble.text += letter;
-
-            if (letter == sentance[sentance.Length-1])
-            {
-                bubbleUp = true;
-            }
-
            yield return new WaitForSeconds(0.027f);
         }
+
+        bubbleUp = true;
     }
 
 
@@ -240,14 +242,31 @@ public class CardGameManager : MonoBehaviour
     {
         playerHonour -= pendingDamageToPlayer;
         pendingDamageToPlayer = 0;
-        playerHonourDisplay.text = playerHonour.ToString();
+        if (playerHonour <= 0)
+        {
+            playerHonourDisplay.text = "X";
+            gameOver = true;
+        }
+        else
+        {
+            playerHonourDisplay.text = playerHonour.ToString();
+        }     
     }
 
     public void AsignDamgeToEnemey()
     {
        enemyHonour -= pendingDamageToEnemy;
-        pendingDamageToEnemy = 0;
-        enemyHonourDisplay.text = enemyHonour.ToString();
+       pendingDamageToEnemy = 0;
+      
+        if (enemyHonour <= 0)
+        {
+            enemyHonourDisplay.text = "X";
+            gameOver = true;
+        }
+        else
+        {
+            enemyHonourDisplay.text = enemyHonour.ToString();          
+        }
     }
 
     // Hand sorting so that cards are in the correct place after a card is played
@@ -283,7 +302,7 @@ public class CardGameManager : MonoBehaviour
                     print("Error!");
                     break;
             }
-        }
+       }
     }
 
 
@@ -345,10 +364,126 @@ public class CardGameManager : MonoBehaviour
 
     public void ActivateHand()
     {
-        foreach (GameObject card in cardsInHand)
+        if (!gameOver)
         {
-            card.GetComponent<PlayingCardControls>().TurnOn();
-            card.GetComponent<OnMouseOverCards>().isDeactivated = false;
+            foreach (GameObject card in cardsInHand)
+            {
+                card.GetComponent<PlayingCardControls>().TurnOn();
+                card.GetComponent<OnMouseOverCards>().isDeactivated = false;
+            }
         }
+        else
+        {
+            EndCardGame();
+        }
+    }
+
+    public void EndCardGame()
+    {
+
+        if (playerHonour <= 0 && enemyHonour <= 0)
+        {
+            gameOutcome = GameOutcomes.Draw;
+        }
+        else if (enemyHonour <= 0)
+        {
+            gameOutcome = GameOutcomes.Win;
+        }
+        else if (playerHonour <= 0)
+        {
+            gameOutcome = GameOutcomes.Lose;
+        }
+        else
+        {
+            Debug.Log("Error");
+        }
+
+        switch (gameOutcome)
+        {
+            case GameOutcomes.Win:
+                gameResultText.text = "Romeo Wins!";
+                break;
+            case GameOutcomes.Lose:
+                gameResultText.text = "You Lose!";
+                break;
+            case GameOutcomes.Draw:
+                gameResultText.text = "Draw!";
+                break;
+            default:
+                break;
+        }
+    }
+
+
+    // enemy setUp
+    public void LoadEnemyDeckCSVFile(RomeoData.CardgameEvents Opponent)
+    {    
+        // clear list of previous cards
+        enemyDecklist.Clear();
+
+        switch (Opponent)
+        {
+            case RomeoData.CardgameEvents.LakeFighter:
+
+                List<Dictionary<string, object>> lakeFighterData = CSVReader.Read("LakeKnightDeckList");
+                for (var i = 0; i < lakeFighterData.Count; i++)
+                {
+                    string nameData = lakeFighterData[i]["Name"].ToString();
+                    int cost = int.Parse(lakeFighterData[i]["Cost"].ToString(), System.Globalization.NumberStyles.Integer);
+                    int damage = int.Parse(lakeFighterData[i]["Damage"].ToString(), System.Globalization.NumberStyles.Integer);
+                    string quote = lakeFighterData[i]["Quote"].ToString();
+                    string source = lakeFighterData[i]["Source"].ToString();
+
+                    CardInfo newCard = new CardInfo(nameData, cost, damage, quote, source);
+                    enemyDecklist.Add(newCard);
+                }
+                enemyHonour = 20;
+                break;
+            case RomeoData.CardgameEvents.TavernFighter:
+                List<Dictionary<string, object>> data = CSVReader.Read("TavernFighterDeckList");
+                for (var i = 0; i < data.Count; i++)
+                {
+                    string nameData = data[i]["Name"].ToString();
+                    int cost = int.Parse(data[i]["Cost"].ToString(), System.Globalization.NumberStyles.Integer);
+                    int damage = int.Parse(data[i]["Damage"].ToString(), System.Globalization.NumberStyles.Integer);
+                    string quote = data[i]["Quote"].ToString();
+                    string source = data[i]["Source"].ToString();
+
+                    CardInfo newCard = new CardInfo(nameData, cost, damage, quote, source);
+                    enemyDecklist.Add(newCard);
+                }
+                enemyHonour = 30;
+                break;
+            case RomeoData.CardgameEvents.CityKnight:
+                List<Dictionary<string, object>> cityKnightData = CSVReader.Read("CityKnightDeckList");
+                for (var i = 0; i < cityKnightData.Count; i++)
+                {
+                    string nameData = cityKnightData[i]["Name"].ToString();
+                    int cost = int.Parse(cityKnightData[i]["Cost"].ToString(), System.Globalization.NumberStyles.Integer);
+                    int damage = int.Parse(cityKnightData[i]["Damage"].ToString(), System.Globalization.NumberStyles.Integer);
+                    string quote = cityKnightData[i]["Quote"].ToString();
+                    string source = cityKnightData[i]["Source"].ToString();
+
+                    CardInfo newCard = new CardInfo(nameData, cost, damage, quote, source);
+                    enemyDecklist.Add(newCard);
+                }
+                enemyHonour = 25;       
+                break;
+            case RomeoData.CardgameEvents.TavernAxeMan:
+
+               
+                break;
+            case RomeoData.CardgameEvents.ForestGhoul:
+
+               
+                break;
+            case RomeoData.CardgameEvents.Tybalt:
+
+               
+                break;
+
+            default:
+                break;
+        }              
     }
 }

@@ -6,6 +6,7 @@ public class CardGameGateWay : MonoBehaviour
 {
     public PlayerMovement playerScript;
     LevelLoader.Levels destination = LevelLoader.Levels.CardGame;
+    public RomeoData.CardgameEvents CardgameOponent;
     public LevelLoader.Levels gatewayOrigin;
     public RomeoData romeoData;
     
@@ -17,6 +18,7 @@ public class CardGameGateWay : MonoBehaviour
             romeoData.previousLocation = gatewayOrigin;
             romeoData.currentLocation = destination;
             romeoData.currentEvent = RomeoData.Events.CardGame;
+            romeoData.CurrentCardgame = CardgameOponent;
             playerScript.locationSet = true;          
         }
     }
