@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d482e30ee1925ec45a369de51c90a2f0, type: 3}
+  m_Name: PlayerProgressAsset
+  m_EditorClassIdentifier: 
+  lakeCardGameComplete: 0
+  tavernFCardGameComplete: 0
+  cityCardGameComplete: 0
+  tavernAMCardGameComplete: 0
+  forestCardGameComplete: 0
+  tybaltCardGameComplete: 0
+  castleCombatCompelte: 0
+  forestKCombatCompelte: 0
+  gravyardCombatCompelte: 0
+  forestRHCombatCompelte: 0
+  churchCombatCompelte: 0
+  tybaltCombatCompelte: 0
+  castleDialogCompelte: 0
+  tavernDialogCompelte: 0
+  gravyardTDialogCompelte: 0
+  gravyardMDialogCompelte: 0
+  churchDialogCompelte: 0
+  tybaltDialogCompelte: 0
+  levelOneEventsComplete: 0
+  levelTwoEventsComplete: 0

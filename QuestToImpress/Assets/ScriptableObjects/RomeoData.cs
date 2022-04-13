@@ -20,8 +20,6 @@ public class RomeoData : ScriptableObject
     public enum CardgameEvents { None, LakeFighter, TavernFighter, CityKnight, TavernAxeMan, ForestGhoul, Tybalt};
     public enum CombatEvents { None, CastleKnight, ForestKnight, CultistPriest, RedHood, EvilSpirt, Tybalt};
 
-
-
     // Current Cardgame Event
     public CardgameEvents CurrentCardgame = CardgameEvents.None;
     // Current Combat Event

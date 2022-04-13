@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CardGameGateWay : MonoBehaviour
 {
-    public PlayerMovement playerScript;
+    public SceneBasedPlayerControls playerScript;
     LevelLoader.Levels destination = LevelLoader.Levels.CardGame;
     public RomeoData.CardgameEvents CardgameOponent;
     public LevelLoader.Levels gatewayOrigin;
@@ -27,6 +27,7 @@ public class CardGameGateWay : MonoBehaviour
     {
         if (collision.name == "Player")
         {
+            romeoData.CurrentCardgame = RomeoData.CardgameEvents.None;
             romeoData.currentEvent = RomeoData.Events.None;
             playerScript.locationSet = false;
         }

@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 784440588}
   - component: {fileID: 5276884639038668771}
   - component: {fileID: 5276884639038668780}
-  - component: {fileID: 5276884639038668770}
+  - component: {fileID: 9054598737529238441}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -153,7 +153,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.23855764, y: 1.2566981}
   m_EdgeRadius: 0
---- !u!114 &5276884639038668770
+--- !u!114 &9054598737529238441
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -162,16 +162,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 5276884639038668775}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ba4b2ea56bc25a4e96054525a0d4533, type: 3}
+  m_Script: {fileID: 11500000, guid: 4b6931325d60e7c41873a7f5b60cb40b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   levelLoader: {fileID: 0}
   newDestination: 2
   locationSet: 0
-  playerFacingRight: 1
+  playerFacingRight: 0
   m_MovementSmoothing: 0.3
   romeoData: {fileID: 0}
   trackingCam: {fileID: 0}
+  movmentLocked: 0
 --- !u!1 &9029692083610573770
 GameObject:
   m_ObjectHideFlags: 0

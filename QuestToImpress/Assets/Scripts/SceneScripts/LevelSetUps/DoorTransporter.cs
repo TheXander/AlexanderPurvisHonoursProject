@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DoorTransporter : MonoBehaviour
 {
-    public PlayerMovement playerScript;
+    public SceneBasedPlayerControls playerScript;
     public LevelLoader.Levels doorDestination;
     public LevelLoader.Levels gatewayOrigin;
     public RomeoData romeoData;

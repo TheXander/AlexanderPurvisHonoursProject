@@ -33,20 +33,26 @@ public class SetUpCardGameEvent : MonoBehaviour
         SetUpOpponent();
     }
 
-    private void Update()
+    //private void Update()
+    //{
+    //    if (Input.GetKeyDown("space"))
+    //    {
+    //        romeoData.previousLocation = LevelLoader.Levels.CardGame;
+    //        levelLoader.LoadLevel(returnDestination);
+    //    }
+    //}
+
+    public void ReturnPlayer()
     {
-        if (Input.GetKeyDown("space"))
-        {
-            romeoData.previousLocation = LevelLoader.Levels.CardGame;
-            levelLoader.LoadLevel(returnDestination);
-        }
+        romeoData.previousLocation = LevelLoader.Levels.CardGame;
+        levelLoader.LoadLevel(returnDestination);
     }
+
 
     void SetUpScene()
     {
         switch (romeoData.previousLocation)
-        {
-         
+        {       
             case LevelLoader.Levels.City:
                 returnDestination = LevelLoader.Levels.City;
                 cityScene.SetActive(true);
@@ -84,29 +90,35 @@ public class SetUpCardGameEvent : MonoBehaviour
     {
         switch (romeoData.CurrentCardgame)
         {
-            case RomeoData.CardgameEvents.LakeFighter:
+            case RomeoData.CardgameEvents.LakeFighter:                
                 PLakeFighter.gameObject.SetActive(true);
-                LakeFighter.SetActive(true);              
+                LakeFighter.SetActive(true);
+                cardGameManager.enemyAnimator = LakeFighter.GetComponent<Animator>();
                 break;
             case RomeoData.CardgameEvents.TavernFighter:
                 PTavernFighter.gameObject.SetActive(true);
                 TavernFighter.SetActive(true);
+                cardGameManager.enemyAnimator = TavernFighter.GetComponent<Animator>();
                 break;
             case RomeoData.CardgameEvents.CityKnight:
                 PCityKnight.gameObject.SetActive(true);
                 CityKnight.SetActive(true);
+                cardGameManager.enemyAnimator = CityKnight.GetComponent<Animator>();
                 break;
             case RomeoData.CardgameEvents.TavernAxeMan:
                 PTavernAxeMan.gameObject.SetActive(true);
                 TavernAxeMan.SetActive(true);
+                cardGameManager.enemyAnimator = TavernAxeMan.GetComponent<Animator>();
                 break;
             case RomeoData.CardgameEvents.ForestGhoul:
                 PForestGhoul.gameObject.SetActive(true);
                 ForestGhoul.SetActive(true);
+                cardGameManager.enemyAnimator = ForestGhoul.GetComponent<Animator>();
                 break;
             case RomeoData.CardgameEvents.Tybalt:
                 PTybalt.gameObject.SetActive(true);
                 Tybalt.SetActive(true);
+                cardGameManager.enemyAnimator = Tybalt.GetComponent<Animator>();
                 break;
 
             default:

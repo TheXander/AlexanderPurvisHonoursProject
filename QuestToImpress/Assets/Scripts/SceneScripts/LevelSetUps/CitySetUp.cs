@@ -24,9 +24,22 @@ public class CitySetUp : MonoBehaviour
     public Transform julietsSpawnPoint;
     public Transform julietsCamPos;
 
+    // main menu
+    public Transform mainMenuSpawnPoint;
+    public Transform mainMenuCamPos;
+
     public RomeoData romeoData;
     public GameObject player;
     public Camera playerCam;
+
+    // tutorial 
+    public GameObject levelOneBarriers;
+
+    // progress
+    public PlayerProgress playerProgress;
+
+    public GameObject l1CityCardGame;
+    public GameObject cityKnight;
 
     private void Awake()
     {
@@ -56,11 +69,24 @@ public class CitySetUp : MonoBehaviour
                 player.transform.position = julietsSpawnPoint.position;
                 playerCam.transform.position = julietsCamPos.position;
                 playerCam.GetComponent<CamPlayerTracking>().trackingActive = false;
-                player.GetComponent<PlayerMovement>().TurnPlayerLeft();
+                player.GetComponent<SceneBasedPlayerControls>().TurnPlayerLeft();
+                break;
+            case LevelLoader.Levels.MainMenu:
+                player.transform.position = mainMenuSpawnPoint.position;
+                playerCam.transform.position = mainMenuCamPos.position;
+                playerCam.GetComponent<CamPlayerTracking>().trackingActive = true;
+                levelOneBarriers.SetActive(true);
                 break;
             default:
                
                 break;
-        }  
+        }
+
+        // progress
+        if (playerProgress.cityCardGameComplete)
+        {
+            l1CityCardGame.SetActive(false);
+            cityKnight.SetActive(true);
+        }      
     }
 }

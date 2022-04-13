@@ -5,11 +5,15 @@ using TMPro;
 
 public class CardGameManager : MonoBehaviour
 {
+
     public OpponentResponseManager opponentResponseManager;
+    public SetUpCardGameEvent setUpEvent;
     public enum GameOutcomes { Win, Lose, Draw};
     GameOutcomes gameOutcome;
     public TMP_Text gameResultText;
     public RomeoData romeoData;
+    public PlayerProgress playerProgress;
+
     // Player deck
     public List<CardInfo> playingCards = new List<CardInfo>();
     public List<CardInfo> standeredPlayerDeck = new List<CardInfo>();
@@ -28,14 +32,17 @@ public class CardGameManager : MonoBehaviour
 
     public TMP_Text playerSpeachBubble;
     public Animator pSpeachBubbleAni;
-    string newsentance;
 
-    float cooldown = 3.2f;
+    public Animator enemyAnimator;
+    public Animator romeoAnimator;
+    string newsentance;
+    float bubbleCooldown = 3.2f;
+    float returnPlayerCooldown = 4.5f;
     float cooldownCounter = 0f;
     bool bubbleUp = false;
 
-    int playerHonour = 30;
-    public int enemyHonour = 20;
+    int playerHonour = 7;
+    int enemyHonour = 9;
 
     public Animator playerCostObject;
     public Animator playerDamageObject;
@@ -46,9 +53,14 @@ public class CardGameManager : MonoBehaviour
     public Animator enemyCostObject;
     public Animator enemyDamageObject;
 
-    public List<GameObject> magnifiedCards = new List<GameObject>();
+    public List<GameObject> magnifiedCards = new List<GameObject>();  
+    
+    // Deck managment
+    public bool cardAvalible = true;
+    public GameObject deckOutline;
 
     public bool gameOver = false;
+    bool gameResolved = false;
 
     private void Start()
     {
@@ -56,42 +68,59 @@ public class CardGameManager : MonoBehaviour
         SetUpPlayerDeck();
 
         playerHonourDisplay.text = playerHonour.ToString();
-        enemyHonourDisplay.text = enemyHonour.ToString();       
+        enemyHonourDisplay.text = enemyHonour.ToString();            
     }
 
     private void Update()
     {
+
         if (Input.GetMouseButtonDown(0))
         {
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
             if (Physics.Raycast(ray, out hit))
-            {             
+            {
                 if (hit.transform.tag == "PlayingCard")
                 {
                     if (!hit.transform.GetComponent<OnMouseOverCards>().isDeactivated)
                     {
                         PlayCard(hit.transform.gameObject);
-                    }                   
+                    }
                 }
             }
         }
-
+            
         if (bubbleUp)
         {
-            Coundown();
+            bubbleCoundown();
         }
+
+        if (gameResolved)
+        {
+            returnPlayerCountdown();
+        }       
     }
 
-    void Coundown()
+    void bubbleCoundown()
     {
         cooldownCounter += Time.deltaTime;
-        if (cooldownCounter >= cooldown)
+        if (cooldownCounter >= returnPlayerCooldown)
         {
             bubbleUp = false;
             pSpeachBubbleAni.SetTrigger("Deactivate");
             playerSpeachBubble.text = "";
             cooldownCounter = 0;
+        }
+    }
+
+    void returnPlayerCountdown()
+    {
+        cooldownCounter += Time.deltaTime;
+        if (cooldownCounter >= bubbleCooldown)
+        {       
+            gameResolved = false;
+            cooldownCounter = 0;
+            setUpEvent.ReturnPlayer();
         }
     }
 
@@ -137,13 +166,18 @@ public class CardGameManager : MonoBehaviour
 
     public void DrawCard()
     {
-        if (cardsInHand.Count <= 4)
+        if (cardAvalible)
         {
             GameObject CardInHand = Instantiate(cardPrefab);
 
             SetUpCardTransform(CardInHand);
-
             AddCardData(CardInHand);
+
+            if (cardsInHand.Count >= 5)
+            {
+                cardAvalible = false;
+                deckOutline.SetActive(false);    
+            }
         }     
     }
 
@@ -189,11 +223,14 @@ public class CardGameManager : MonoBehaviour
 
     public void PlayCard(GameObject cardToPlay)
     {
+        deckOutline.SetActive(false);
+        cardAvalible = false;
+
         newsentance = cardToPlay.GetComponent<PlayingCardControls>().quote;     
         pendingDamageToEnemy = cardToPlay.GetComponent<PlayingCardControls>().damage;
         pendingDamageToPlayer = cardToPlay.GetComponent<PlayingCardControls>().cost;
         
-        cooldown = (float)(0.06 * (float)newsentance.Length);
+        bubbleCooldown = (float)(0.06 * (float)newsentance.Length);
 
         pSpeachBubbleAni.SetTrigger("Activate");
         
@@ -245,6 +282,7 @@ public class CardGameManager : MonoBehaviour
         if (playerHonour <= 0)
         {
             playerHonourDisplay.text = "X";
+            romeoAnimator.SetTrigger("Defeated");
             gameOver = true;
         }
         else
@@ -261,6 +299,7 @@ public class CardGameManager : MonoBehaviour
         if (enemyHonour <= 0)
         {
             enemyHonourDisplay.text = "X";
+            enemyAnimator.SetTrigger("Defeated");
             gameOver = true;
         }
         else
@@ -366,6 +405,9 @@ public class CardGameManager : MonoBehaviour
     {
         if (!gameOver)
         {
+            deckOutline.SetActive(true);
+            cardAvalible = true;
+
             foreach (GameObject card in cardsInHand)
             {
                 card.GetComponent<PlayingCardControls>().TurnOn();
@@ -380,7 +422,6 @@ public class CardGameManager : MonoBehaviour
 
     public void EndCardGame()
     {
-
         if (playerHonour <= 0 && enemyHonour <= 0)
         {
             gameOutcome = GameOutcomes.Draw;
@@ -404,7 +445,7 @@ public class CardGameManager : MonoBehaviour
                 gameResultText.text = "Romeo Wins!";
                 break;
             case GameOutcomes.Lose:
-                gameResultText.text = "You Lose!";
+                gameResultText.text = "You Lost! Sad times";
                 break;
             case GameOutcomes.Draw:
                 gameResultText.text = "Draw!";
@@ -412,8 +453,45 @@ public class CardGameManager : MonoBehaviour
             default:
                 break;
         }
+
+        gameResolved = true;
+
+        MarkCombatAsComplete();
     }
 
+    void MarkCombatAsComplete()
+    {
+        switch (romeoData.CurrentCardgame)
+        {
+            case RomeoData.CardgameEvents.LakeFighter:
+                playerProgress.lakeCardGameComplete = true;
+                playerProgress.levelOneEventsComplete++;
+                break;
+            case RomeoData.CardgameEvents.TavernFighter:
+                playerProgress.tavernFCardGameComplete = true;
+                playerProgress.levelOneEventsComplete++;
+                break;
+            case RomeoData.CardgameEvents.CityKnight:
+                playerProgress.cityCardGameComplete = true;
+                playerProgress.levelOneEventsComplete++;
+                break;
+            case RomeoData.CardgameEvents.TavernAxeMan:
+                playerProgress.tavernAMCardGameComplete = true;
+                playerProgress.levelTwoEventsComplete++;
+                break;
+            case RomeoData.CardgameEvents.ForestGhoul:
+                playerProgress.forestCardGameComplete = true;
+                playerProgress.levelTwoEventsComplete++;
+                break;
+            case RomeoData.CardgameEvents.Tybalt:
+                playerProgress.tybaltCardGameComplete = true;
+                playerProgress.levelTwoEventsComplete++;
+                break;
+            default:
+                Debug.Log("Error no result");
+                break;
+        }
+    }
 
     // enemy setUp
     public void LoadEnemyDeckCSVFile(RomeoData.CardgameEvents Opponent)
@@ -437,7 +515,7 @@ public class CardGameManager : MonoBehaviour
                     CardInfo newCard = new CardInfo(nameData, cost, damage, quote, source);
                     enemyDecklist.Add(newCard);
                 }
-                enemyHonour = 20;
+                //enemyHonour = 20;
                 break;
             case RomeoData.CardgameEvents.TavernFighter:
                 List<Dictionary<string, object>> data = CSVReader.Read("TavernFighterDeckList");
@@ -452,7 +530,7 @@ public class CardGameManager : MonoBehaviour
                     CardInfo newCard = new CardInfo(nameData, cost, damage, quote, source);
                     enemyDecklist.Add(newCard);
                 }
-                enemyHonour = 30;
+                //enemyHonour = 30;
                 break;
             case RomeoData.CardgameEvents.CityKnight:
                 List<Dictionary<string, object>> cityKnightData = CSVReader.Read("CityKnightDeckList");
@@ -467,7 +545,7 @@ public class CardGameManager : MonoBehaviour
                     CardInfo newCard = new CardInfo(nameData, cost, damage, quote, source);
                     enemyDecklist.Add(newCard);
                 }
-                enemyHonour = 25;       
+               // enemyHonour = 25;       
                 break;
             case RomeoData.CardgameEvents.TavernAxeMan:
 

@@ -608,6 +608,22 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 9054598737529238441, guid: 71d9bbbe418f060408a9c3b642d8c5cf, type: 3}
+      propertyPath: levelLoader
+      value: 
+      objectReference: {fileID: 394299221}
+    - target: {fileID: 9054598737529238441, guid: 71d9bbbe418f060408a9c3b642d8c5cf, type: 3}
+      propertyPath: trackingCam
+      value: 
+      objectReference: {fileID: 431153518}
+    - target: {fileID: 9054598737529238441, guid: 71d9bbbe418f060408a9c3b642d8c5cf, type: 3}
+      propertyPath: romeoData
+      value: 
+      objectReference: {fileID: 11400000, guid: 477729ec08176074185993656ff20221, type: 2}
+    - target: {fileID: 9054598737529238441, guid: 71d9bbbe418f060408a9c3b642d8c5cf, type: 3}
+      propertyPath: playerFacingRight
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 71d9bbbe418f060408a9c3b642d8c5cf, type: 3}
 --- !u!1 &150755439

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class SceneBasedPlayerControls : MonoBehaviour
 {
     // for navagating the city  
     public LevelLoader levelLoader;
