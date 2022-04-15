@@ -1,0 +1,18 @@
+title: Start
+tags: 
+colorID: 0
+position: 860,368
+---
+<<DeactivatePlayerMovment (Player)>>
+<<DisplayRomeo (Player)>>
+Romeo:  1.
+<<HideRomeo (Player)>>
+
+<<DisplayMercutio (Player)>>
+Mercutio: 2?
+<<HideMercutio (Player)>>
+
+<<DisplayRomeo (Player)>>
+Romeo: 3. 
+<<HideRomeo (Player)>>
+===

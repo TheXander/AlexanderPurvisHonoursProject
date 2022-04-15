@@ -1,0 +1,57 @@
+title: Start
+tags: 
+colorID: 0
+position: 860,368
+---
+<<DeactivatePlayerMovment (Player)>>
+<<DisplayRomeo (Player)>>
+Romeo:  Good-morrow, cousin.
+<<HideRomeo (Player)>>
+
+<<DisplayMercutio (Player)>>
+Mercutio: Is the day so young?
+<<HideMercutio (Player)>>
+
+<<DisplayRomeo (Player)>>
+Romeo: But new struck nine. 
+<<HideRomeo (Player)>>
+
+<<DisplayMercutio (Player)>>
+Mercutio: Awww indeed! sad hours seem long.
+<<HideMercutio (Player)>>
+
+<<DisplayRomeo (Player)>>
+Romeo: What sadness lengthens my dear Mercutio 's hours?
+<<HideRomeo (Player)>>
+
+<<DisplayMercutio (Player)>>
+Mercutio: Not having that, which, having, makes them short.
+<<HideMercutio (Player)>>
+
+<<DisplayRomeo (Player)>>
+Romeo: In love?
+<<HideRomeo (Player)>>
+
+<<DisplayMercutio (Player)>>
+Mercutio: Out of her favour, where I am in love.
+<<HideMercutio (Player)>>
+
+<<DisplayRomeo (Player)>>
+Romeo: aww then this be about dear lady Rosaline. But why art thou mad?
+<<HideRomeo (Player)>>
+
+<<DisplayMercutio (Player)>>
+Mercutio: Not mad, but bound more than a mad-man is; Shut up in prison, kept without my food, Whipp'd and tormented and--God-den, good fellow.
+<<HideMercutio (Player)>>
+
+<<DisplayRomeo (Player)>>
+Romeo: Aww you long to see her. Well dear Mercutio. On this day be the ancient feast at the castle. There sups the fair Rosaline whom thou so lovest.
+Romeo: Might I suggest we join her there, whence you may make your loving declaration onto the unto she.
+<<HideRomeo (Player)>>
+
+
+<<DisplayMercutio (Player)>>
+Mercutio: O Romeo you surly jest, this party you speak, be awash with Capulets. Despite this your word set my heart ablaze. We will do all as you say, follow me to the castle and let us be away.
+<<HideMercutio (Player)>>
+<<MoveMercutioToLake (Player)>>
+===

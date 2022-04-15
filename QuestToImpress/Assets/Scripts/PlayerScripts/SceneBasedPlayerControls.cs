@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SceneBasedPlayerControls : MonoBehaviour
 {
@@ -126,12 +124,24 @@ public class SceneBasedPlayerControls : MonoBehaviour
                     }
                     break;
                 case RomeoData.Events.Dialog:
-                    print("New Dialog Started!");
+                    StartDialog();                   
                     break;
                 default:
                     break;
             }
         }
+    }
+
+    public void StartDialog()
+    {
+        print("Dialog Started!");
+        movmentLocked = true;
+    }
+
+    public void EndDialog()
+    {
+        print("Dialog Ended!");
+        movmentLocked = false;
     }
 
    
@@ -160,5 +170,19 @@ public class SceneBasedPlayerControls : MonoBehaviour
     private void OnDisable()
     {
         playerInputActions.Gameplay.Disable();
+    }
+
+    public void StopPlayer()
+    {      
+        spriteBody2D.velocity = new Vector3(0, 0, 0);
+        animator.SetFloat("playerSpeed", 0.0f);
+        movmentLocked = true;
+        animator.SetTrigger("SetAsIdle");
+    }
+
+    public void StartPlayer()
+    {
+       
+        movmentLocked = false;
     }
 }
