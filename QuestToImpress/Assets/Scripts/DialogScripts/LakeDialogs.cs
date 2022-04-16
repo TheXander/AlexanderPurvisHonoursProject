@@ -6,7 +6,7 @@ using Yarn.Unity;
 
 public class LakeDialogs : MonoBehaviour
 {
-    public GameObject romeoPortrait, mercutioPortrait;
+    public GameObject romeoPortrait, mercutioPortrait, lakeKnightPortrait;
     public SceneBasedPlayerControls playerControls;
     public Animator mercutioAnimator;
 
@@ -26,6 +26,11 @@ public class LakeDialogs : MonoBehaviour
             DisplayMercutio
             );
 
+        dialogueRunner.AddCommandHandler<GameObject>(
+           "DisplayLakeKnight",
+           DisplayLakeKnight
+           );
+
         //Hide portraits
         dialogueRunner.AddCommandHandler<GameObject>(
             "HideRomeo",
@@ -35,6 +40,11 @@ public class LakeDialogs : MonoBehaviour
         dialogueRunner.AddCommandHandler<GameObject>(
             "HideMercutio",
             HideMercutio
+            );
+
+        dialogueRunner.AddCommandHandler<GameObject>(
+            "HideLakeKnight",
+            HideLakeKnight
             );
 
         dialogueRunner.AddCommandHandler<GameObject>(
@@ -51,9 +61,14 @@ public class LakeDialogs : MonoBehaviour
           "MoveMercutioToLake",
           MoveMercutioToLake
           );
+
+        dialogueRunner.AddCommandHandler<GameObject>(
+         "SignalPlayerToStartEvent",
+         SignalPlayerToStartEvent
+         );      
     }
 
-
+    // Show Portraits
     void DisplayRomeo(GameObject Player)
     {
         romeoPortrait.SetActive(true);
@@ -64,6 +79,12 @@ public class LakeDialogs : MonoBehaviour
         mercutioPortrait.SetActive(true);
     }
 
+    void DisplayLakeKnight(GameObject Player)
+    {
+        lakeKnightPortrait.SetActive(true);
+    }
+
+    // Hide Portraits
     void HideRomeo(GameObject Player)
     {
         romeoPortrait.SetActive(false);
@@ -74,6 +95,12 @@ public class LakeDialogs : MonoBehaviour
         mercutioPortrait.SetActive(false);
     }
 
+    void HideLakeKnight(GameObject Player)
+    {
+        lakeKnightPortrait.SetActive(false);
+    }
+
+    //player control interactions
     void DeactivatePlayerMovment(GameObject Player)
     {
         playerControls.StopPlayer();
@@ -84,8 +111,15 @@ public class LakeDialogs : MonoBehaviour
         playerControls.StartPlayer();
     }
 
+    //animation triggers
     void MoveMercutioToLake(GameObject Player)
     {
         mercutioAnimator.SetTrigger("RunToLake");
     }
+    
+    // player interactions
+    void SignalPlayerToStartEvent(GameObject Player)
+    {
+        playerControls.eventConfirmed = true;
+    }    
 }

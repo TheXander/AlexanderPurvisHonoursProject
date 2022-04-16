@@ -15,11 +15,17 @@ public class SceneBasedPlayerControls : MonoBehaviour
     private Vector3 velocityZero = Vector3.zero;
     [Range(0, 1.0f)] [SerializeField] private float m_MovementSmoothing = 0.3f;	// How much to smooth out the movement
     Vector2 newDirectionInput;
-
-    
+   
     public RomeoData romeoData;
     public CamPlayerTracking trackingCam;
     public bool movmentLocked = false;
+
+    // dialog / event bools
+    public bool eventReady = false;
+    public bool confirmingEvent = false;
+    public bool eventConfirmed = false;
+    bool eventActivated = false;
+
 
     private void Awake()
     {
@@ -58,14 +64,39 @@ public class SceneBasedPlayerControls : MonoBehaviour
         {
             EnterDoor();
         }
+
+        if (eventConfirmed && !eventActivated)
+        {
+            switch (romeoData.currentEvent)
+            {
+                case RomeoData.Events.CardGame:
+                    if (locationSet)
+                    {
+                        romeoData.previousPlayerCoordinates = transform.position;
+                        levelLoader.LoadLevel(newDestination);
+                    }
+                    break;
+                case RomeoData.Events.Combat:
+                    if (locationSet)
+                    {
+                        romeoData.previousPlayerCoordinates = transform.position;
+                        levelLoader.LoadLevel(newDestination);
+                    }
+                    break;
+                case RomeoData.Events.Dialog:
+                    StartDialog();
+                    break;
+                default:
+                    break;
+            }
+            eventActivated = true;
+        }
     }
 
     private void MovePlayer()
     {
-  
        if (newDirectionInput.x != 0)
-       {
-         
+       {      
           float move;
           move = (newDirectionInput.x * Time.fixedDeltaTime) * movmentSpeed;
           // Move the character by finding the target velocity
@@ -107,28 +138,7 @@ public class SceneBasedPlayerControls : MonoBehaviour
     {
         if (!movmentLocked)
         {
-            switch (romeoData.currentEvent)
-            {
-                case RomeoData.Events.CardGame:
-                    if (locationSet)
-                    {
-                        romeoData.previousPlayerCoordinates = transform.position;
-                        levelLoader.LoadLevel(newDestination);
-                    }
-                    break;
-                case RomeoData.Events.Combat:
-                    if (locationSet)
-                    {
-                        romeoData.previousPlayerCoordinates = transform.position;
-                        levelLoader.LoadLevel(newDestination);
-                    }
-                    break;
-                case RomeoData.Events.Dialog:
-                    StartDialog();                   
-                    break;
-                default:
-                    break;
-            }
+            eventReady = true;
         }
     }
 

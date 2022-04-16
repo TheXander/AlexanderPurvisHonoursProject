@@ -8,7 +8,7 @@ public class StartButton : MonoBehaviour
     public Animator introAnimator;
 
     public void StartGame()
-    {
+    {      
         uiAnimator.SetTrigger("HideUI");
         introAnimator.SetTrigger("PlayIntro");
     }

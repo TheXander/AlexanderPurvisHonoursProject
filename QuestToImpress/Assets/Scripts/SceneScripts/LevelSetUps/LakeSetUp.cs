@@ -9,6 +9,7 @@ public class LakeSetUp : MonoBehaviour
     public Transform castleCamPos;
 
     public RomeoData romeoData;
+    public PlayerEventResults eventResults;
     public GameObject player;
     public Camera playerCam;
 
@@ -20,6 +21,8 @@ public class LakeSetUp : MonoBehaviour
 
     public GameObject cityBarrier, citySign, castleBarrier, castleSign;
 
+    public GameObject CardWinResultDialogue, CardLossResultDialogue, CardDrawResultDialogue;
+
     private void Awake()
     {
         if (romeoData.previousLocation == LevelLoader.Levels.Castle)
@@ -29,10 +32,28 @@ public class LakeSetUp : MonoBehaviour
             playerCam.GetComponent<CamPlayerTracking>().trackingActive = false;
             player.GetComponent<SceneBasedPlayerControls>().TurnPlayerLeft();
 
-            cityBarrier.SetActive(false); 
+            cityBarrier.SetActive(false);
             citySign.SetActive(true);
             castleBarrier.SetActive(true);
             castleSign.SetActive(false);
+        }
+        else if (romeoData.previousLocation == LevelLoader.Levels.CardGame)
+        {
+    
+            switch (eventResults.lakeCardGame)
+            {
+                case PlayerEventResults.EventResults.Win:
+                    CardWinResultDialogue.SetActive(true);
+                    break;
+                case PlayerEventResults.EventResults.Loss:
+                    CardLossResultDialogue.SetActive(true);
+                    break;
+                case PlayerEventResults.EventResults.Draw:
+                    CardDrawResultDialogue.SetActive(true);
+                    break;
+                default:
+                    break;
+            }
         }
 
         if (playerProgress.lakeCardGameComplete)

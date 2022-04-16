@@ -9,13 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa118590f57aff24ba4324045dbd05b8, type: 3}
-  m_Name: RomeoDataAsset
+  m_Script: {fileID: 11500000, guid: d6fb4bab87d0adb4a866f19099ce069c, type: 3}
+  m_Name: PlayerEventResults
   m_EditorClassIdentifier: 
-  previousLocation: 2
-  currentLocation: 6
-  currentEvent: 0
-  previousPlayerCoordinates: {x: 0.32858244, y: 0.40163004, z: -2}
-  CurrentCardgame: 0
-  CurrentCombat: 0
-  CurrentDialog: 0
+  lakeCardGame: 0
+  tavernFCardGame: 0
+  cityCardGame: 0
+  castleCombat: 0
+  forestKCombat: 0
+  gravyardCombat: 0

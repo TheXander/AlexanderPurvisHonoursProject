@@ -5,14 +5,15 @@ using TMPro;
 
 public class CardGameManager : MonoBehaviour
 {
-
     public OpponentResponseManager opponentResponseManager;
     public SetUpCardGameEvent setUpEvent;
     public enum GameOutcomes { Win, Lose, Draw};
     GameOutcomes gameOutcome;
     public TMP_Text gameResultText;
+
     public RomeoData romeoData;
     public PlayerProgress playerProgress;
+    public PlayerEventResults eventResults;
 
     // Player deck
     public List<CardInfo> playingCards = new List<CardInfo>();
@@ -439,6 +440,64 @@ public class CardGameManager : MonoBehaviour
             Debug.Log("Error");
         }
 
+
+
+        switch (romeoData.CurrentCardgame)
+        {
+            case RomeoData.CardgameEvents.LakeFighter:        
+                switch (gameOutcome)
+                {
+                    case GameOutcomes.Win:
+                        eventResults.lakeCardGame = PlayerEventResults.EventResults.Win;
+                        break;
+                    case GameOutcomes.Lose:
+                        eventResults.lakeCardGame = PlayerEventResults.EventResults.Loss;
+                        break;
+                    case GameOutcomes.Draw:
+                        eventResults.lakeCardGame = PlayerEventResults.EventResults.Draw;
+                        break;
+                    default:
+                        break;
+                }
+                break;
+
+            case RomeoData.CardgameEvents.TavernFighter:
+                switch (gameOutcome)
+                {
+                    case GameOutcomes.Win:
+                        eventResults.tavernFCardGame = PlayerEventResults.EventResults.Win;
+                        break;
+                    case GameOutcomes.Lose:
+                        eventResults.tavernFCardGame = PlayerEventResults.EventResults.Loss;
+                        break;
+                    case GameOutcomes.Draw:
+                        eventResults.tavernFCardGame = PlayerEventResults.EventResults.Draw;
+                        break;
+                    default:
+                        break;
+                }
+                break;
+
+            case RomeoData.CardgameEvents.CityKnight:
+                switch (gameOutcome)
+                {
+                    case GameOutcomes.Win:
+                        eventResults.castleCombat = PlayerEventResults.EventResults.Win;
+                        break;
+                    case GameOutcomes.Lose:
+                        eventResults.castleCombat = PlayerEventResults.EventResults.Loss;
+                        break;
+                    case GameOutcomes.Draw:
+                        eventResults.castleCombat = PlayerEventResults.EventResults.Draw;
+                        break;
+                    default:
+                        break;
+                }
+                break;
+            default:
+                break;
+        }
+        
         switch (gameOutcome)
         {
             case GameOutcomes.Win:
@@ -459,6 +518,7 @@ public class CardGameManager : MonoBehaviour
         MarkCombatAsComplete();
     }
 
+  
     void MarkCombatAsComplete()
     {
         switch (romeoData.CurrentCardgame)

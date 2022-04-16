@@ -29139,6 +29139,7 @@ MonoBehaviour:
   gameResultText: {fileID: 705612006}
   romeoData: {fileID: 11400000, guid: 477729ec08176074185993656ff20221, type: 2}
   playerProgress: {fileID: 11400000, guid: 667827b00ea143842982ca497119aca7, type: 2}
+  eventResults: {fileID: 11400000, guid: 197b4fbfaeac198488351c0ec2713596, type: 2}
   playingCards: []
   standeredPlayerDeck: []
   activePlayerDeck: []

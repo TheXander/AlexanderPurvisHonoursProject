@@ -4,15 +4,77 @@ colorID: 0
 position: 860,368
 ---
 <<DeactivatePlayerMovment (Player)>>
-<<DisplayRomeo (Player)>>
-Romeo:  1.
-<<HideRomeo (Player)>>
 
 <<DisplayMercutio (Player)>>
-Mercutio: 2?
+Mercutio: Be warned fair Romeo, This foul Capulet seeks to dishonor you and our house with his venomous tongue!
 <<HideMercutio (Player)>>
 
+<<DisplayLakeKnight (Player)>>
+Capulet Noble: Two dogs of the house of Montague moves me.
+<<HideLakeKnight (Player)>>
+
+<<DisplayMercutio (Player)>>
+Mercutio: To move is to stir; and to be valiant is to stand, therefore, if thou art moved, thou runn'st away?
+<<HideMercutio (Player)>>
+
+<<DisplayLakeKnight (Player)>>
+Capulet Noble: Dogs of your house shall move me to stand: I will take the on of any man or maid of Montague's.
+<<HideLakeKnight (Player)>>
+
 <<DisplayRomeo (Player)>>
-Romeo: 3. 
+Romeo: Aside dear Mercutio, I will easly out wit this scoundrels devious tongue!
 <<HideRomeo (Player)>>
+<<ReactivatePlayerMovment (Player)>>
+===
+
+title: LakeKnightGreeting
+tags: 
+colorID: 0
+position: 860,368
+---
+<<DeactivatePlayerMovment (Player)>>
+<<DisplayLakeKnight (Player)>>
+Capulet Noble: Romeo, you are no match for my wit, I will make short work of you!
+<<HideLakeKnight (Player)>>
+<<SignalPlayerToStartEvent (Player)>>
+<<ReactivatePlayerMovment (Player)>>
+===
+
+title: LakeKnightWinResolution
+tags: 
+colorID: 0
+position: 860,368
+---
+<<DeactivatePlayerMovment (Player)>>
+<<DisplayLakeKnight (Player)>>
+Capulet Noble: Win!
+<<HideLakeKnight (Player)>>
+<<SignalPlayerToStartEvent (Player)>>
+<<ReactivatePlayerMovment (Player)>>
+===
+
+title: LakeKnightLoseResolution
+tags: 
+colorID: 0
+position: 860,368
+---
+<<DeactivatePlayerMovment (Player)>>
+<<DisplayLakeKnight (Player)>>
+Capulet Noble: Lose!
+<<HideLakeKnight (Player)>>
+<<SignalPlayerToStartEvent (Player)>>
+<<ReactivatePlayerMovment (Player)>>
+===
+
+title: LakeKnightDrawResolution
+tags: 
+colorID: 0
+position: 860,368
+---
+<<DeactivatePlayerMovment (Player)>>
+<<DisplayLakeKnight (Player)>>
+Capulet Noble: Draw!
+<<HideLakeKnight (Player)>>
+<<SignalPlayerToStartEvent (Player)>>
+<<ReactivatePlayerMovment (Player)>>
 ===
