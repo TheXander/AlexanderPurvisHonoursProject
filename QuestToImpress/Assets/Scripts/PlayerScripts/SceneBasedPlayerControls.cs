@@ -54,8 +54,7 @@ public class SceneBasedPlayerControls : MonoBehaviour
         if (!movmentLocked)
         {
             MovePlayer();
-        }
-       
+        }     
     }
 
     private void Update()
@@ -64,11 +63,11 @@ public class SceneBasedPlayerControls : MonoBehaviour
         {
             EnterDoor();
         }
-
+      
         if (eventConfirmed && !eventActivated)
-        {
+        {          
             switch (romeoData.currentEvent)
-            {
+            {                
                 case RomeoData.Events.CardGame:
                     if (locationSet)
                     {
@@ -76,9 +75,9 @@ public class SceneBasedPlayerControls : MonoBehaviour
                         levelLoader.LoadLevel(newDestination);
                     }
                     break;
-                case RomeoData.Events.Combat:
+                case RomeoData.Events.Combat:                 
                     if (locationSet)
-                    {
+                    {       
                         romeoData.previousPlayerCoordinates = transform.position;
                         levelLoader.LoadLevel(newDestination);
                     }

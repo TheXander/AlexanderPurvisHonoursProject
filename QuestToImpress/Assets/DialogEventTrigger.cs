@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Yarn.Unity;
 
-public class LakeKnightTrigger : MonoBehaviour
+public class DialogEventTrigger : MonoBehaviour
 {
     public SceneBasedPlayerControls playerControls;
     public DialogueRunner dialogueRunner;
@@ -15,8 +15,8 @@ public class LakeKnightTrigger : MonoBehaviour
     {
         if (playerControls.eventReady && triggered && !playerControls.confirmingEvent)
         {
-            StartConversation();
             playerControls.confirmingEvent = true;
+            StartConversation();
         }
     }
 
@@ -25,13 +25,14 @@ public class LakeKnightTrigger : MonoBehaviour
     {
         if (!triggered)
         {
-            triggered = true;        
+            triggered = true;
+            playerControls.confirmingEvent = false;
         }
     }
 
     private void OnTriggerExit2D(Collider2D collision)
     {
-        triggered = false;
+        triggered = false;     
     }
 
 

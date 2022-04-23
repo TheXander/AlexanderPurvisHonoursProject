@@ -9,6 +9,8 @@ public class LakeDialogs : MonoBehaviour
     public GameObject romeoPortrait, mercutioPortrait, lakeKnightPortrait;
     public SceneBasedPlayerControls playerControls;
     public Animator mercutioAnimator;
+    public Animator lakeKnightAnimator;
+    public Animator postCastleMercutioAnimator;
 
     // Dialogue Runner ivariable for yarn spinner control.
     public DialogueRunner dialogueRunner;
@@ -58,10 +60,21 @@ public class LakeDialogs : MonoBehaviour
           );
 
         dialogueRunner.AddCommandHandler<GameObject>(
-          "MoveMercutioToLake",
-          MoveMercutioToLake
+          "MoveMercutioToCastle",
+          MoveMercutioToCastle
           );
 
+        dialogueRunner.AddCommandHandler<GameObject>(
+        "MoveMercutioToCity",
+        MoveMercutioToCity
+        );
+        
+        dialogueRunner.AddCommandHandler<GameObject>(
+         "MoveLakeKnightToCastle",
+          MoveLakeKnightToCastle
+          );
+
+        
         dialogueRunner.AddCommandHandler<GameObject>(
          "SignalPlayerToStartEvent",
          SignalPlayerToStartEvent
@@ -112,10 +125,19 @@ public class LakeDialogs : MonoBehaviour
     }
 
     //animation triggers
-    void MoveMercutioToLake(GameObject Player)
+    void MoveMercutioToCastle(GameObject Player)
     {
-        mercutioAnimator.SetTrigger("RunToLake");
+        mercutioAnimator.SetTrigger("RunToCastle");
     }
+    void MoveMercutioToCity(GameObject Player)
+    {
+        postCastleMercutioAnimator.SetTrigger("RunToCity");
+    }
+    void MoveLakeKnightToCastle(GameObject Player)
+    {
+        lakeKnightAnimator.SetTrigger("RunToCastle");
+    }
+
     
     // player interactions
     void SignalPlayerToStartEvent(GameObject Player)

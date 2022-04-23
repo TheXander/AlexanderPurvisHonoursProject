@@ -29,17 +29,22 @@ public class CitySetUp : MonoBehaviour
     public Transform mainMenuCamPos;
 
     public RomeoData romeoData;
+    public PlayerEventResults eventResults;
     public GameObject player;
     public Camera playerCam;
 
     // tutorial 
     public GameObject levelOneBarriers;
+    public GameObject JulietBarriers;
 
     // progress
     public PlayerProgress playerProgress;
 
     public GameObject l1CityCardGame;
     public GameObject cityKnight;
+
+    public GameObject townNPCs;
+    public GameObject cardWinResultDialogue, cardLossResultDialogue, cardDrawResultDialogue;
 
     private void Awake()
     {
@@ -76,17 +81,41 @@ public class CitySetUp : MonoBehaviour
                 playerCam.transform.position = mainMenuCamPos.position;
                 playerCam.GetComponent<CamPlayerTracking>().trackingActive = true;
                 levelOneBarriers.SetActive(true);
+                JulietBarriers.SetActive(false);
+                townNPCs.SetActive(false);
                 break;
             default:
                
                 break;
         }
 
+
+        // card game result Dialoge
+        if (romeoData.previousLocation == LevelLoader.Levels.CardGame)
+        {
+            cityKnight.SetActive(true);
+
+            switch (eventResults.cityCardGame)
+            {
+                case PlayerEventResults.EventResults.Win:
+                    cardWinResultDialogue.SetActive(true);
+                    break;
+                case PlayerEventResults.EventResults.Loss:
+                    cardLossResultDialogue.SetActive(true);
+                    break;
+                case PlayerEventResults.EventResults.Draw:
+                    cardDrawResultDialogue.SetActive(true);
+                    break;
+                default:
+                    break;
+            }           
+        }
+
+
         // progress
         if (playerProgress.cityCardGameComplete)
         {
-            l1CityCardGame.SetActive(false);
-            cityKnight.SetActive(true);
+            l1CityCardGame.SetActive(false);        
         }      
     }
 }

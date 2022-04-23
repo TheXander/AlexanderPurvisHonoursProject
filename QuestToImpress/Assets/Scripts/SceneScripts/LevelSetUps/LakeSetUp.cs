@@ -18,6 +18,8 @@ public class LakeSetUp : MonoBehaviour
 
     public GameObject l1LakeCardGame;
     public GameObject lakeFighter;
+    public GameObject Mercutio;
+    public GameObject postCastleMercutio;
 
     public GameObject cityBarrier, citySign, castleBarrier, castleSign;
 
@@ -36,6 +38,12 @@ public class LakeSetUp : MonoBehaviour
             citySign.SetActive(true);
             castleBarrier.SetActive(true);
             castleSign.SetActive(false);
+           
+
+            l1LakeCardGame.SetActive(false);
+            lakeFighter.SetActive(false);
+            Mercutio.SetActive(false);
+            postCastleMercutio.SetActive(true);
         }
         else if (romeoData.previousLocation == LevelLoader.Levels.CardGame)
         {
@@ -52,11 +60,12 @@ public class LakeSetUp : MonoBehaviour
                     CardDrawResultDialogue.SetActive(true);
                     break;
                 default:
-                    break;
+                    break;               
             }
+            l1LakeCardGame.SetActive(false);
         }
 
-        if (playerProgress.lakeCardGameComplete)
+        if (playerProgress.lakeCardGameComplete && romeoData.previousLocation == LevelLoader.Levels.City)
         {
             l1LakeCardGame.SetActive(false);
             lakeFighter.SetActive(true);

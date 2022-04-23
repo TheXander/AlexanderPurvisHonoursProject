@@ -55,3 +55,52 @@ Mercutio: O Romeo you surly jest, this party you speak, be awash with Capulets. 
 <<HideMercutio (Player)>>
 <<MoveMercutioToLake (Player)>>
 ===
+
+
+title: TownKnightStart
+tags: 
+colorID: 0
+position: 860,368
+---
+<<DeactivatePlayerMovment (Player)>>
+<<DisplayCardGameKnight (Player)>>
+Capulet Knight: Intro
+<<HideCardGameKnight (Player)>>
+<<SignalPlayerToStartEvent (Player)>>
+===
+
+title: TownKnightWin
+tags: 
+colorID: 0
+position: 860,368
+---
+<<DeactivatePlayerMovment (Player)>>
+<<DisplayCardGameKnight (Player)>>
+Capulet Knight: Win
+<<HideCardGameKnight (Player)>>
+<<ReactivatePlayerMovment (Player)>>
+===
+
+title: TownKnightLoss
+tags: 
+colorID: 0
+position: 860,368
+---
+<<DeactivatePlayerMovment (Player)>>
+<<DisplayCardGameKnight (Player)>>
+Capulet Knight: Loss
+<<HideCardGameKnight (Player)>>
+<<ReactivatePlayerMovment (Player)>>
+===
+
+title: TownKnightDraw
+tags: 
+colorID: 0
+position: 860,368
+---
+<<DeactivatePlayerMovment (Player)>>
+<<DisplayCardGameKnight (Player)>>
+Capulet Knight: Draw
+<<HideCardGameKnight (Player)>>
+<<ReactivatePlayerMovment (Player)>>
+===

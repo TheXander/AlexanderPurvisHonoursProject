@@ -47,9 +47,19 @@ position: 860,368
 ---
 <<DeactivatePlayerMovment (Player)>>
 <<DisplayLakeKnight (Player)>>
-Capulet Noble: Win!
+Capulet Noble: Curse you Romeo, Alright I yeld, I yeld!
 <<HideLakeKnight (Player)>>
-<<SignalPlayerToStartEvent (Player)>>
+<<MoveLakeKnightToCastle (Player)>>
+
+<<DisplayMercutio (Player)>>
+Mercutio: Congratulations Romeo, there may be hope for you yet.
+<<HideMercutio (Player)>>
+
+<<DisplayRomeo (Player)>>
+Romeo: Come come now Mercutio. 'twas. Now let us away. On to the castle;
+<<HideRomeo (Player)>>
+
+<<MoveMercutioToCastle (Player)>>
 <<ReactivatePlayerMovment (Player)>>
 ===
 
@@ -60,11 +70,22 @@ position: 860,368
 ---
 <<DeactivatePlayerMovment (Player)>>
 <<DisplayLakeKnight (Player)>>
-Capulet Noble: Lose!
+Capulet Noble: Thats right you Montague dog. There is no place for you and your kind here.
 <<HideLakeKnight (Player)>>
-<<SignalPlayerToStartEvent (Player)>>
+<<MoveLakeKnightToCastle (Player)>>
+
+<<DisplayMercutio (Player)>>
+Mercutio: Ow Romeo, you surly do have a lot to learn. Maybe we should head back to town?
+<<HideMercutio (Player)>>
+
+<<DisplayRomeo (Player)>>
+Romeo: It's quite alright cousin, we came here for a purpose. Let us on to the castle;
+<<HideRomeo (Player)>>
+
+<<MoveMercutioToCastle (Player)>>
 <<ReactivatePlayerMovment (Player)>>
 ===
+
 
 title: LakeKnightDrawResolution
 tags: 
@@ -73,8 +94,75 @@ position: 860,368
 ---
 <<DeactivatePlayerMovment (Player)>>
 <<DisplayLakeKnight (Player)>>
-Capulet Noble: Draw!
+Capulet Noble: Grrr away with you Romeo, you and your kin dont belong here.
 <<HideLakeKnight (Player)>>
-<<SignalPlayerToStartEvent (Player)>>
+<<MoveLakeKnightToCastle (Player)>>
+
+<<DisplayMercutio (Player)>>
+Mercutio: Ow Romeo, you surly do have a lot to learn. But a you made a brave stand none the less.
+<<HideMercutio (Player)>>
+
+<<DisplayRomeo (Player)>>
+Romeo: It seems I do cousin, Let it not spoil the day, let us on to the castle;
+<<HideRomeo (Player)>>
+
+<<MoveMercutioToCastle (Player)>>
+<<ReactivatePlayerMovment (Player)>>
+===
+
+title: WhatNext
+tags: 
+colorID: 0
+position: 860,368s
+---
+<<DeactivatePlayerMovment (Player)>>
+<<DisplayMercutio (Player)>>
+Mercutio: That was most unexpected, One would have thought the King would have seen that damn Capulet did instigate your duel?
+<<HideMercutio (Player)>>
+
+<<DisplayRomeo (Player)>>
+Romeo: And all in front of fair Juliet, What will she make of me for quarreling with her kin?;
+<<HideRomeo (Player)>>
+
+<<DisplayMercutio (Player)>>
+Mercutio: Most likly still, that which all Capulets think of us Montagues. I did tell tho not to speak unto her.
+<<HideMercutio (Player)>>
+
+<<DisplayRomeo (Player)>>
+Romeo: I know I can not convince ye Mercutio, but I knowest she be no Capulet at heart;
+Romeo: If I might only speak to her again I know that what bond there is between us might flourish;
+<<HideRomeo (Player)>>
+
+<<DisplayMercutio (Player)>>
+Mercutio: O dear Romeo I hear not sense in your words but the song of one in love.
+Mercutio: You are in grave trouble, but let it not be said that Mercutio dose not help his kin when in need.
+Mercutio: For she be of Capulet and you Montague the familys would never allow you to see her.
+Mercutio: Fortunate for you fair verona is not such a large city with many that do tell of tales.
+Mercutio: If tho seek out great deeds and show great chivalry, one would asume it will reach the ear of Juliet.
+<<HideMercutio (Player)>>
+
+<<DisplayRomeo (Player)>>
+Romeo: Mercutio surly you are the wisest person I know. And dose tho think that dear Juliet will contact me if she hears of my deeds;
+<<HideRomeo (Player)>>
+
+<<DisplayMercutio (Player)>>
+Mercutio: I surely do cousin. I have added some places of intrest to your map. 
+Mercutio: You may want to engage the people in discusions and listen to their stories. 
+Mercutio: Or by standing up to those who would insult our house should indeed show off your wit. 
+Mercutio: And challanging evil-doers to a duel will show of your strength and resolve.  
+Mercutio: Complete 3 deeds and I will come to thee with news.
+Mercutio: But do remember that the King has bid thee and all Montagues not to duel with the Capulets. 
+Mercutio: An exchange of words or insult them if you will. But do refraim from dueling them. 
+<<HideMercutio (Player)>>
+
+<<DisplayRomeo (Player)>>
+Romeo: Aww but the Capulets are bound as well as I, In penalty alike. It will not be hard, I think to keep the peace.
+<<HideRomeo (Player)>>
+
+<<DisplayMercutio (Player)>>
+Mercutio: Good luck and far thee well Romeo.
+<<HideMercutio (Player)>>
+
+<<MoveMercutioToCity (Player)>>
 <<ReactivatePlayerMovment (Player)>>
 ===

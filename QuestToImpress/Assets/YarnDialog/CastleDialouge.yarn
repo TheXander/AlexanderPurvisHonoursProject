@@ -1,0 +1,311 @@
+﻿title: Start
+tags: 
+colorID: 0
+position: 860,368
+---
+<<DeactivatePlayerMovment (Player)>>
+
+<<DisplayMercutio (Player)>>
+Mercutio: Aww we made it. Thank you for this chance to speak to my Rosaline.
+<<HideMercutio (Player)>>
+
+<<DisplayRomeo (Player)>>
+Romeo: Yes yes Mercutio but tell me please. Who be this fair maid over there?
+<<HideRomeo (Player)>>
+
+<<DisplayMercutio (Player)>>
+Mercutio: Juliet? But dont tho know she be a Capulet! Speak not with her I beg you please.
+<<HideMercutio (Player)>>
+
+<<DisplayRomeo (Player)>>
+Romeo: Somthing tells me I must, for why or what reason I do not know but I must.
+<<HideRomeo (Player)>>
+
+<<DisplayMercutio (Player)>>
+Mercutio: I will not stop tho Romeo but know that I have given the fair warning.
+<<HideMercutio (Player)>>
+
+<<ReactivatePlayerMovment (Player)>>
+===
+
+
+title: JulietAtCastleStart
+tags: 
+colorID: 0
+position: 860,368
+---
+<<DeactivatePlayerMovment (Player)>>
+<<SwitchJuliets (Player)>>
+-> Introduce yourself?
+    <<jump JulietAtCastleIntroDuction>>
+
+-> Flirt with Juliet?
+    <<jump JulietAtCastleFlirt>>
+===
+
+title: JulietAtCastleFlirt
+tags: 
+colorID: 0
+position: 860,368
+---
+<<DisplayRomeo (Player)>>
+ROMEO: If I profane with my unworthiest hand.
+ROMEO: This holy shrine, the gentle fine is this.
+ROMEO: My lips, two blushing pilgrims, ready stand. To smooth that rough touch with a tender kiss.
+<<HideRomeo (Player)>>
+
+<<DisplayJuliet (Player)>>
+JULIET: Good pilgrim, you do wrong your hand too much,
+JULIET: Which mannerly devotion shows in this;
+JULIET: For saints have hands that pilgrims' hands do touch,
+JULIET: And palm to palm is holy palmers' kiss.
+<<HideJuliet (Player)>>
+
+<<DisplayRomeo (Player)>>
+ROMEO: Have not saints lips, and holy palmers too?
+<<HideRomeo (Player)>>
+
+<<DisplayJuliet (Player)>>
+JULIET: Ay, pilgrim, lips that they must use in prayer.
+<<HideJuliet (Player)>>
+
+<<DisplayRomeo (Player)>>
+ROMEO: O, then, dear saint, let lips do what hands do.
+ROMEO: They pray, grant thou, lest faith turn to despair.
+<<HideRomeo (Player)>>
+
+<<DisplayJuliet (Player)>>
+JULIET: Saints do not move, though grant for prayers' sake.
+<<HideJuliet (Player)>>
+
+-> Declare honourable Intentions?
+    <<jump JulietAtCastleIntentions>>
+
+-> Ask Juliet if you may kiss her?
+    <<jump JulietAtCastleKiss>>
+===
+
+title: JulietAtCastleKiss
+tags: 
+colorID: 0
+position: 860,368
+---
+
+<<DisplayRomeo (Player)>>
+ROMEO: Then move not, while my prayer's effect I take.
+ROMEO: Thus from my lips, by yours, my sin is purged.
+<<HideRomeo (Player)>>
+
+<<DisplayJuliet (Player)>>
+JULIET: Then have my lips the sin that they have took.
+<<HideJuliet (Player)>>
+
+<<DisplayRomeo (Player)>>
+ROMEO: Sin from thy lips? O trespass sweetly urged!
+ROMEO: Give me my sin again......
+<<HideRomeo (Player)>>
+
+<<DisplayJuliet (Player)>>
+JULIET: You kiss by the book.
+<<HideJuliet (Player)>>
+<<SignalPlayerEventOver (Player)>>
+<<ActivateCastleKnight (Player)>>
+===
+
+title: JulietAtCastleIntentions
+tags: 
+colorID: 0
+position: 860,368
+---
+
+<<DisplayRomeo (Player)>>
+ROMEO: Pray then if thee dost feel this too, I do pronounce a love for thee faithfully.
+ROMEO: Juliet, by yonder blessed moon I swear That tips with silver all these fruit-tree tops--
+<<HideRomeo (Player)>>
+
+<<DisplayJuliet (Player)>>
+JULIET: O, swear not by the moon, the inconstant moon,
+JULIET: That monthly changes in her circled orb,
+JULIET:Lest that thy love prove likewise variable.
+<<HideJuliet (Player)>>
+
+<<DisplayRomeo (Player)>>
+ROMEO: What shall I swear by?
+<<HideRomeo (Player)>>
+
+<<DisplayJuliet (Player)>>
+JULIET: Do not swear at all. Or, if thou wilt, swear by thy gracious self, And I'll believe thee.
+<<HideJuliet (Player)>>
+
+<<DisplayRomeo (Player)>>
+ROMEO: If my heart's dear love--
+<<HideRomeo (Player)>>
+<<SignalPlayerEventOver (Player)>>
+<<ActivateCastleKnight (Player)>>
+===
+
+title: JulietAtCastleIntroDuction
+tags: 
+colorID: 0
+position: 860,368
+---
+
+<<DisplayRomeo (Player)>>
+ROMEO: My lady fair may I bid thee well at this magnificent feast. I be Romeo Montague. 
+<<HideRomeo (Player)>>
+
+<<DisplayJuliet (Player)>>
+JULIET: 'Tis but thy name that is my enemy!
+<<HideJuliet (Player)>>
+
+<<DisplayRomeo (Player)>>
+ROMEO: What's in a name? that which we call a rose. By any other name would smell as sweet.
+<<HideRomeo (Player)>>
+
+<<DisplayJuliet (Player)>>
+JULIET: What man art thou that thus deny thy father and refuse thy name by speaking with an enemy of thy house? 
+<<HideJuliet (Player)>>
+
+-> Show no fear of retribution?
+    <<jump JulietAtCastleNofear>>
+
+-> Curse your name?
+    <<jump JulietAtCastleCurse>>
+===
+
+title: JulietAtCastleNofear
+tags: 
+colorID: 0
+position: 860,368
+---
+
+<<DisplayRomeo (Player)>>
+ROMEO: Alack, there lies more peril in thine eye.
+ROMEO: Than twenty of their swords: look thou but sweet, And I am proof against their hate of your family.
+<<HideRomeo (Player)>>
+
+<<DisplayJuliet (Player)>>
+JULIET:By whose direction then dose thou seek me out?
+<<HideJuliet (Player)>>
+
+<<DisplayRomeo (Player)>>
+ROMEO: By love, who first did prompt me to inquire;
+ROMEO: Love lent me counsel and lent me eyes.
+ROMEO: Seeing you over her
+ROMEO: Well as  vast shore did wash with the farthest sea, I be not Capitan but I would certainly adventure for to be closer to one such as thee.
+<<HideRomeo (Player)>>
+
+<<DisplayJuliet (Player)>>
+JULIET: You claim your Love is as boundless as the sea, your honour runs as deep.
+JULIET: The doubt I have, for both is infinite.
+<<HideJuliet (Player)>>
+
+<<jump JulietAtCastleIntentions>>
+===
+
+title: JulietAtCastleCurse
+tags: 
+colorID: 0
+position: 860,368
+---
+
+<<DisplayRomeo (Player)>>
+ROMEO: My name, dear saint, is hateful to myself,
+ROMEO: Because it is an enemy to thee.
+ROMEO: Had I it written, I would tear the word.
+ROMEO: For what's Montague? it is nor hand, nor foot,
+ROMEO: Nor arm, nor face, nor any other part belonging to a man. 
+<<HideRomeo (Player)>>
+
+<<DisplayJuliet (Player)>>
+JULIET: But then what possible reason dose thou have to speak with myself and put thee at risk. My kins men will surly slay thee if thou art caught speaking with me.
+<<HideJuliet (Player)>>
+
+<<DisplayRomeo (Player)>>
+ROMEO:Surly it be love that make men do such things risk thy own life even for but a word with such a bright angel!
+<<HideRomeo (Player)>>
+
+<<DisplayJuliet (Player)>>
+JULIET: I do doubt, even if thy do swear off thy name. That a Montague could ever love a Capulet.
+<<HideJuliet (Player)>>
+
+<<jump JulietAtCastleIntentions>>
+===
+
+title: CastleKnightInterrupt
+tags: 
+colorID: 0
+position: 860,368
+---
+<<DeactivatePlayerMovment (Player)>>
+<<DisplayCastleKnight (Player)>>
+Capulet Knight: Juliet! What does thou think thee are speaking too!
+Capulet Knight: This is a Montague, our foe,
+Capulet Knight: A villain that is hither come in spite,
+Capulet Knight: To scorn at our solemnity this night.
+Capulet Knight: I challenge thee Romeo, dule or die where you stand.
+<<HideCastleKnight (Player)>>
+<<ReactivatePlayerMovment (Player)>>
+===
+
+title: CastleKnightPrefight
+tags: 
+colorID: 0
+position: 860,368
+---
+<<DeactivatePlayerMovment (Player)>>
+<<DisplayCastleKnight (Player)>>
+Capulet Knight: Now, by the stock and honour of my kin,
+Capulet Knight: I will strike thee dead Romeo, I hold it not a sin.
+<<HideCastleKnight (Player)>>
+<<SignalPlayerToStartEvent (Player)>>
+===
+
+title: CastleKnightWinResolution
+tags: 
+colorID: 0
+position: 860,368
+---
+<<DeactivatePlayerMovment (Player)>>
+<<DisplayCastleKnight (Player)>>
+Capulet Knight: I yield you have bested me! Please have mercy!
+<<hideCastleKnight (Player)>>
+<<SignalPlayerEventOver (Player)>>
+<<jump TheKingsSpeach>>
+===
+
+title: CastleKnightLoseResolution
+tags: 
+colorID: 0
+position: 860,368
+---
+<<DeactivatePlayerMovment (Player)>>
+<<DisplayCastleKnight (Player)>>
+Capulet Knight: I have wounded thee with my first blow Romeo! 
+Capulet Knight: But you need not bare that scar for long. My second Strike will finish Thee!
+<<HideCastleKnight (Player)>>
+<<SignalPlayerEventOver (Player)>>
+<<jump TheKingsSpeach>>
+===
+
+title: TheKingsSpeach
+tags: 
+colorID: 0
+position: 860,368
+---
+<<DisplayKing (Player)>>
+King Alexander: Rebellious subjects, enemies to peace,
+King Alexander: Will they not hear? What, you men, you beasts, That quench the fire of your pernicious rage.
+King Alexander: With purple fountains issuing from your veins, 
+King Alexander: On pain of torture, from those bloody hands Throw your mistemper'd weapons to the ground,
+King Alexander: And hear the sentence of your moved prince.
+King Alexander: Three civil brawls, bred of an airy word, By thee, Capulets, and Montagues,
+King Alexander: Have thrice disturb'd the quiet of our streets, And made Verona's ancient citizens grieve for peace. 
+King Alexander: If ever you disturb our streets again, Your lives shall pay the forfeit of the peace.
+King Alexander: For this time, all the rest. Montagues and Capulets depart away.
+King Alexander: The heads of Capulet house, shall go along with me And, The heads of Montague, come this afternoon,
+King Alexander: To know our further pleasure in this case, To old Free-town, our common judgment-place.
+King Alexander: Once more, on pain of death, all Montagues and Capulets depart.
+<<HideKing (Player)>>
+<<LeaveCastle (Player)>>
+===

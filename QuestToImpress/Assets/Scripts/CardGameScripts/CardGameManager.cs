@@ -42,7 +42,7 @@ public class CardGameManager : MonoBehaviour
     float cooldownCounter = 0f;
     bool bubbleUp = false;
 
-    int playerHonour = 7;
+    int playerHonour = 30;
     int enemyHonour = 9;
 
     public Animator playerCostObject;
@@ -482,13 +482,13 @@ public class CardGameManager : MonoBehaviour
                 switch (gameOutcome)
                 {
                     case GameOutcomes.Win:
-                        eventResults.castleCombat = PlayerEventResults.EventResults.Win;
+                        eventResults.cityCardGame = PlayerEventResults.EventResults.Win;
                         break;
                     case GameOutcomes.Lose:
-                        eventResults.castleCombat = PlayerEventResults.EventResults.Loss;
+                        eventResults.cityCardGame = PlayerEventResults.EventResults.Loss;
                         break;
                     case GameOutcomes.Draw:
-                        eventResults.castleCombat = PlayerEventResults.EventResults.Draw;
+                        eventResults.cityCardGame = PlayerEventResults.EventResults.Draw;
                         break;
                     default:
                         break;
@@ -575,7 +575,7 @@ public class CardGameManager : MonoBehaviour
                     CardInfo newCard = new CardInfo(nameData, cost, damage, quote, source);
                     enemyDecklist.Add(newCard);
                 }
-                //enemyHonour = 20;
+                 enemyHonour = 24;
                 break;
             case RomeoData.CardgameEvents.TavernFighter:
                 List<Dictionary<string, object>> data = CSVReader.Read("TavernFighterDeckList");
@@ -590,7 +590,7 @@ public class CardGameManager : MonoBehaviour
                     CardInfo newCard = new CardInfo(nameData, cost, damage, quote, source);
                     enemyDecklist.Add(newCard);
                 }
-                //enemyHonour = 30;
+                  enemyHonour = 30;
                 break;
             case RomeoData.CardgameEvents.CityKnight:
                 List<Dictionary<string, object>> cityKnightData = CSVReader.Read("CityKnightDeckList");
@@ -605,7 +605,7 @@ public class CardGameManager : MonoBehaviour
                     CardInfo newCard = new CardInfo(nameData, cost, damage, quote, source);
                     enemyDecklist.Add(newCard);
                 }
-               // enemyHonour = 25;       
+                  enemyHonour = 25;       
                 break;
             case RomeoData.CardgameEvents.TavernAxeMan:
 
