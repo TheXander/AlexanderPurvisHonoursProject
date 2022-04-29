@@ -8,6 +8,7 @@ public class CombatManager : MonoBehaviour
     public PlayerProgress playerProgress;
     public RomeoData romeoData;
     public PlayerEventResults eventResults;
+    
 
     public Animator fightAnnouncement;
     public TMP_Text gameResultText;
@@ -67,14 +68,14 @@ public class CombatManager : MonoBehaviour
             case RomeoData.CombatEvents.ForestKnight:
                 playerProgress.forestKCombatCompelte = true;
                 playerProgress.levelOneEventsComplete++;
-
+                
                 switch (combatResult)
                 {
                     case CombatResults.Win:
                         eventResults.forestKCombat = PlayerEventResults.EventResults.Win;
                         break;
                     case CombatResults.Lose:
-                        eventResults.castleCombat = PlayerEventResults.EventResults.Loss;
+                        eventResults.forestKCombat = PlayerEventResults.EventResults.Loss;
                         break;
                     default:
                         Debug.Log("Error no result");

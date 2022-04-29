@@ -13,4 +13,7 @@ public class PlayerEventResults : ScriptableObject
 
     // Level One Combats
     public EventResults castleCombat, forestKCombat, gravyardCombat = EventResults.None;
+
+    // Level One Dialogues
+    public EventResults julietDialogue, barmanDialogue, tybaltDialogue = EventResults.None; 
 }

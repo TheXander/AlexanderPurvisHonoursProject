@@ -64,7 +64,9 @@ position: 860,368
 ---
 <<DeactivatePlayerMovment (Player)>>
 <<DisplayCardGameKnight (Player)>>
-Capulet Knight: Intro
+Capulet Knight: My kin tell me that you have been speaking with Juliet. I should kill you where you stand!
+Capulet Knight: A pity it is that they also tell me of the kings decree that our house may not cross blades.
+Capulet Knight: No matter I shall strike thee down with my tongue and wit.
 <<HideCardGameKnight (Player)>>
 <<SignalPlayerToStartEvent (Player)>>
 ===
@@ -76,7 +78,7 @@ position: 860,368
 ---
 <<DeactivatePlayerMovment (Player)>>
 <<DisplayCardGameKnight (Player)>>
-Capulet Knight: Win
+Capulet Knight: Alright alright, you may have out done me Romeo. But Tybalt is on the hunt for you too and mark my words he will do more then trade insults with you.
 <<HideCardGameKnight (Player)>>
 <<ReactivatePlayerMovment (Player)>>
 ===
@@ -88,7 +90,8 @@ position: 860,368
 ---
 <<DeactivatePlayerMovment (Player)>>
 <<DisplayCardGameKnight (Player)>>
-Capulet Knight: Loss
+Capulet Knight: Ha ha I have dealt the killing blow to your honour Romeo, but fear not Tybalt is on the hunt for you too.
+Capulet Knight: He will do away with the rest of you!
 <<HideCardGameKnight (Player)>>
 <<ReactivatePlayerMovment (Player)>>
 ===
@@ -100,7 +103,8 @@ position: 860,368
 ---
 <<DeactivatePlayerMovment (Player)>>
 <<DisplayCardGameKnight (Player)>>
-Capulet Knight: Draw
+Capulet Knight: Well well you have a little wit yourself Romeo. But hear me now. 
+Capulet Knight: Tybalt is on the hunt for you too and mark my words he will do more then trade insults with you.
 <<HideCardGameKnight (Player)>>
 <<ReactivatePlayerMovment (Player)>>
 ===

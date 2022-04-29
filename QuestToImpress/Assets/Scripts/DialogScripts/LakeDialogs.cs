@@ -12,6 +12,7 @@ public class LakeDialogs : MonoBehaviour
     public Animator lakeKnightAnimator;
     public Animator postCastleMercutioAnimator;
 
+
     // Dialogue Runner ivariable for yarn spinner control.
     public DialogueRunner dialogueRunner;
 
@@ -137,11 +138,10 @@ public class LakeDialogs : MonoBehaviour
     {
         lakeKnightAnimator.SetTrigger("RunToCastle");
     }
-
-    
+  
     // player interactions
     void SignalPlayerToStartEvent(GameObject Player)
     {
         playerControls.eventConfirmed = true;
-    }    
+    }
 }

@@ -7,7 +7,7 @@ public class PlayerProgress : ScriptableObject
 {
     // cardgame complete bools
     public bool lakeCardGameComplete = false, tavernFCardGameComplete = false, cityCardGameComplete = false,
-        tavernAMCardGameComplete = false, forestCardGameComplete = false, tybaltCardGameComplete = false;
+        tavernVCardGameComplete = false, forestCardGameComplete = false, tybaltCardGameComplete = false;
     
     // Combat complete bools
     public bool castleCombatCompelte = false, forestKCombatCompelte = false, gravyardCombatCompelte = false,

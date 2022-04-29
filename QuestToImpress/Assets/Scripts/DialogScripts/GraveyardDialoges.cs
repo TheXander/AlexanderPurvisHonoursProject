@@ -7,9 +7,11 @@ public class GraveyardDialoges : MonoBehaviour
 {
     public GameObject romeoPortrait, mercutioPortrait, cultistPortrait, grocerPortrait, tybaltPortrait;
     public SceneBasedPlayerControls playerControls;
+    public GameObject tybaltDialog, tybalt;
 
     // Dialogue Runner ivariable for yarn spinner control.
     public DialogueRunner dialogueRunner;
+    public PlayerProgress playerProgress;
 
     public void Awake()
     {
@@ -52,8 +54,8 @@ public class GraveyardDialoges : MonoBehaviour
              HideGrocer);
 
         dialogueRunner.AddCommandHandler<GameObject>(
-           "HideCardTybalt",
-            HideCardTybalt);
+           "HideTybalt",
+            HideTybalt);
 
         dialogueRunner.AddCommandHandler<GameObject>(
           "DeactivatePlayerMovment",
@@ -67,6 +69,21 @@ public class GraveyardDialoges : MonoBehaviour
         "SignalPlayerToStartEvent",
         SignalPlayerToStartEvent
         );
+
+        dialogueRunner.AddCommandHandler<GameObject>(
+        "SignalPlayerEventOver",
+        SignalPlayerEventOver
+        );
+
+        dialogueRunner.AddCommandHandler<GameObject>(
+        "SwitchTybalt",
+         SwitchTybalt
+        );
+
+        dialogueRunner.AddCommandHandler<GameObject>(
+       "SetTybaltDialogueComplete",
+        SetTybaltDialogueComplete
+       );
     }
 
     void DisplayRomeo(GameObject Player)
@@ -111,10 +128,12 @@ public class GraveyardDialoges : MonoBehaviour
         grocerPortrait.SetActive(false);
     }
 
-    void HideCardTybalt(GameObject Player)
+    void HideTybalt(GameObject Player)
     {
         tybaltPortrait.SetActive(false);
     }
+
+    // player interactions
 
     void DeactivatePlayerMovment(GameObject Player)
     {
@@ -125,10 +144,28 @@ public class GraveyardDialoges : MonoBehaviour
     {
         playerControls.StartPlayer();
     }
-
-    // player interactions
+ 
     void SignalPlayerToStartEvent(GameObject Player)
     {
         playerControls.eventConfirmed = true;
+    }
+
+    void SignalPlayerEventOver(GameObject Player)
+    {
+        playerControls.eventReady = false;
+        playerControls.confirmingEvent = false;
+        playerControls.eventConfirmed = false;
+    }
+
+    void SwitchTybalt(GameObject Player)
+    {
+        tybalt.SetActive(true);
+        tybaltDialog.SetActive(false);
+    }
+
+    void SetTybaltDialogueComplete(GameObject Player)
+    {
+        playerProgress.gravyardTDialogCompelte = true;
+        playerProgress.levelOneEventsComplete++;
     }
 }

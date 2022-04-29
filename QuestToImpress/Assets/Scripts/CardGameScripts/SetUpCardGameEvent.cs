@@ -33,14 +33,6 @@ public class SetUpCardGameEvent : MonoBehaviour
         SetUpOpponent();
     }
 
-    //private void Update()
-    //{
-    //    if (Input.GetKeyDown("space"))
-    //    {
-    //        romeoData.previousLocation = LevelLoader.Levels.CardGame;
-    //        levelLoader.LoadLevel(returnDestination);
-    //    }
-    //}
 
     public void ReturnPlayer()
     {

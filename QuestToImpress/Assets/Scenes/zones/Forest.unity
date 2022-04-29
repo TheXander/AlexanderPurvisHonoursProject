@@ -1157,6 +1157,38 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &185794131
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 185794132}
+  m_Layer: 0
+  m_Name: Level two combat results (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &185794132
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185794131}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 729859766}
+  - {fileID: 851987141}
+  m_Father: {fileID: 1767419630}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &211438175
 GameObject:
   m_ObjectHideFlags: 0
@@ -2410,7 +2442,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &462519968
 Transform:
   m_ObjectHideFlags: 0
@@ -2483,7 +2515,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerControls: {fileID: 1480044057}
   dialogueRunner: {fileID: 1580205341}
-  conversationStartNode: 
+  conversationStartNode: SecondCardGame
 --- !u!1 &472911078
 GameObject:
   m_ObjectHideFlags: 0
@@ -2963,6 +2995,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 550398875}
   m_CullTransparentMesh: 0
+--- !u!1 &562264308
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 562264309}
+  m_Layer: 0
+  m_Name: Level one card results
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &562264309
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 562264308}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1175928477}
+  - {fileID: 1108226174}
+  - {fileID: 2138857469}
+  m_Father: {fileID: 932572955}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &564299462
 GameObject:
   m_ObjectHideFlags: 0
@@ -3714,6 +3779,10 @@ MonoBehaviour:
   playerProgress: {fileID: 11400000, guid: 667827b00ea143842982ca497119aca7, type: 2}
   L1ForestCombat: {fileID: 961003773}
   ForestKnight: {fileID: 2117211784}
+  romeoData: {fileID: 11400000, guid: 477729ec08176074185993656ff20221, type: 2}
+  eventResults: {fileID: 11400000, guid: 197b4fbfaeac198488351c0ec2713596, type: 2}
+  firstCombatWinDialodue: {fileID: 1956757909}
+  firstCombatLossDialodue: {fileID: 1379131253}
 --- !u!4 &657995211
 Transform:
   m_ObjectHideFlags: 0
@@ -3728,51 +3797,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &677290091
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 677290092}
-  - component: {fileID: 677290093}
-  m_Layer: 0
-  m_Name: CombatDrawResolution
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &677290092
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 677290091}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 25.143589, y: 4.595314, z: -0.70786065}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1767419630}
-  m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &677290093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 677290091}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e9ccac6e493f1df4baddb12aa6b84f7c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueRunner: {fileID: 1580205341}
-  conversationStartNode: TownKnightDraw
 --- !u!1 &683407882
 GameObject:
   m_ObjectHideFlags: 0
@@ -4143,6 +4167,51 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &729859765
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 729859766}
+  - component: {fileID: 729859767}
+  m_Layer: 0
+  m_Name: CombatWinResolution
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &729859766
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729859765}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 25.143589, y: 4.595314, z: -0.70786065}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 185794132}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &729859767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 729859765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9ccac6e493f1df4baddb12aa6b84f7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueRunner: {fileID: 1580205341}
+  conversationStartNode: 
 --- !u!1 &736982757
 GameObject:
   m_ObjectHideFlags: 0
@@ -4575,6 +4644,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5276884639038668769, guid: 71d9bbbe418f060408a9c3b642d8c5cf, type: 3}
   m_PrefabInstance: {fileID: 1480044056}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &851987140
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 851987141}
+  - component: {fileID: 851987142}
+  m_Layer: 0
+  m_Name: CombatLoseResolution
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &851987141
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851987140}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 25.143589, y: 4.595314, z: -0.70786065}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 185794132}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &851987142
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 851987140}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9ccac6e493f1df4baddb12aa6b84f7c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueRunner: {fileID: 1580205341}
+  conversationStartNode: 
 --- !u!1 &874672996
 GameObject:
   m_ObjectHideFlags: 0
@@ -5043,9 +5157,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1175928477}
-  - {fileID: 1108226174}
-  - {fileID: 2138857469}
+  - {fileID: 562264309}
   m_Father: {fileID: 0}
   m_RootOrder: 19
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5349,7 +5461,7 @@ MonoBehaviour:
   romeoData: {fileID: 11400000, guid: 477729ec08176074185993656ff20221, type: 2}
   playerControls: {fileID: 1480044057}
   dialogueRunner: {fileID: 1580205341}
-  conversationStartNode: LevelOneForestCombat
+  conversationStartNode: FirstCombatStart
 --- !u!61 &961003776
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5593,7 +5705,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1046725503
 Transform:
   m_ObjectHideFlags: 0
@@ -5628,7 +5740,7 @@ MonoBehaviour:
   romeoData: {fileID: 11400000, guid: 477729ec08176074185993656ff20221, type: 2}
   playerControls: {fileID: 1480044057}
   dialogueRunner: {fileID: 1580205341}
-  conversationStartNode: LevelTwoForestCombat
+  conversationStartNode: SecondCombatStart
 --- !u!61 &1046725505
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -5950,7 +6062,7 @@ Transform:
   m_LocalPosition: {x: 25.143589, y: 4.595314, z: -0.70786065}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 932572955}
+  m_Father: {fileID: 562264309}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1108226175
@@ -5966,7 +6078,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueRunner: {fileID: 1580205341}
-  conversationStartNode: TownKnightLoss
+  conversationStartNode: 
 --- !u!1 &1123809440
 GameObject:
   m_ObjectHideFlags: 0
@@ -6300,6 +6412,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f9f0f793d529934396a6ee6279d9c07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1174036698
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1174036699}
+  m_Layer: 0
+  m_Name: Level one combat results
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1174036699
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1174036698}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1956757910}
+  - {fileID: 1379131254}
+  m_Father: {fileID: 1767419630}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1175928476
 GameObject:
   m_ObjectHideFlags: 0
@@ -6328,7 +6472,7 @@ Transform:
   m_LocalPosition: {x: 25.143589, y: 4.595314, z: -0.70786065}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 932572955}
+  m_Father: {fileID: 562264309}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1175928478
@@ -6344,7 +6488,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueRunner: {fileID: 1580205341}
-  conversationStartNode: TownKnightWin
+  conversationStartNode: 
 --- !u!1 &1215624463
 GameObject:
   m_ObjectHideFlags: 0
@@ -7316,7 +7460,7 @@ Transform:
   m_LocalPosition: {x: 25.143589, y: 4.595314, z: -0.70786065}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1767419630}
+  m_Father: {fileID: 1174036699}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1379131255
@@ -7332,7 +7476,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueRunner: {fileID: 1580205341}
-  conversationStartNode: TownKnightLoss
+  conversationStartNode: FirstCombatLoss
 --- !u!1 &1414582097
 GameObject:
   m_ObjectHideFlags: 0
@@ -8334,7 +8478,7 @@ PrefabInstance:
     - target: {fileID: 3579681405068720530, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
       propertyPath: yarnProject
       value: 
-      objectReference: {fileID: 7545569452688597077, guid: 502f346069b04214f991df68e76549c5, type: 3}
+      objectReference: {fileID: 7545569452688597077, guid: bf81040c0ede384469e390e9d7abd3ec, type: 3}
     - target: {fileID: 3579681405068720530, guid: 7f29e5f7ffdea4a6793cefb278b61f0c, type: 3}
       propertyPath: startAutomatically
       value: 0
@@ -9234,9 +9378,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1956757910}
-  - {fileID: 1379131254}
-  - {fileID: 677290092}
+  - {fileID: 1174036699}
+  - {fileID: 185794132}
   m_Father: {fileID: 0}
   m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10096,7 +10239,7 @@ Transform:
   m_LocalPosition: {x: 25.143589, y: 4.595314, z: -0.70786065}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1767419630}
+  m_Father: {fileID: 1174036699}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1956757911
@@ -10112,7 +10255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueRunner: {fileID: 1580205341}
-  conversationStartNode: TownKnightWin
+  conversationStartNode: FirstCombatWin
 --- !u!1 &1961679969
 GameObject:
   m_ObjectHideFlags: 0
@@ -10772,7 +10915,7 @@ Transform:
   m_LocalPosition: {x: 25.143589, y: 4.595314, z: -0.70786065}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 932572955}
+  m_Father: {fileID: 562264309}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2138857470
@@ -10788,7 +10931,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogueRunner: {fileID: 1580205341}
-  conversationStartNode: TownKnightDraw
+  conversationStartNode: 
 --- !u!1 &2143266948
 GameObject:
   m_ObjectHideFlags: 0

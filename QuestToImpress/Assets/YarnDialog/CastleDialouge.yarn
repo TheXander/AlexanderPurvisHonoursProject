@@ -109,6 +109,7 @@ ROMEO: Give me my sin again......
 JULIET: You kiss by the book.
 <<HideJuliet (Player)>>
 <<SignalPlayerEventOver (Player)>>
+<<SetJulietDialogueComplete (Player)>>
 <<ActivateCastleKnight (Player)>>
 ===
 
@@ -141,6 +142,7 @@ JULIET: Do not swear at all. Or, if thou wilt, swear by thy gracious self, And I
 ROMEO: If my heart's dear love--
 <<HideRomeo (Player)>>
 <<SignalPlayerEventOver (Player)>>
+<<SetJulietDialogueComplete (Player)>>
 <<ActivateCastleKnight (Player)>>
 ===
 

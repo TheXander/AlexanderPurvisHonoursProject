@@ -17,6 +17,8 @@ public class GraveyardSetUp : MonoBehaviour
     public GameObject l1GraveyardCombat, l1GraveyardDialog;
     public GameObject tybalt, priest;
 
+    public GameObject combatWinDialodue, combatLossDialodue;
+    public PlayerEventResults eventResults;
 
     private void Awake()
     {
@@ -26,6 +28,23 @@ public class GraveyardSetUp : MonoBehaviour
             playerCam.transform.position = graveyardCamPos.position;
             playerCam.GetComponent<CamPlayerTracking>().trackingActive = false;
             player.GetComponent<SceneBasedPlayerControls>().TurnPlayerRight();
+        }
+
+
+        // combat result Dialogue
+        if (romeoData.previousLocation == LevelLoader.Levels.Combat)
+        {
+            switch (eventResults.gravyardCombat)
+            {
+                case PlayerEventResults.EventResults.Win:
+                    combatWinDialodue.SetActive(true);
+                    break;
+                case PlayerEventResults.EventResults.Loss:
+                    combatLossDialodue.SetActive(true);
+                    break;
+                default:
+                    break;
+            }
         }
 
 

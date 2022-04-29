@@ -536,7 +536,7 @@ public class CardGameManager : MonoBehaviour
                 playerProgress.levelOneEventsComplete++;
                 break;
             case RomeoData.CardgameEvents.TavernAxeMan:
-                playerProgress.tavernAMCardGameComplete = true;
+                playerProgress.tavernVCardGameComplete = true;
                 playerProgress.levelTwoEventsComplete++;
                 break;
             case RomeoData.CardgameEvents.ForestGhoul:

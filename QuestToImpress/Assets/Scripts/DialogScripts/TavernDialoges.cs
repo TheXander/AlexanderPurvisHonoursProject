@@ -8,9 +8,11 @@ public class TavernDialoges : MonoBehaviour
     public GameObject romeoPortrait, mercutioPortrait, tavernFighterPortrait,
         vikingPortrait, barkeeperPortrait;
     public SceneBasedPlayerControls playerControls;
+    public GameObject barkeepDialog, barkeep;
 
     // Dialogue Runner ivariable for yarn spinner control.
     public DialogueRunner dialogueRunner;
+    public PlayerProgress playerProgress;
 
     public void Awake()
     {
@@ -68,6 +70,21 @@ public class TavernDialoges : MonoBehaviour
         "SignalPlayerToStartEvent",
         SignalPlayerToStartEvent
         );
+
+        dialogueRunner.AddCommandHandler<GameObject>(
+        "SwitchBarkeep",
+        SwitchBarkeep
+        );
+
+        dialogueRunner.AddCommandHandler<GameObject>(
+        "SignalPlayerEventOver",
+        SignalPlayerEventOver
+        );
+
+        dialogueRunner.AddCommandHandler<GameObject>(
+        "SetBarmanDialogueComplete",
+         SetBarmanDialogueComplete
+         );     
     }
 
 
@@ -121,6 +138,8 @@ public class TavernDialoges : MonoBehaviour
         barkeeperPortrait.SetActive(false);
     }
 
+
+    // player interactions
     void DeactivatePlayerMovment(GameObject Player)
     {
         playerControls.StopPlayer();
@@ -131,9 +150,27 @@ public class TavernDialoges : MonoBehaviour
         playerControls.StartPlayer();
     }
 
-    // player interactions
     void SignalPlayerToStartEvent(GameObject Player)
     {
         playerControls.eventConfirmed = true;
+    }
+
+    void SignalPlayerEventOver(GameObject Player)
+    {
+        playerControls.eventReady = false;
+        playerControls.confirmingEvent = false;
+        playerControls.eventConfirmed = false;
+    }
+
+    void SwitchBarkeep(GameObject Player)
+    {
+        barkeep.SetActive(true);
+        barkeepDialog.SetActive(false);
+    }
+
+    void SetBarmanDialogueComplete(GameObject Player)
+    {
+        playerProgress.tavernDialogCompelte = true;
+        playerProgress.levelOneEventsComplete++;
     }
 }

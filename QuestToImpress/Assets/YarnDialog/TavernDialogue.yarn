@@ -1,14 +1,176 @@
 ﻿title: BarkeepStart
 tags:
 ---
-Barkeep: HI
+<<DeactivatePlayerMovment (Player)>>
+<<DisplayBarkeep (Player)>>
+<<SwitchBarkeep (Player)>>
+BARMAN: Romeo do my ears deceive me or are the rumours true, that thou consort'st with Juliet 
+<<HideBarkeep (Player)>>
+
+-> Reply Honestly?
+    <<jump BarkeepHonesty>>
+
+-> Make a Joke of it?
+    <<jump BarkeepJoke>>
 ===
+
+
+title: BarkeepJoke
+tags:
+---
+<<DisplayRomeo (Player)>>
+ROMEO: Consort? 
+ROMEO: what, dost thou make me a minstrel? 
+ROMEO: And thou make a minstrel out of me?
+<<HideRomeo (Player)>>
+
+
+<<DisplayBarkeep (Player)>>
+BARMAN: That is not an answer and you be clearly too happy Romeo. 
+BARMAN: The rumours are true you are in love with a Capulet 
+<<HideBarkeep (Player)>>
+
+-> Tell the truth?
+    <<jump BarkeepHonesty>>
+
+-> Tell a Lie?
+    <<jump BarkeepLie>>
+===
+
+title: BarkeepLie
+tags:
+---
+<<DisplayRomeo (Player)>>
+ROMEO: No no dear barman,
+ROMEO: I merely have enjoyed many a cup of wine at the great feast hosted at the castle this day, 
+ROMEO: And I have come here for another fair sir.
+<<HideRomeo (Player)>>
+
+<<DisplayBarkeep (Player)>>
+BARMAN: Well Romeo I neither serve liars nor drunks. 
+BARMAN: So away with thee Romeo till thou either sobers or speaks honestly.
+<<HideBarkeep (Player)>>
+<<SignalPlayerEventOver (Player)>>
+<<SetBarmanDialogueComplete (Player)>>
+<<ReactivatePlayerMovment (Player)>>
+===
+
+
+title: BarkeepHonesty
+tags:
+---
+<<DisplayRomeo (Player)>>
+ROMEO: I can not lie, for my heart indeed sores upon wings of love for dear Juliet.
+<<HideRomeo (Player)>>
+
+<<DisplayBarkeep (Player)>>
+BARMAN: Ow no Romeo if thou heart dose sore it must surely fall, and be impaled upon the many swords of her kin. 
+BARMAN: Nothing good can come of the Capulets, or even your Montagues learning of this doomed love of yours.
+<<HideBarkeep (Player)>>
+
+-> Reply with confidence?
+    <<jump BarkeepConfidant>>
+
+-> Admit apprehension?
+    <<jump BarkeepApprehension>>
+===
+
+
+title: BarkeepConfidant
+tags:
+---
+
+<<DisplayRomeo (Player)>>
+I do not have any fear good sir for when they see the purity of my love they will not be able to draw their swords for they will be shielding their eyes.
+<<HideRomeo (Player)>>
+<<jump BarkeepHonestEnding>>
+===
+
+
+title: BarkeepApprehension
+tags:
+---
+
+<<DisplayRomeo (Player)>>
+I do not know what reactions my any of my kin of hers may have, but if a man will not risk his life for a chance at true love what would he risk it for?
+<<HideRomeo (Player)>>
+<<jump BarkeepHonestEnding>>
+===
+
+
+title: BarkeepHonestEnding
+tags:
+---
+<<DisplayBarkeep (Player)>>
+BARMAN: I have to warn the Romeo. I have already heard stirrings from Capulets. 
+BARMAN: If thou dose speak to Juliet again then they will surly have your head. 
+BARMAN: I give thee this cup of wine so thee may sip and think a while.
+<<HideBarkeep (Player)>>
+<<SignalPlayerEventOver (Player)>>
+<<SetBarmanDialogueComplete (Player)>>
+<<ReactivatePlayerMovment (Player)>>
+===
+
 
 title: TavernFighterStart
 tags:
 ---
-Capulate Noble: HI
+<<DisplayTavernFighter (Player)>>
+Capulate Noble: Lad you are far to short in years to be allowed in this here inn.
+<<HideTavernFighter (Player)>>
+
+<<DisplayRomeo (Player)>>
+ROMEO: Lord Capulet, you are mistaken, I am 22.
+<<HideRomeo (Player)>>
+
+<<DisplayTavernFighter (Player)>>
+Capulate Noble: Awww but then you must be a Montague, I had forgotten they only produce runts.
+<<HideTavernFighter (Player)>>
+
+<<SignalPlayerToStartEvent (Player)>>
 ===
+
+
+title: TavernFighterWin
+tags:
+---
+<<DeactivatePlayerMovment (Player)>>
+
+<<DisplayTavernFighter (Player)>>
+Capulate Noble: Curses, outwited by a Montague child.
+<<HideTavernFighter (Player)>>
+
+<<SignalPlayerEventOver (Player)>>
+<<ReactivatePlayerMovment (Player)>>
+===
+
+title: TavernFighterDraw
+tags:
+---
+<<DeactivatePlayerMovment (Player)>>
+
+<<DisplayTavernFighter (Player)>>
+Capulate Noble: A decent fight for a Montague puppy.
+<<HideTavernFighter (Player)>>
+
+<<SignalPlayerEventOver (Player)>>
+<<ReactivatePlayerMovment (Player)>>
+===
+
+title: TavernFighterLoss
+tags:
+---
+<<DeactivatePlayerMovment (Player)>>
+
+<<DisplayTavernFighter (Player)>>
+Capulate Noble: That will teach you to respect your elders.
+<<HideTavernFighter (Player)>>
+
+<<SignalPlayerEventOver (Player)>>
+<<ReactivatePlayerMovment (Player)>>
+===
+
+
 
 title: VikingStart
 tags:

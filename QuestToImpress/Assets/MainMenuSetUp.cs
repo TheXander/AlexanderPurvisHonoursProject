@@ -27,7 +27,7 @@ public class MainMenuSetUp : MonoBehaviour
         playerProgress.lakeCardGameComplete = false;
         playerProgress.tavernFCardGameComplete = false;
         playerProgress.cityCardGameComplete = false;
-        playerProgress.tavernAMCardGameComplete = false;
+        playerProgress.tavernVCardGameComplete = false;
         playerProgress.forestCardGameComplete = false;
         playerProgress.tybaltCardGameComplete = false;
 

@@ -42,8 +42,7 @@ public class ForestDialoges : MonoBehaviour
         dialogueRunner.AddCommandHandler<GameObject>(
             "DisplayHuntress",
              DisplayHuntress);
-
-     
+    
         //Hide portraits
         dialogueRunner.AddCommandHandler<GameObject>(
             "HideRomeo",
@@ -72,7 +71,6 @@ public class ForestDialoges : MonoBehaviour
         dialogueRunner.AddCommandHandler<GameObject>(
              "HideHuntress",
              HideHuntress);
-
 
         dialogueRunner.AddCommandHandler<GameObject>(
           "DeactivatePlayerMovment",

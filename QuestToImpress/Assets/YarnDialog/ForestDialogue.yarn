@@ -1,5 +1,106 @@
-﻿title: ForestDialogue
-tags:
+title: FirstCombatStart
+tags: 
+colorID: 0
+position: 860,368
 ---
 
+<<DeactivatePlayerMovment (Player)>>
+
+<<DisplayHuntress (Player)>>
+HUNTRESS: Good fellow, help me with this scoundrel!
+<<HideHuntress (Player)>>
+
+<<DisplayRomeo (Player)>>
+ROMEO: Why what is wrong dear lady. Good day Benvolio, what are you doing here?
+<<HideRomeo (Player)>>
+
+<<DisplayVai (Player)>>
+BENVOLIO: Awwww Romeo, nothing just having a little fun.
+<<HideVai (Player)>>
+
+<<DisplayHuntress (Player)>>
+HUNTRESS: This man will not let me into the city. He declares there to be some kind of tax? But I was here last week and there was no such thing.
+HUNTRESS: Surly he be some kind of trickster!
+<<HideHuntress (Player)>>
+
+<<DisplayRomeo (Player)>>
+ROMEO: Benvolio! You disgrace yourself and our house! I must challnge thee to a dule on the behest of this fair lady's honor!
+<<HideRomeo (Player)>>
+<<SignalPlayerToStartEvent (Player)>>
+===
+
+title: FirstCombatWin
+tags: 
+colorID: 0
+position: 860,368
+---
+<<DeactivatePlayerMovment (Player)>>
+<<DisplayVai (Player)>>
+BENVOLIO: I  yield! Enough Romeo, I do see my wrong doing. I apologies madam.
+<<HideVai (Player)>>
+
+<<DisplayRomeo (Player)>>
+ROMEO: I do think you owe more then your apology how much were you attempting to make off with?
+<<HideRomeo (Player)>>
+
+<<DisplayVai (Player)>>
+BENVOLIO: 12 shillings......
+<<HideVai (Player)>>
+
+<<DisplayRomeo (Player)>>
+ROMEO: Then I do believe you do owe this dear woman 12 shillings along with your apology, for time spent waisted on your foolery.
+<<HideRomeo (Player)>>
+
+<<DisplayHuntress (Player)>>
+HUNTRESS: Why thank you Romoe. I will be watching you Benvolio.
+<<HideHuntress (Player)>>
+<<ReactivatePlayerMovment (Player)>>
+===
+
+
+title: FirstCombatLoss
+tags: 
+colorID: 0
+position: 860,368
+---
+<<DeactivatePlayerMovment (Player)>>
+<<DisplayVai (Player)>>
+BENVOLIO: Awww Romeo you have surly not be practicing. Thou should spend less time in the inn cousin.   
+<<HideVai (Player)>>
+
+<<DisplayRomeo (Player)>>
+ROMEO: Yes yes you bested me but still, let this lady be. 
+<<HideRomeo (Player)>>
+
+<<DisplayVai (Player)>>
+BENVOLIO: Indeed, I believe I have had all the entertainment I wanted today. 
+<<HideVai (Player)>>
+
+<<DisplayHuntress (Player)>>
+HUNTRESS: Why thank you Romoe, for trying. I do think that thou has softend him up for me.
+HUNTRESS: I challange thee to a dule Benvolio, and I will surly defeat thee.
+<<HideHuntress (Player)>>
+
+<<ReactivatePlayerMovment (Player)>>
+===
+
+
+title: SecondCombatStart
+tags: 
+colorID: 0
+position: 860,368
+---
+LevelTwoForestCombat: Hi
+===
+
+
+
+
+
+title: SecondCardGame
+tags: 
+colorID: 0
+position: 860,368
+---
+LevelTwoForestCardGame: Hi
 ===

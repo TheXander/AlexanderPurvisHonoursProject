@@ -305,6 +305,8 @@ MonoBehaviour:
   mercutioAnimator: {fileID: 922249275}
   lakeKnightAnimator: {fileID: 1415380942}
   postCastleMercutioAnimator: {fileID: 234280231}
+  lakeKnightCardGame: {fileID: 1592523298}
+  lakeKnight: {fileID: 1415380941}
   dialogueRunner: {fileID: 339630032}
 --- !u!4 &195551536 stripped
 Transform:

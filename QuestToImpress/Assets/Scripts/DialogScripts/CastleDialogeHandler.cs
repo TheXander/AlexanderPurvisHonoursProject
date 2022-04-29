@@ -12,6 +12,7 @@ public class CastleDialogeHandler : MonoBehaviour
 
     public RomeoData romeoData;
     public LevelLoader levelLoader;
+    public PlayerProgress playerProgress;
 
     // Dialogue Runner ivariable for yarn spinner control.
     public DialogueRunner dialogueRunner;
@@ -103,7 +104,12 @@ public class CastleDialogeHandler : MonoBehaviour
         dialogueRunner.AddCommandHandler<GameObject>(
         "LeaveCastle",
         LeaveCastle
-        );    
+        );
+
+        dialogueRunner.AddCommandHandler<GameObject>(
+        "SetJulietDialogueComplete",
+        SetJulietDialogueComplete
+        );
     }
 
     // Show Portraits
@@ -181,7 +187,6 @@ public class CastleDialogeHandler : MonoBehaviour
         playerControls.eventConfirmed = false;
     }
 
-
     void ActivateCastleKnight(GameObject Player)
     {
         knightControls.MovePreCombatKnightToPlayer();
@@ -198,5 +203,11 @@ public class CastleDialogeHandler : MonoBehaviour
         romeoData.previousLocation = LevelLoader.Levels.Castle;
         romeoData.currentLocation = LevelLoader.Levels.Lake;
         levelLoader.LoadLevel(LevelLoader.Levels.Lake);
+    }
+
+    void SetJulietDialogueComplete(GameObject Player)
+    {
+        playerProgress.castleCombatCompelte = true;
+        playerProgress.levelOneEventsComplete++;
     }
 }

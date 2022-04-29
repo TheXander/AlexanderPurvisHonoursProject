@@ -1,17 +1,186 @@
 ﻿title: TybaltStart
 tags:
 ---
-Tybalt: Hi
+<<DeactivatePlayerMovment (Player)>>
+<<SwitchTybalt (Player)>>
+<<DisplayTybalt (Player)>>
+TYBALT: Romeo, the hate I bear thee can afford. No better term than this,
+TYBALT: thou art a villain!
+<<HideTybalt (Player)>>
+
+-> Attempt to make peace with Tybalt?
+    <<jump TybaltPeace>>
+
+-> Insult the evil Tybalt?
+    <<jump TybaltInsult>>
 ===
+
+title: TybaltPeace
+tags:
+---
+<<DisplayRomeo (Player)>>
+ROMEO: Tybalt, the reason that I have to love thee
+ROMEO: Doth much excuse the appertaining rage
+ROMEO: To such a greeting: villain am I none.
+ROMEO: Therefore farewell; I see thou know'st me not.
+<<HideRomeo (Player)>>
+
+<<DisplayTybalt (Player)>>
+TYBALT: Boy, this shall not excuse the injuries that thou hast done me.
+<<HideTybalt (Player)>>
+
+<<DisplayRomeo (Player)>>
+ROMEO: I do protest, I never injured thee,
+ROMEO: But love thee better than thou canst devise,
+ROMEO: Till thou shalt know the reason of my love,
+ROMEO: And so, good Capulet,--which name I tender.
+ROMEO: As dearly as my own,--be satisfied.
+<<HideRomeo (Player)>>
+
+<<jump TybaltEnd>>
+===
+
+title: TybaltInsult
+tags:
+---
+
+<<DisplayRomeo (Player)>>
+ROMEO: Nay, as you dare. I will bite my at thumb you
+ROMEO: which is a disgrace to you, if you bear it.
+<<HideRomeo (Player)>>
+
+<<DisplayTybalt (Player)>>
+TYBALT: Do you bite your thumb at me, sir?
+<<HideTybalt (Player)>>
+
+<<DisplayRomeo (Player)>>
+ROMEO: I do bite my thumb, sir.
+<<HideRomeo (Player)>>
+
+<<DisplayTybalt (Player)>>
+TYBALT: Do you dare bite your thumb at Me, sir!?!?
+<<HideTybalt (Player)>>
+
+<<DisplayRomeo (Player)>>
+ROMEO: Is the law of our side, if I say ay?
+<<HideRomeo (Player)>>
+
+<<DisplayTybalt (Player)>>
+TYBALT: No!
+<<HideTybalt (Player)>>
+
+<<DisplayRomeo (Player)>>
+ROMEO: No, sir, I do not bite my thumb at you, sir, 
+ROMEO: but I bite my thumb, sir.
+<<HideRomeo (Player)>>
+
+<<jump TybaltEnd>>
+===
+
+title: TybaltEnd
+tags:
+---
+<<DisplayTybalt (Player)>>
+TYBALT: Enough of your nonsense Romeo look around thee. You see your kin buried here deep.
+TYBALT: I will burry you deeper then I buried them, much deeper. 
+TYBALT: Despite the kings decree I will end you and make your death a slow painful one, as soon as I get my chance.
+TYBALT: Only this can be the price for seeking the hand of my niece Juliet.
+<<HideTybalt (Player)>>
+<<SignalPlayerEventOver (Player)>>
+<<SetTybaltDialogueComplete (Player)>>
+<<ReactivatePlayerMovment (Player)>>
+===
+
 
 title: CultistStart
 tags:
 ---
-Priest: Hi
+<<DeactivatePlayerMovment (Player)>>
+
+<<DisplayGrocer (Player)>>
+GREEN GROCER: But please good father I cant pay you any more.
+<<HideGrocer (Player)>>
+
+<<DisplayCultist (Player)>>
+PRIEST: If you want your wifes grave to be cleaned and taken care off it shall be 10 shillings a week.
+<<HideCardCultist (Player)>>
+
+<<DisplayGrocer (Player)>>
+GREEN GROCER: But the shop barly brings in that much.
+<<HideGrocer (Player)>>
+
+<<DisplayCultist (Player)>>
+PRIEST: Then maybe we should just take the head stone down and be done.
+<<HideCardCultist (Player)>>
+
+<<DisplayRomeo (Player)>>
+ROMEO: Priest far be it from me to know more then thou, but i think the lord not best served by taking money from the poor.
+<<HideRomeo (Player)>>
+
+<<DisplayCultist (Player)>>
+PRIEST: Yes indeed thou knowest nothing now begone.
+<<HideCardCultist (Player)>>
+
+<<DisplayRomeo (Player)>>
+ROMEO: Then I here by challenge thee to a dule father if god be on my side then I will surly out match thee.
+<<HideRomeo (Player)>>
+
+<<DisplayCultist (Player)>>
+PRIEST: How dare you! I shall righteously strike thee down child.
+<<HideCardCultist (Player)>>
+
+<<SignalPlayerToStartEvent (Player)>>
 ===
+
+
+title: CultistWin
+tags:
+---
+<<DeactivatePlayerMovment (Player)>>
+
+<<DisplayCultist (Player)>>
+PRIEST: My son, surly I have lost my way. I see you were right, and I am thankful god gave you the courage to stand up to me. 
+PRIEST: Forgive me my dear Grocer. You need not pay anything any more. Your dear wife will be taken care of I asure you.
+<<HideCardCultist (Player)>>
+
+<<DisplayGrocer (Player)>>
+GREEN GROCER: Thank you father and thank you Romeo.
+<<HideGrocer (Player)>>
+
+<<SignalPlayerEventOver (Player)>>
+<<ReactivatePlayerMovment (Player)>>
+===
+
+title: CultistLoss
+tags:
+---
+<<DeactivatePlayerMovment (Player)>>
+
+<<DisplayCultist (Player)>>
+PRIEST: Ha ha it seems god is still on my side. See you next week grocer.
+<<HideCardCultist (Player)>>
+
+<<DisplayGrocer (Player)>>
+GREEN GROCER: Thank you for trying Romeo.
+<<HideGrocer (Player)>>
+
+<<DisplayRomeo (Player)>>
+ROMEO: I am sorry fair grocer, please allow me to pay for the upkeep of your wifes grave this is not fair.
+<<HideRomeo (Player)>>
+
+<<DisplayGrocer (Player)>>
+GREEN GROCER: I can not accept your offer I am sorry. My faith is strong and I will find away forward.
+<<HideGrocer (Player)>>
+
+<<SignalPlayerEventOver (Player)>>
+<<ReactivatePlayerMovment (Player)>>
+===
+
 
 title: MercutioQuestStart
 tags:
 ---
+<<DeactivatePlayerMovment (Player)>>
 Mercutio: Hi
+<<SignalPlayerToStartEvent (Player)>>
 ===
