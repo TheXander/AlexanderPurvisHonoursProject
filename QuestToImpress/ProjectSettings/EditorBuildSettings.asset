@@ -6,36 +6,36 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Menus/MainMenu.unity
+    path: Assets/GameFiles/Scenes/Menus/MainMenu.unity
     guid: 1d12ea372a83e034188a32f8e8254ee4
   - enabled: 1
-    path: Assets/Scenes/CardGame/CardGame.unity
+    path: Assets/GameFiles/Scenes/CardGame/CardGame.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/zones/City.unity
+    path: Assets/GameFiles/Scenes/zones/City.unity
     guid: 3f1e5461a67391146818f854b96d2d72
   - enabled: 1
-    path: Assets/Scenes/zones/Graveyard.unity
+    path: Assets/GameFiles/Scenes/zones/Graveyard.unity
     guid: 5e3276b919602c745af1c38263c2473a
   - enabled: 1
-    path: Assets/Scenes/zones/Forest.unity
+    path: Assets/GameFiles/Scenes/zones/Forest.unity
     guid: 83fc71308db15c74491375307feb7413
   - enabled: 1
-    path: Assets/Scenes/zones/Tavern.unity
+    path: Assets/GameFiles/Scenes/zones/Tavern.unity
     guid: 26fe426618a1fd548bc2e026368d3f39
   - enabled: 1
-    path: Assets/Scenes/zones/Lake.unity
+    path: Assets/GameFiles/Scenes/zones/Lake.unity
     guid: d172939ac7905d343bf1bd7c2a4ca609
   - enabled: 1
-    path: Assets/Scenes/zones/Church.unity
+    path: Assets/GameFiles/Scenes/zones/Church.unity
     guid: 3800e5e5fc08d3d40a447ab009d7fa4d
   - enabled: 1
-    path: Assets/Scenes/zones/Castle.unity
+    path: Assets/GameFiles/Scenes/zones/Castle.unity
     guid: 74a2d6a67b937d34a9b246fee8406b4b
   - enabled: 1
-    path: Assets/Scenes/zones/JulietsHouse.unity
+    path: Assets/GameFiles/Scenes/zones/JulietsHouse.unity
     guid: f7795ea7b1921544c89537de5ebbadc4
   - enabled: 1
-    path: Assets/Scenes/Combat/Combat.unity
+    path: Assets/GameFiles/Scenes/Combat/Combat.unity
     guid: 964e67bbc5091b8429ac4e15e3d81c96
   m_configObjects: {}

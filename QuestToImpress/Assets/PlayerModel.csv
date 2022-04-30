@@ -1,0 +1,5 @@
+PlayerID,Time Stamp, Game Running, Current Location,Combats Engaged In, Combat Wins, Combats Avoided,Card Games Engaged In, Card Game Wins, Card Game Draws, Card Games Avoided,Dialog Engaged In, Dialog Avoided
+|30042022111806|,11:18,True,Main Menu,0,0,0,0,0,0,0,0,0
+|30042022111806|,11:18,True,City,0,0,0,0,0,0,1,0,0
+|30042022111806|,11:19,True,Graveyard,0,0,1,0,0,0,1,0,0
+|30042022111806|,11:19,True,Graveyard,0,0,1,0,0,0,1,1,0
