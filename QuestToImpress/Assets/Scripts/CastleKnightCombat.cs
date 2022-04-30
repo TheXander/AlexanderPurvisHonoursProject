@@ -25,7 +25,7 @@ public class CastleKnightCombat : MonoBehaviour
     Transform attackPoint;
     LayerMask playerLayeres;
     int attackDamage = 5;
-    float attackRange = 3f;
+    float attackRange = 3.5f;
 
     float attackLongCooldown = 2f;
     float attackShortCooldown = 0.4f;
@@ -52,7 +52,6 @@ public class CastleKnightCombat : MonoBehaviour
 
     void Update()
     {
-
         if (enemyAlive)
         {
             if (shortAttackCoolActive)

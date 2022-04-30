@@ -13,6 +13,7 @@ public class PlayerInputControls : MonoBehaviour
 
     public bool playerActive = true;
     public bool playerAlive = true;
+    public bool blocking = false;
 
     //public CSVFileManager csvManager;
 
@@ -21,7 +22,7 @@ public class PlayerInputControls : MonoBehaviour
     private Vector3 velocityZero = Vector3.zero;
     [Range(0, .3f)] [SerializeField] private float m_MovementSmoothing = 0.2f;	// How much to smooth out the movement
     public bool isGrounded = true;
-    float jumpForce = 800.0f;
+    float jumpForce = 600.0f;
     Vector2 newDirectionInput;
     Vector3 lastPosition;
 
@@ -74,7 +75,7 @@ public class PlayerInputControls : MonoBehaviour
 
     private void MovePlayer()
     {
-        if (playerActive == true && playerAlive == true) {
+        if (playerActive && playerAlive && !blocking) {
 
             if (newDirectionInput.x != 0)
             {
@@ -106,7 +107,7 @@ public class PlayerInputControls : MonoBehaviour
 
     private void Jump()
     {
-        if (playerActive == true && playerAlive == true)
+        if (playerActive && playerAlive && !blocking)
         {
             if (isGrounded)
             {

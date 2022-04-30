@@ -19,7 +19,10 @@ public class HealthBarManager : MonoBehaviour
     public Animator enemyHealthAnimator;
 
     float playerStartingHealth = 100.0f;
-    float priestStartingHealth = 100.0f;
+
+    float priestStartingHealth = 150.0f;
+    float vaiDrogulStartingHealth = 120.0f;
+    float castleKnightStartingHealth = 90.0f;
 
     float currentPlayerHealth, currentEnemyHealth;
     public bool enemyIsAlive = true;
@@ -31,12 +34,12 @@ public class HealthBarManager : MonoBehaviour
         switch (romeoData.CurrentCombat)
         {
             case RomeoData.CombatEvents.CastleKnight:
-
-
+                
+                SetUpHealth(castleKnightStartingHealth);               
                 break;
             case RomeoData.CombatEvents.ForestKnight:
 
-                SetUpHealth(80.0f);
+                SetUpHealth(vaiDrogulStartingHealth);
                 break;
             case RomeoData.CombatEvents.CultistPriest:
 
@@ -61,14 +64,7 @@ public class HealthBarManager : MonoBehaviour
         }
     }
 
-    // Update is called once per frame
-    void Update()
-    {       
-       
-
-    }
-
-
+    
 
     public void SetUpHealth(float enemyStartingHealth)
     {
@@ -131,7 +127,7 @@ public class HealthBarManager : MonoBehaviour
                 castleKnightCombat.DamageReaction(currentEnemyHealth);
                 break;
             case RomeoData.CombatEvents.ForestKnight:
-              
+                vaiDrogulCombat.DamageReaction(currentEnemyHealth);
                 break;
             case RomeoData.CombatEvents.CultistPriest:
 
@@ -147,6 +143,7 @@ public class HealthBarManager : MonoBehaviour
         
                 break;
             default:
+                // castleKnightCombat.DamageReaction(currentEnemyHealth);
                 // enemyGauntletPriest.DamageReaction(currentEnemyHealth);
                 vaiDrogulCombat.DamageReaction(currentEnemyHealth);
                 break;

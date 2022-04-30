@@ -78,6 +78,8 @@ public class PlayerAttackManager : MonoBehaviour
     {
         if (currentEnergy > 5 && playerInputControls.playerAlive)
         {
+            playerInputControls.blocking = true;
+
             isBlocking = true;
             animator.SetBool("IsBlocking", true);
             animator.SetTrigger("Block");
@@ -94,6 +96,8 @@ public class PlayerAttackManager : MonoBehaviour
 
     public void EndBlock()
     {
+        playerInputControls.blocking = false;
+
         if (isBlocking == true && playerInputControls.playerAlive)
         {
             isBlocking = false;
@@ -103,58 +107,62 @@ public class PlayerAttackManager : MonoBehaviour
 
     public void Attack()
     {
-        if (currentEnergy >= 20)
+        if (!playerInputControls.blocking)
         {
-            bool enemyHit = false;
 
-            if (Time.time >= attackCooldown && playerInputControls.playerActive == true && playerInputControls.playerAlive)
+            if (currentEnergy >= 20)
             {
-                currentEnergy -= 20;
-                energySlider.value = currentEnergy;
+                bool enemyHit = false;
 
-                switch (attackCounter)
+                if (Time.time >= attackCooldown && playerInputControls.playerActive == true && playerInputControls.playerAlive)
                 {
-                    case 0:
-                        animator.SetTrigger("attack1");
-                        attackDamage = 4;
-                        break;
-                    case 1:
-                        animator.SetTrigger("attack2");
-                        attackDamage = 8;
-                        break;
-                    case 2:
-                        animator.SetTrigger("attack3");
-                        attackCounter = resetAttack;
-                        attackDamage = 12;
-                        break;
-                    default:
-                        break;
-                }
+                    currentEnergy -= 20;
+                    energySlider.value = currentEnergy;
 
-                Collider2D[] enemiesHit = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayeres);
-                foreach (Collider2D enemy in enemiesHit)
-                {
-                    healthManager.DecreaseEnemyHealth(attackDamage);
+                    switch (attackCounter)
+                    {
+                        case 0:
+                            animator.SetTrigger("attack1");
+                            attackDamage = 4;
+                            break;
+                        case 1:
+                            animator.SetTrigger("attack2");
+                            attackDamage = 8;
+                            break;
+                        case 2:
+                            animator.SetTrigger("attack3");
+                            attackCounter = resetAttack;
+                            attackDamage = 12;
+                            break;
+                        default:
+                            break;
+                    }
 
-                    enemyHit = true;
-                }
+                    Collider2D[] enemiesHit = Physics2D.OverlapCircleAll(attackPoint.position, attackRange, enemyLayeres);
+                    foreach (Collider2D enemy in enemiesHit)
+                    {
+                        healthManager.DecreaseEnemyHealth(attackDamage);
 
-                if (enemyHit && healthManager.enemyIsVulnerable)
-                {
-                    attackCounter++;
+                        enemyHit = true;
+                    }
 
-                    if (attackCounter > 2)
+                    if (enemyHit && healthManager.enemyIsVulnerable)
+                    {
+                        attackCounter++;
+
+                        if (attackCounter > 2)
+                        {
+                            attackCounter = 0;
+                        }
+                    }
+                    else
                     {
                         attackCounter = 0;
                     }
+
+                    attackCooldown = Time.time + 2f / attackRate;
                 }
-                else
-                {
-                    attackCounter = 0;
-                }
-              
-                attackCooldown = Time.time + 2f / attackRate;
-            }   
-        }         
+            }
+        }
     }   
 }

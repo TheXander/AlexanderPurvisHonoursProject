@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class MainMenuSetUp : MonoBehaviour
 {
+
+    public PlayerModel playerModel;
+
     public PlayerEventResults eventResults;
     public PlayerProgress playerProgress;
     public RomeoData romeoData;
@@ -62,5 +65,7 @@ public class MainMenuSetUp : MonoBehaviour
 
         romeoData.currentLocation = LevelLoader.Levels.MainMenu;
         romeoData.previousLocation = LevelLoader.Levels.MainMenu;
+
+        playerModel.CreateFile();
     }
 }

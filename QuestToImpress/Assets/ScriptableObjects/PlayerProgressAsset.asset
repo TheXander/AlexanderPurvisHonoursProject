@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lakeCardGameComplete: 0
   tavernFCardGameComplete: 0
-  cityCardGameComplete: 1
+  cityCardGameComplete: 0
   tavernVCardGameComplete: 0
   forestCardGameComplete: 0
   tybaltCardGameComplete: 0
   castleCombatCompelte: 0
-  forestKCombatCompelte: 1
+  forestKCombatCompelte: 0
   gravyardCombatCompelte: 0
   forestRHCombatCompelte: 0
   churchCombatCompelte: 0
@@ -30,5 +30,5 @@ MonoBehaviour:
   gravyardMDialogCompelte: 0
   churchDialogCompelte: 0
   tybaltDialogCompelte: 0
-  levelOneEventsComplete: 3
+  levelOneEventsComplete: 0
   levelTwoEventsComplete: 0

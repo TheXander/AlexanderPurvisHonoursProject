@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lakeCardGame: 0
   tavernFCardGame: 0
-  cityCardGame: 1
+  cityCardGame: 0
   castleCombat: 0
-  forestKCombat: 2
+  forestKCombat: 0
   gravyardCombat: 0
   julietDialogue: 0
   barmanDialogue: 0

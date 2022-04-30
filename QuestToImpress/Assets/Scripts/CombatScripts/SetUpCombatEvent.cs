@@ -15,6 +15,9 @@ public class SetUpCombatEvent : MonoBehaviour
     public GameObject churchScene;
     public GameObject castleScene;
 
+    public GameObject ForestSpawnPoint, CastleSpawnPoint, GraveyardSpawnPoint;
+    public GameObject player;
+
     // Character Portraits
     public Image pCastleKnight, pForestKnight, pGraveyardPriest,
                         pForestRedHood, pChurchPriest, PTybalt;
@@ -44,6 +47,7 @@ public class SetUpCombatEvent : MonoBehaviour
                 break;
             case LevelLoader.Levels.Graveyard:
                 returnDestination = LevelLoader.Levels.Graveyard;
+                player.transform.position = GraveyardSpawnPoint.transform.position;
                 graveyardScene.SetActive(true);
                 break;
             case LevelLoader.Levels.Tavern:
@@ -56,6 +60,7 @@ public class SetUpCombatEvent : MonoBehaviour
                 break;
             case LevelLoader.Levels.Forest:
                 returnDestination = LevelLoader.Levels.Forest;
+                player.transform.position = ForestSpawnPoint.transform.position;
                 forestScene.SetActive(true);
                 break;
             case LevelLoader.Levels.Church:
@@ -64,6 +69,7 @@ public class SetUpCombatEvent : MonoBehaviour
                 break;
             case LevelLoader.Levels.Castle:
                 returnDestination = LevelLoader.Levels.Castle;
+                player.transform.position = CastleSpawnPoint.transform.position;
                 castleScene.SetActive(true);
                 break;
 

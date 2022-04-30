@@ -6,6 +6,7 @@ public class FireballControls : MonoBehaviour
 {  
     public  Rigidbody2D rb;
     public VaiDrogulFireball vaiDrogulFireballs;
+    Vector2 direction;
 
     private void Start()
     {      
@@ -23,6 +24,7 @@ public class FireballControls : MonoBehaviour
         {
            
             vaiDrogulFireballs.BurnPlayer();
+            collision.gameObject.GetComponent<Rigidbody2D>().velocity = direction;
             Destroy(gameObject);
         }    
     }
@@ -38,6 +40,7 @@ public class FireballControls : MonoBehaviour
     public void SetFireballCourse(float speed, float angle)
     {
         rb.velocity = new Vector2(speed, angle);
+        direction = new Vector2(speed, 0);
     }
 
     public void SetSource(GameObject Source)
