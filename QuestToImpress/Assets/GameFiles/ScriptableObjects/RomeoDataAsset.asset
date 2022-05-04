@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa118590f57aff24ba4324045dbd05b8, type: 3}
   m_Name: RomeoDataAsset
   m_EditorClassIdentifier: 
-  previousLocation: 6
-  currentLocation: 1
-  currentEvent: 1
+  previousLocation: 0
+  currentLocation: 0
+  currentEvent: 0
   previousPlayerCoordinates: {x: 1.310577, y: 0.40163004, z: -2}
-  CurrentCardgame: 1
-  CurrentCombat: 1
+  CurrentCardgame: 0
+  CurrentCombat: 0
   CurrentDialog: 0

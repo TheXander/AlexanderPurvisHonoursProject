@@ -52,6 +52,36 @@ public class PlayerModel : ScriptableObject
             "Card Games Engaged In, Card Game Wins, Card Game Draws, Card Games Avoided," +
             "Dialog Engaged In, Dialog Avoided";
 
+    // reset
+    public void reset()
+    {
+    
+        playerID = "";
+        time = "";    
+        gameRunning = false;      
+        currentLocation = "";            
+        combatsEngagedIn = 0;       
+        combatWins = 0;
+        combatsAvoided = 0;
+  
+        cardGamesEngagedIn = 0;
+        cardGameWins = 0;
+        cardGameDraws = 0;
+        cardGamesAvoided = 0;
+
+        dialogueEngagedIn = 0;
+        dialogueAvoided = 0;
+
+        // CSVFile data
+         filename = "Player Model";
+         headers = "PlayerID," +
+                "Time Stamp, Game Running, Current Location," +
+                "Combats Engaged In, Combat Wins, Combats Avoided," +
+                "Card Games Engaged In, Card Game Wins, Card Game Draws, Card Games Avoided," +
+                "Dialog Engaged In, Dialog Avoided";
+    }
+
+
     // --Setters--
 
     // game state data

@@ -27,6 +27,14 @@ public class MapManager : MonoBehaviour
 
     public PlayerProgress playerProgress;
 
+    SceneBasedPlayerControls playerControls;
+    public GameObject player;
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerControls = player.GetComponent<SceneBasedPlayerControls>();
+    }
 
     // Update is called once per frame
     void Update()
@@ -38,7 +46,7 @@ public class MapManager : MonoBehaviour
         }
 
 
-        if (Input.GetKeyDown(KeyCode.M) && !viewUp && !totorialMaps)
+        if (Input.GetKeyDown(KeyCode.M) && !viewUp && !totorialMaps && !playerControls.movmentLocked)
         {
             instructionsView.SetActive(false);
             dialogueView.SetActive(false);

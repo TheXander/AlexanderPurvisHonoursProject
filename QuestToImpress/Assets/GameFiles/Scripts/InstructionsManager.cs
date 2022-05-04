@@ -37,11 +37,19 @@ public class InstructionsManager : MonoBehaviour
 
     public bool totorialRead = false;
 
+    SceneBasedPlayerControls playerControls;
+    public GameObject player;
+
+    private void Start()
+    {
+        player = GameObject.FindGameObjectWithTag("Player");
+        playerControls = player.GetComponent<SceneBasedPlayerControls>();
+    }
 
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape) && !viewUp && !totorialInstructions)
+        if (Input.GetKeyDown(KeyCode.Escape) && !viewUp && !totorialInstructions && !playerControls.movmentLocked)
         {
             mapsView.SetActive(false);
 

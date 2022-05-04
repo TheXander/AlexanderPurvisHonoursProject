@@ -11,6 +11,7 @@ public class MainMenuSetUp : MonoBehaviour
     public PlayerProgress playerProgress;
     public RomeoData romeoData;
 
+
     // Start is called before the first frame update
     void Start()
     {
@@ -55,6 +56,13 @@ public class MainMenuSetUp : MonoBehaviour
         playerProgress.levelTwoEventsComplete = 0;
 
 
+        playerProgress.levelOneEventsComplete =0;
+        playerProgress.levelTwoEventsComplete = 0;
+
+        playerProgress.julietsReady = false;
+        playerProgress.invitedToJuliets = false;
+
+
         // RomeoData resets
         // rest Current Events 
         romeoData.CurrentCardgame = RomeoData.CardgameEvents.None;
@@ -65,6 +73,10 @@ public class MainMenuSetUp : MonoBehaviour
 
         romeoData.currentLocation = LevelLoader.Levels.MainMenu;
         romeoData.previousLocation = LevelLoader.Levels.MainMenu;
+
+
+        playerModel.reset();
+
 
         playerModel.CreateFile();
     }
