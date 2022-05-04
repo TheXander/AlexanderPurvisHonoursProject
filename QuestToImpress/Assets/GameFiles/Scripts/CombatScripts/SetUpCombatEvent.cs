@@ -25,12 +25,15 @@ public class SetUpCombatEvent : MonoBehaviour
     public LevelLoader levelLoader;
     LevelLoader.Levels returnDestination;
 
+
+
     private void Awake()
     {
         SetUpScene();
         ChoseEnemey();
     }
 
+   
     public void ReturnPlayer()
     {
         romeoData.previousLocation = LevelLoader.Levels.Combat;
@@ -70,7 +73,7 @@ public class SetUpCombatEvent : MonoBehaviour
             case LevelLoader.Levels.Castle:
                 returnDestination = LevelLoader.Levels.Castle;
                 player.transform.position = CastleSpawnPoint.transform.position;
-                castleScene.SetActive(true);
+                castleScene.SetActive(true);        
                 break;
 
             default:

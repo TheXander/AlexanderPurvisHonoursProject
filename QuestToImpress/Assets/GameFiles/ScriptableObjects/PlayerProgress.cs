@@ -24,4 +24,10 @@ public class PlayerProgress : ScriptableObject
     public int levelOneEventsComplete;
     [SerializeField]
     public int levelTwoEventsComplete;
+
+    [SerializeField]
+    public bool julietsReady = false;
+
+    [SerializeField]
+    public bool invitedToJuliets = false;
 }

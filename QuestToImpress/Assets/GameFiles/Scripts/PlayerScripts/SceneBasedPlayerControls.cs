@@ -26,6 +26,9 @@ public class SceneBasedPlayerControls : MonoBehaviour
     public bool eventConfirmed = false;
     bool eventActivated = false;
 
+   
+    public PlayerProgress playerProgress;
+    public GameObject invitation;
 
     private void Awake()
     {
@@ -40,6 +43,7 @@ public class SceneBasedPlayerControls : MonoBehaviour
         playerInputActions.Gameplay.EnterDoor.performed += context => EnterDoor();
         // interactions
         playerInputActions.Gameplay.Interact.performed += context => StartEvent();
+        playerInputActions.Gameplay.Interact.canceled += context => StopEvent();
 
         if (romeoData.previousLocation == LevelLoader.Levels.CardGame ||
             romeoData.previousLocation == LevelLoader.Levels.Combat)
@@ -54,11 +58,24 @@ public class SceneBasedPlayerControls : MonoBehaviour
         if (!movmentLocked)
         {
             MovePlayer();
-        }     
-    }
+        }
+    }// Created by ALexander Purvis copyright Alexander Purvis
 
     private void Update()
     {
+        if (playerProgress.levelOneEventsComplete >= 3 && !playerProgress.julietsReady)
+        {
+            playerProgress.julietsReady = true;
+        }
+
+        if (playerProgress.julietsReady && !playerProgress.invitedToJuliets)
+        {
+            StopPlayer();
+            invitation.SetActive(true);
+            playerProgress.invitedToJuliets = true;
+        }
+
+
         if (newDirectionInput.y > 0.95)
         {
             EnterDoor();
@@ -140,6 +157,14 @@ public class SceneBasedPlayerControls : MonoBehaviour
             eventReady = true;
         }
     }
+
+    void StopEvent()
+    {
+        
+            eventReady = false;
+        
+    }
+
 
     public void StartDialog()
     {

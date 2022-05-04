@@ -9,7 +9,7 @@ public class VaiDrogulCombat : MonoBehaviour
     public Animator effects;
    
     public bool enemyAlive = true;
-    public bool enemyActive = true;
+    public bool enemyActive = false;
 
     public HealthBarManager healthBarManager;
     public PlayerAttackManager playerAttackManager;
@@ -46,7 +46,7 @@ public class VaiDrogulCombat : MonoBehaviour
 
     void Update()
     {
-        if (enemyAlive && !teleporting)
+        if (enemyAlive && !teleporting && enemyActive)
         {
             if (shortAttackCoolActive && !longAttackCoolActive)
             {

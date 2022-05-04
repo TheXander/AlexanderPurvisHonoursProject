@@ -8,7 +8,7 @@ public class CombatManager : MonoBehaviour
     public PlayerProgress playerProgress;
     public RomeoData romeoData;
     public PlayerEventResults eventResults;
-    
+    public PlayerInputControls playerInputControls;
 
     public Animator fightAnnouncement;
     public TMP_Text gameResultText;
@@ -20,11 +20,42 @@ public class CombatManager : MonoBehaviour
     public PlayerModel playerModel;
     bool resultSentToPlayerModel = false;
 
+    // enemies 
+    public EnemyGauntletPriest enemyGauntletPriest;
+    public VaiDrogulCombat vaiDrogulCombat;
+    public CastleKnightCombat castleKnightCombat;
+
+
     public void ActivateFighters()
     {
+        playerInputControls.playerActive = true;
 
+        switch (romeoData.CurrentCombat)
+        {
+            case RomeoData.CombatEvents.CastleKnight:
+                castleKnightCombat.ActivateEnemy();
+                break;
+            case RomeoData.CombatEvents.ForestKnight:
+                vaiDrogulCombat.enemyActive = true;
+                break;
+            case RomeoData.CombatEvents.CultistPriest:
+                enemyGauntletPriest.ActivateEnemy();
+                break;
+            case RomeoData.CombatEvents.RedHood:
+
+                break;
+            case RomeoData.CombatEvents.EvilSpirt:
+
+                break;
+            case RomeoData.CombatEvents.Tybalt:
+
+                break;
+            default:
+                Debug.Log("Error no result");
+                break;
+        }
     }
-   
+
     public void RevealFightResult(CombatResults ResultOfCombat)
     {
         combatResult = ResultOfCombat;
@@ -48,15 +79,13 @@ public class CombatManager : MonoBehaviour
 
     public void EndFight()
     {
-
         if (!resultSentToPlayerModel)
         {
-
             switch (romeoData.CurrentCombat)
             {
                 case RomeoData.CombatEvents.CastleKnight:
                     playerProgress.castleCombatCompelte = true;
-                    playerProgress.levelOneEventsComplete++;
+                    //playerProgress.levelOneEventsComplete++;
 
                     switch (combatResult)
                     {

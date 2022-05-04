@@ -14,7 +14,7 @@ public class PlayerAttackManager : MonoBehaviour
     int attackDamage = 20;
     float attackRate = 3f;
     float attackCooldown = 0f;
-
+    
 
     // energy
     public Slider energySlider;
@@ -76,7 +76,7 @@ public class PlayerAttackManager : MonoBehaviour
 
     public void Block()
     {
-        if (currentEnergy > 5 && playerInputControls.playerAlive)
+        if (currentEnergy > 5 && playerInputControls.playerAlive && playerInputControls.playerActive)
         {
             playerInputControls.blocking = true;
 
@@ -107,14 +107,14 @@ public class PlayerAttackManager : MonoBehaviour
 
     public void Attack()
     {
-        if (!playerInputControls.blocking)
+        if (!playerInputControls.blocking && playerInputControls.playerActive)
         {
 
             if (currentEnergy >= 20)
             {
                 bool enemyHit = false;
 
-                if (Time.time >= attackCooldown && playerInputControls.playerActive == true && playerInputControls.playerAlive)
+                if (Time.time >= attackCooldown && playerInputControls.playerActive == true && playerInputControls.playerAlive )
                 {
                     currentEnergy -= 20;
                     energySlider.value = currentEnergy;

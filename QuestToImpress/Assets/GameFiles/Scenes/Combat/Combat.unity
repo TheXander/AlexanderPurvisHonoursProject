@@ -9299,7 +9299,7 @@ GameObject:
   - component: {fileID: 388064501}
   - component: {fileID: 388064497}
   m_Layer: 9
-  m_Name: PreCastleKnight
+  m_Name: CastleKnight
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9320,7 +9320,7 @@ MonoBehaviour:
   enemyFacingRight: 0
   m_MovementSmoothing: 0.05
   enemyAlive: 1
-  enemyActive: 1
+  enemyActive: 0
   healthBarManager: {fileID: 830042013}
   playerAttackManager: {fileID: 813595900}
   player: {fileID: 813595899}
@@ -11320,6 +11320,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   glow: {fileID: 1354836557}
+  glowing: 0
 --- !u!61 &463547503
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -20458,7 +20459,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackManager: {fileID: 813595900}
   healthManager: {fileID: 830042013}
-  playerActive: 1
+  playerActive: 0
   playerAlive: 1
   blocking: 0
   playerFacingRight: 1
@@ -20748,10 +20749,14 @@ MonoBehaviour:
   playerProgress: {fileID: 11400000, guid: 667827b00ea143842982ca497119aca7, type: 2}
   romeoData: {fileID: 11400000, guid: 477729ec08176074185993656ff20221, type: 2}
   eventResults: {fileID: 11400000, guid: 197b4fbfaeac198488351c0ec2713596, type: 2}
+  playerInputControls: {fileID: 813595901}
   fightAnnouncement: {fileID: 881956013}
   gameResultText: {fileID: 881956012}
   setUpCombat: {fileID: 1368007993}
   playerModel: {fileID: 11400000, guid: ad2e17ed8773e8341b50b632ae156b06, type: 2}
+  enemyGauntletPriest: {fileID: 1365869958}
+  vaiDrogulCombat: {fileID: 1523992107}
+  castleKnightCombat: {fileID: 388064497}
 --- !u!4 &830042012
 Transform:
   m_ObjectHideFlags: 0
@@ -35247,7 +35252,7 @@ MonoBehaviour:
   enemyFacingRight: 0
   m_MovementSmoothing: 0.05
   enemyAlive: 1
-  enemyActive: 1
+  enemyActive: 0
   healthBarManager: {fileID: 830042013}
   playerAttackManager: {fileID: 813595900}
   player: {fileID: 813595899}
@@ -35401,6 +35406,9 @@ MonoBehaviour:
   pChurchPriest: {fileID: 340296030}
   PTybalt: {fileID: 1841475275}
   levelLoader: {fileID: 1407000077}
+  mapManager: {fileID: 0}
+  instructionsManager: {fileID: 0}
+  tutorialIsRead: 0
 --- !u!1 &1369968546
 GameObject:
   m_ObjectHideFlags: 0
@@ -39494,7 +39502,7 @@ MonoBehaviour:
   animator: {fileID: 1523992109}
   effects: {fileID: 541517460}
   enemyAlive: 1
-  enemyActive: 1
+  enemyActive: 0
   healthBarManager: {fileID: 830042013}
   playerAttackManager: {fileID: 813595900}
   vaiDrogulFireball: {fileID: 1523992112}

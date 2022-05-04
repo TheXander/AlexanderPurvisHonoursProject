@@ -46,6 +46,9 @@ public class CitySetUp : MonoBehaviour
     public GameObject townNPCs;
     public GameObject cardWinResultDialogue, cardLossResultDialogue, cardDrawResultDialogue;
 
+    public InstructionsManager instructionsManager;
+    public MapManager mapManager;
+
     private void Awake()
     {
         switch (romeoData.previousLocation)
@@ -83,6 +86,10 @@ public class CitySetUp : MonoBehaviour
                 levelOneBarriers.SetActive(true);
                 JulietBarriers.SetActive(false);
                 townNPCs.SetActive(false);
+
+
+                instructionsManager.preTotorial = true;
+                mapManager.preTutorial = true;
                 break;
             default:
                

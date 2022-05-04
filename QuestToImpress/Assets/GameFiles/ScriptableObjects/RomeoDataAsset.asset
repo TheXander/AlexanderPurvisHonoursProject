@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: RomeoDataAsset
   m_EditorClassIdentifier: 
   previousLocation: 6
-  currentLocation: 6
+  currentLocation: 1
   currentEvent: 1
-  previousPlayerCoordinates: {x: -11.368965, y: -4.19837, z: -2}
-  CurrentCardgame: 3
-  CurrentCombat: 3
+  previousPlayerCoordinates: {x: 1.310577, y: 0.40163004, z: -2}
+  CurrentCardgame: 1
+  CurrentCombat: 1
   CurrentDialog: 0

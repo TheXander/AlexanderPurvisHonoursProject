@@ -551,14 +551,13 @@ public class CardGameManager : MonoBehaviour
         MarkCombatAsComplete();
     }
 
-  
     void MarkCombatAsComplete()
     {
         switch (romeoData.CurrentCardgame)
         {
             case RomeoData.CardgameEvents.LakeFighter:
                 playerProgress.lakeCardGameComplete = true;
-                playerProgress.levelOneEventsComplete++;
+                //playerProgress.levelOneEventsComplete++;
                 break;
             case RomeoData.CardgameEvents.TavernFighter:
                 playerProgress.tavernFCardGameComplete = true;
@@ -641,16 +640,13 @@ public class CardGameManager : MonoBehaviour
                   enemyHonour = 25;       
                 break;
             case RomeoData.CardgameEvents.TavernAxeMan:
-
-               
+              
                 break;
             case RomeoData.CardgameEvents.ForestGhoul:
-
-               
+             
                 break;
             case RomeoData.CardgameEvents.Tybalt:
-
-               
+              
                 break;
 
             default:

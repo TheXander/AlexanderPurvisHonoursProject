@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-
+// Created by ALexander Purvis copyright Alexander Purvis
 [CreateAssetMenu]
 public class PlayerModel : ScriptableObject
 {
@@ -57,13 +57,19 @@ public class PlayerModel : ScriptableObject
     // game state data
     public void StandardUpdate(bool GameState, string location)
     {
-        Debug.Log("StandardUpdate ");
-
         time = System.DateTime.UtcNow.ToLocalTime().ToString("HH:mm");
         gameRunning = GameState;
         currentLocation = location;
     }
 
+    public void LastUpdate(string location)
+    {
+        time = System.DateTime.UtcNow.ToLocalTime().ToString("HH:mm");
+        gameRunning = false;
+        currentLocation = location;
+        WriteToCSV();
+    }
+    // Created by ALexander Purvis copyright Alexander Purvis
     // Combat Event data
     public void NewCombatEngagement(bool playerWon)
     {
@@ -113,7 +119,6 @@ public class PlayerModel : ScriptableObject
     // dialogue Event data
     public void NewDialogueEngagement()
     {
-        Debug.LogWarning("dialogueEngagedIn++ ");
         dialogueEngagedIn++;
 
         WriteToCSV();
@@ -135,8 +140,8 @@ public class PlayerModel : ScriptableObject
         ClearAllData();
         CreateUniqueEnoughPlayerID();
 
-       // filename = Application.dataPath + "/Player " + playerID + " PlayerModel.csv";
-        filename = Application.dataPath + "/PlayerModel.csv";
+        filename = Application.dataPath + "/Player " + playerID + " PlayerModel.csv";
+       // filename = Application.dataPath + "/PlayerModel.csv";
         TextWriter tw = new StreamWriter(filename, false);
         tw.WriteLine(headers);
         tw.Close();
@@ -193,7 +198,7 @@ public class PlayerModel : ScriptableObject
 
     public void WriteToCSV()
     {
-        filename = Application.dataPath + "/PlayerModel.csv";
+       // filename = Application.dataPath + "/PlayerModel.csv";
 
         TextWriter tw = new StreamWriter(filename, true);
 

@@ -14,7 +14,7 @@ public class EnemyGauntletPriest : MonoBehaviour
     float move;
 
     public bool enemyAlive = true;
-    public bool enemyActive = true;
+    public bool enemyActive = false;
     bool takingdamage = false;
  
     public HealthBarManager healthBarManager;
@@ -25,10 +25,10 @@ public class EnemyGauntletPriest : MonoBehaviour
     Transform attackPoint;
     LayerMask playerLayeres;
     int attackDamage = 5;
-    float attackRange = 2.5f;
+    float attackRange = 2f;
 
-    float attackLongCooldown = 2f;
-    float attackShortCooldown = 0.4f;
+    float attackLongCooldown = 4.4f;
+    float attackShortCooldown = 1.4f;
     float cooldownCounter = 0f;
 
     float walkingTime = 5f;
@@ -53,7 +53,7 @@ public class EnemyGauntletPriest : MonoBehaviour
     void Update()
     {
 
-        if (enemyAlive)
+        if (enemyAlive && enemyActive)
         {
             if (shortAttackCoolActive)
             {
@@ -65,6 +65,7 @@ public class EnemyGauntletPriest : MonoBehaviour
                     isIdle = true;
                 }
 
+               
                 cooldownCounter += Time.deltaTime;
                 if (cooldownCounter >= attackShortCooldown)
                 {
@@ -86,7 +87,7 @@ public class EnemyGauntletPriest : MonoBehaviour
                     animator.SetTrigger("idle");
                     isIdle = true;
                 }
-
+             
                 cooldownCounter += Time.deltaTime;
                 if (cooldownCounter >= attackLongCooldown)
                 {
@@ -110,6 +111,7 @@ public class EnemyGauntletPriest : MonoBehaviour
     {
         if (enemyAlive && enemyActive)
         {
+            
 
             walkingCounter += Time.deltaTime;
             if (walkingCounter >= walkingTime)
@@ -146,13 +148,7 @@ public class EnemyGauntletPriest : MonoBehaviour
             }
 
 
-            // animator.SetFloat("enemySpeed", Mathf.Abs((float)direction));
-            move = (direction * Time.fixedDeltaTime) * movmentSpeed;
-            // Move the character by finding the target velocity
-            Vector3 targetVelocity = new Vector2(move * 10f, spriteBody2D.velocity.y);
-            // And then smoothing it out and applying it to the character
-            spriteBody2D.velocity = Vector3.SmoothDamp(spriteBody2D.velocity, targetVelocity, ref velocityZero, m_MovementSmoothing);
-
+            
             if (Vector2.Distance(currentPos, playerPos) <= attackRange)
             {
                 animator.SetTrigger("attack");
@@ -161,6 +157,13 @@ public class EnemyGauntletPriest : MonoBehaviour
             else
             {
                 healthBarManager.enemyIsVulnerable = true;
+                // animator.SetFloat("enemySpeed", Mathf.Abs((float)direction));
+                move = (direction * Time.fixedDeltaTime) * movmentSpeed;
+                // Move the character by finding the target velocity
+                Vector3 targetVelocity = new Vector2(move * 10f, spriteBody2D.velocity.y);
+                // And then smoothing it out and applying it to the character
+                spriteBody2D.velocity = Vector3.SmoothDamp(spriteBody2D.velocity, targetVelocity, ref velocityZero, m_MovementSmoothing);
+             
             }
         }
     }
@@ -178,7 +181,7 @@ public class EnemyGauntletPriest : MonoBehaviour
     public void Attack() {
 
         if (enemyAlive)
-        {
+        {          
             bool attackBlocked = false;
 
             if (playerAttackManager.isBlocking && playerAttackManager.enemyDetected)

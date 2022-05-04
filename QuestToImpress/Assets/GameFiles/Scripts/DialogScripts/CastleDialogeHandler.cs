@@ -148,66 +148,55 @@ public class CastleDialogeHandler : MonoBehaviour
     {
         mercutioPortrait.SetActive(false);
     }
-
     void HideJuliet(GameObject Player)
     {
         julietPortrait.SetActive(false);
     }
-
     void HideCastleKnight(GameObject Player)
     {
         castleKnightPortrait.SetActive(false);
     }
-
     void HideKing(GameObject Player)
     {
         kingPortrait.SetActive(false);
     }
-
     //player control interactions
     void DeactivatePlayerMovment(GameObject Player)
     {
         playerControls.StopPlayer();
     }
-
     void ReactivatePlayerMovment(GameObject Player)
     {
         playerControls.StartPlayer();
     }
-
     void SignalPlayerToStartEvent(GameObject Player)
     {
         playerControls.eventConfirmed = true;      
     }
-
     void SignalPlayerEventOver(GameObject Player)
     {
         playerControls.eventReady = false;
         playerControls.confirmingEvent = false;
         playerControls.eventConfirmed = false;
     }
-
     void ActivateCastleKnight(GameObject Player)
     {
         knightControls.MovePreCombatKnightToPlayer();
     }
-
     void SwitchJuliets(GameObject Player)
     {
         juliet.SetActive(true);
         julietDialogeEvent.SetActive(false);
     }
-
     void LeaveCastle(GameObject Player)
     {
         romeoData.previousLocation = LevelLoader.Levels.Castle;
         romeoData.currentLocation = LevelLoader.Levels.Lake;
         levelLoader.LoadLevel(LevelLoader.Levels.Lake);
     }
-
     void SetJulietDialogueComplete(GameObject Player)
     {
-        playerProgress.castleCombatCompelte = true;
-        playerProgress.levelOneEventsComplete++;
+        playerProgress.castleDialogCompelte = true;
+       // playerProgress.levelOneEventsComplete++;
     }
 }

@@ -11,7 +11,8 @@ public class PlayerInputControls : MonoBehaviour
     public PlayerAttackManager attackManager;
     public HealthBarManager healthManager;
 
-    public bool playerActive = true;
+    public bool playerActive = false;
+    //public bool playeractivated = false;
     public bool playerAlive = true;
     public bool blocking = false;
 

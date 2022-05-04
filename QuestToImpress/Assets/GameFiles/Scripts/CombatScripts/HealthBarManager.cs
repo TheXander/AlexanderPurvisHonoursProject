@@ -85,7 +85,7 @@ public class HealthBarManager : MonoBehaviour
 
     public void DecreasePlayerHealth(float damage)
     {    
-        if (currentPlayerHealth  > 0 && enemyIsAlive &&  playerInputControls.isGrounded)
+        if (currentPlayerHealth  > 0 && enemyIsAlive)
         {
             currentPlayerHealth -= damage;
             playerHealthSlider.value = currentPlayerHealth;

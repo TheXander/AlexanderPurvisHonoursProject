@@ -14,7 +14,8 @@ public class CastleKnightCombat : MonoBehaviour
     float move;
 
     public bool enemyAlive = true;
-    public bool enemyActive = true;
+    public bool enemyActive = false;
+
     bool takingdamage = false;
 
     public HealthBarManager healthBarManager;
@@ -24,11 +25,11 @@ public class CastleKnightCombat : MonoBehaviour
 
     Transform attackPoint;
     LayerMask playerLayeres;
-    int attackDamage = 5;
-    float attackRange = 3.5f;
+    int attackDamage = 8;
+    float attackRange = 2.6f;
 
-    float attackLongCooldown = 2f;
-    float attackShortCooldown = 0.4f;
+    float attackLongCooldown = 3.1f;
+    float attackShortCooldown = 2f;
     float cooldownCounter = 0f;
 
     float walkingTime = 5f;
@@ -40,6 +41,7 @@ public class CastleKnightCombat : MonoBehaviour
     bool shortAttackCoolActive = false;
     bool longAttackCoolActive = false;
 
+
     private void Awake()
     {
         spriteBody2D = GetComponent<Rigidbody2D>();
@@ -49,10 +51,10 @@ public class CastleKnightCombat : MonoBehaviour
         playerLayeres = LayerMask.GetMask("Player");
     }
 
-
+    // Created by ALexander Purvis copyright Alexander Purvis
     void Update()
     {
-        if (enemyAlive)
+        if (enemyAlive && enemyActive)
         {
             if (shortAttackCoolActive)
             {
@@ -143,24 +145,22 @@ public class CastleKnightCombat : MonoBehaviour
                     enemyFacingRight = true;
                 }
             }
-
-
-            // animator.SetFloat("enemySpeed", Mathf.Abs((float)direction));
-            move = (direction * Time.fixedDeltaTime) * movmentSpeed;
-            // Move the character by finding the target velocity
-            Vector3 targetVelocity = new Vector2(move * 10f, spriteBody2D.velocity.y);
-            // And then smoothing it out and applying it to the character
-            spriteBody2D.velocity = Vector3.SmoothDamp(spriteBody2D.velocity, targetVelocity, ref velocityZero, m_MovementSmoothing);
+           
 
             if (Vector2.Distance(currentPos, playerPos) <= attackRange)
             {
                 animator.SetTrigger("attack");
-                healthBarManager.enemyIsVulnerable = false;
             }
             else
             {
-                healthBarManager.enemyIsVulnerable = true;
+                // animator.SetFloat("enemySpeed", Mathf.Abs((float)direction));
+                move = (direction * Time.fixedDeltaTime) * movmentSpeed;
+                // Move the character by finding the target velocity
+                Vector3 targetVelocity = new Vector2(move * 10f, spriteBody2D.velocity.y);
+                // And then smoothing it out and applying it to the character
+                spriteBody2D.velocity = Vector3.SmoothDamp(spriteBody2D.velocity, targetVelocity, ref velocityZero, m_MovementSmoothing);
             }
+           
         }
     }
 
@@ -173,12 +173,13 @@ public class CastleKnightCombat : MonoBehaviour
         transform.localScale = theScale;
     }
 
-
     public void Attack()
     {
 
         if (enemyAlive)
         {
+            healthBarManager.enemyIsVulnerable = false;
+     
             bool attackBlocked = false;
 
             if (playerAttackManager.isBlocking && playerAttackManager.enemyDetected)
@@ -186,6 +187,7 @@ public class CastleKnightCombat : MonoBehaviour
                 attackBlocked = true;
                 playerAttackManager.ScusessfulBlock();
             }
+
 
             if (enemyActive)
             {

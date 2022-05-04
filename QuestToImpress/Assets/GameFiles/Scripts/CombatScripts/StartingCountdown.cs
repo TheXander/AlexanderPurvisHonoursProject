@@ -6,8 +6,8 @@ public class StartingCountdown : MonoBehaviour
 {
    public CombatManager combatManager;
 
-   public void BeginFight()
-   {
+    public void BeginFight()
+    {
         combatManager.ActivateFighters();
-   }
+    }
 }
