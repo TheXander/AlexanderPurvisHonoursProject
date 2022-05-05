@@ -4266,6 +4266,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: UICanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8193599606020136601, guid: 4ea6f5a226b01d3459a0a0e505d8919c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8193599607082483225, guid: 4ea6f5a226b01d3459a0a0e505d8919c, type: 3}
       propertyPath: dialogueView
       value: 
@@ -17368,7 +17372,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c8f5e4d94bb6f041843b6fe8009c869, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  romeoData: {fileID: 11400000, guid: 477729ec08176074185993656ff20221, type: 2}
   dialogueRunner: {fileID: 1453514002}
   conversationStartNode: Start
 --- !u!114 &1375910752
@@ -24780,7 +24783,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1951758625}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.43, y: -0.31, z: -2}
+  m_LocalPosition: {x: 3.43, y: -0.1, z: -2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
