@@ -14179,7 +14179,7 @@ RectTransform:
   m_GameObject: {fileID: 496497790}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.1671876, y: 1, z: 1}
   m_Children:
   - {fileID: 618078161}
   - {fileID: 121244095}
@@ -14189,7 +14189,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -330.97, y: -140.66}
+  m_AnchoredPosition: {x: -320.7, y: -140.66}
   m_SizeDelta: {x: -684.4183, y: -293.49847}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &496497792
@@ -15903,7 +15903,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7643550430610848163, guid: 6bf421c8be583994db0d2eb6b253bace, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7643550430610848166, guid: 6bf421c8be583994db0d2eb6b253bace, type: 3}
       propertyPath: m_LocalPosition.x
@@ -16319,14 +16319,14 @@ RectTransform:
   m_GameObject: {fileID: 548654904}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: -1, y: -1, z: 1}
+  m_LocalScale: {x: -1.21, y: -1.3229597, z: 1}
   m_Children: []
   m_Father: {fileID: 241831624}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -331.21, y: -140.66}
+  m_AnchoredPosition: {x: -322.8, y: -140.7}
   m_SizeDelta: {x: 128.3921, y: 168.69597}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &548654906
@@ -17821,7 +17821,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.0000014901, y: -27.1}
+  m_AnchoredPosition: {x: 0.0000014901, y: -33.6}
   m_SizeDelta: {x: 45.29663, y: 8.9593525}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &590439397
@@ -42095,6 +42095,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   glow: {fileID: 544722636}
+  glowing: 0
 --- !u!61 &1326895233
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -45004,7 +45005,7 @@ RectTransform:
   m_GameObject: {fileID: 1410533152}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: -1.5, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1877532523}
   m_RootOrder: 2

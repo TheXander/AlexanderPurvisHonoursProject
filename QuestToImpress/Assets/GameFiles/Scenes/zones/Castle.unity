@@ -4178,10 +4178,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8193599605791547248, guid: 4ea6f5a226b01d3459a0a0e505d8919c, type: 3}
-      propertyPath: m_UiScaleMode
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8193599605791547250, guid: 4ea6f5a226b01d3459a0a0e505d8919c, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4270,16 +4266,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: UICanvas
       objectReference: {fileID: 0}
-    - target: {fileID: 8193599606020136601, guid: 4ea6f5a226b01d3459a0a0e505d8919c, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 8193599607082483225, guid: 4ea6f5a226b01d3459a0a0e505d8919c, type: 3}
       propertyPath: dialogueView
       value: 
       objectReference: {fileID: 1453514004}
     - target: {fileID: 8193599607082483225, guid: 4ea6f5a226b01d3459a0a0e505d8919c, type: 3}
       propertyPath: firstCombat
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8193599607082483225, guid: 4ea6f5a226b01d3459a0a0e505d8919c, type: 3}
+      propertyPath: preTotorial
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8193599607082483225, guid: 4ea6f5a226b01d3459a0a0e505d8919c, type: 3}
@@ -4290,14 +4286,6 @@ PrefabInstance:
       propertyPath: dialogueView
       value: 
       objectReference: {fileID: 1453514004}
-    - target: {fileID: 8193599607275464090, guid: 4ea6f5a226b01d3459a0a0e505d8919c, type: 3}
-      propertyPath: totorialMaps
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8193599607463363942, guid: 4ea6f5a226b01d3459a0a0e505d8919c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -935
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ea6f5a226b01d3459a0a0e505d8919c, type: 3}
 --- !u!1 &367716217

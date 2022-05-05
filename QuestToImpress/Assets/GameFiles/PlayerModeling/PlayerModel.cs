@@ -228,25 +228,49 @@ public class PlayerModel : ScriptableObject
 
     public void WriteToCSV()
     {
-       // filename = Application.dataPath + "/PlayerModel.csv";
 
-        TextWriter tw = new StreamWriter(filename, true);
+        string modelUpdate =
+                playerID + "," +
+                    time + "," +
+                    gameRunning + "," +
+                    currentLocation + "," +
+                     combatsEngagedIn + "," +
+                     combatWins + "," +
+                     combatsAvoided + "," +
+                     cardGamesEngagedIn + "," +
+                     cardGameWins + "," +
+                     cardGameDraws + "," +
+                     cardGamesAvoided + "," +
+                     dialogueEngagedIn + "," +
+                     dialogueAvoided +
+                     "\n";
 
-        tw.WriteLine(playerID + "," +
-            time + "," + 
-            gameRunning + "," + 
-            currentLocation + "," +
-             combatsEngagedIn + "," + 
-             combatWins + "," + 
-             combatsAvoided + "," +
-             cardGamesEngagedIn + "," +
-             cardGameWins + "," +
-             cardGameDraws + "," + 
-             cardGamesAvoided + "," +
-             dialogueEngagedIn + "," + 
-             dialogueAvoided);
+        using (FileStream fileStream = new FileStream(filename, FileMode.Append, FileAccess.Write))
+        {
+            using (StreamWriter writer = new StreamWriter(fileStream))
+            {
+                writer.WriteLine(modelUpdate);
+            }
+        }
 
-        tw.Close();            
+
+        //TextWriter tw = new StreamWriter(filename, true);
+
+        //tw.WriteLine(playerID + "," +
+        //    time + "," + 
+        //    gameRunning + "," + 
+        //    currentLocation + "," +
+        //     combatsEngagedIn + "," + 
+        //     combatWins + "," + 
+        //     combatsAvoided + "," +
+        //     cardGamesEngagedIn + "," +
+        //     cardGameWins + "," +
+        //     cardGameDraws + "," + 
+        //     cardGamesAvoided + "," +
+        //     dialogueEngagedIn + "," + 
+        //     dialogueAvoided);
+
+        //tw.Close();                    
     }
 
 }

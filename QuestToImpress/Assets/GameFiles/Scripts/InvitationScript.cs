@@ -10,7 +10,7 @@ public class InvitationScript : MonoBehaviour
 
     public void SetJulietReady()
     {
-        playerProgress.julietsReady = true;
+        playerProgress.julietsReady = true;       
         sceneBasedPlayerControls.movmentLocked = false;        
     }
 }

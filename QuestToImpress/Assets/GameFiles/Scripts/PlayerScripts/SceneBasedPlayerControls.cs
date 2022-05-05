@@ -29,6 +29,10 @@ public class SceneBasedPlayerControls : MonoBehaviour
    
     public PlayerProgress playerProgress;
     public GameObject invitation;
+    float counterForMarcutioPopUp = 0;
+    float MarcutioPopUpTime = 1.2f;
+
+
 
     private void Awake()
     {
@@ -68,11 +72,23 @@ public class SceneBasedPlayerControls : MonoBehaviour
             playerProgress.julietsReady = true;
         }
 
-        if (playerProgress.julietsReady && !playerProgress.invitedToJuliets)
+        if (playerProgress.julietsReady && !playerProgress.invitedToJuliets && !movmentLocked)
         {
-            StopPlayer();
-            invitation.SetActive(true);
-            playerProgress.invitedToJuliets = true;
+
+            counterForMarcutioPopUp += Time.deltaTime;
+            if (counterForMarcutioPopUp >= MarcutioPopUpTime)
+            {
+                StopPlayer();
+                invitation.SetActive(true);
+                playerProgress.invitedToJuliets = true;
+                movmentLocked = true;
+                if (!playerFacingRight)
+                {
+                    invitation.transform.localScale = new Vector3(-invitation.transform.localScale.x, invitation.transform.localScale.y, invitation.transform.localScale.z);
+
+                }
+                counterForMarcutioPopUp = 0;
+            }          
         }
 
 

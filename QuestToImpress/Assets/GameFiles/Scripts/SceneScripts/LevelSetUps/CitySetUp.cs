@@ -125,4 +125,13 @@ public class CitySetUp : MonoBehaviour
             l1CityCardGame.SetActive(false);        
         }      
     }
+
+    private void Update()
+    {
+        
+        if (Input.GetKeyDown(KeyCode.Equals))
+        {
+            levelOneBarriers.SetActive(false);
+        }
+    }
 }

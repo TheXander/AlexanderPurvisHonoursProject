@@ -2313,10 +2313,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: UICanvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8193599606281252743, guid: 4ea6f5a226b01d3459a0a0e505d8919c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8193599607082483225, guid: 4ea6f5a226b01d3459a0a0e505d8919c, type: 3}
       propertyPath: dialogueView
       value: 
       objectReference: {fileID: 1580205343}
+    - target: {fileID: 8193599607221510983, guid: 4ea6f5a226b01d3459a0a0e505d8919c, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8193599607275464090, guid: 4ea6f5a226b01d3459a0a0e505d8919c, type: 3}
       propertyPath: dialogueView
       value: 
@@ -5346,7 +5354,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 942055368}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -26.476124, y: -3.061, z: -5}
+  m_LocalPosition: {x: -26.02, y: -3.061, z: -5}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
   - {fileID: 1744270032}
@@ -5380,7 +5388,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.03296891, y: -0.06940831}
+  m_Offset: {x: -0.1020253, y: -0.06940831}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5391,7 +5399,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1.279892, y: 0.45881662}
+  m_Size: {x: 1.0099037, y: 0.45881662}
   m_EdgeRadius: 0
 --- !u!1 &942552548
 GameObject:
@@ -5618,7 +5626,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 961003773}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -17.609325, y: -1.0761455, z: 0}
+  m_LocalPosition: {x: -16.9, y: -1.0761455, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1839508034}
@@ -11129,7 +11137,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2117211785
 Transform:
   m_ObjectHideFlags: 0

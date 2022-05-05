@@ -13540,7 +13540,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -324, y: 193.8}
+  m_AnchoredPosition: {x: -274, y: 193.8}
   m_SizeDelta: {x: 57.785095, y: 4.6501484}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &551018733
@@ -35406,9 +35406,6 @@ MonoBehaviour:
   pChurchPriest: {fileID: 340296030}
   PTybalt: {fileID: 1841475275}
   levelLoader: {fileID: 1407000077}
-  mapManager: {fileID: 0}
-  instructionsManager: {fileID: 0}
-  tutorialIsRead: 0
 --- !u!1 &1369968546
 GameObject:
   m_ObjectHideFlags: 0
@@ -45782,7 +45779,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 325.9, y: 193.8}
+  m_AnchoredPosition: {x: 274, y: 193.8}
   m_SizeDelta: {x: 57.785095, y: 4.6501484}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1781277801
