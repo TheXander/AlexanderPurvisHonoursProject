@@ -30,7 +30,7 @@ MonoBehaviour:
   gravyardMDialogCompelte: 0
   churchDialogCompelte: 0
   tybaltDialogCompelte: 0
-  levelOneEventsComplete: 2
+  levelOneEventsComplete: 3
   levelTwoEventsComplete: 0
-  julietsReady: 0
-  invitedToJuliets: 0
+  julietsReady: 1
+  invitedToJuliets: 1

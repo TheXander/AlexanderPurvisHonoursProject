@@ -170,7 +170,7 @@ public class PlayerModel : ScriptableObject
         ClearAllData();
         CreateUniqueEnoughPlayerID();
 
-        filename = Application.dataPath + "/Player " + playerID + " PlayerModel.csv";
+        filename = Application.dataPath + "Player " + playerID + " PlayerModel.csv";
        // filename = Application.dataPath + "/PlayerModel.csv";
         TextWriter tw = new StreamWriter(filename, false);
         tw.WriteLine(headers);
@@ -242,8 +242,7 @@ public class PlayerModel : ScriptableObject
                      cardGameDraws + "," +
                      cardGamesAvoided + "," +
                      dialogueEngagedIn + "," +
-                     dialogueAvoided +
-                     "\n";
+                     dialogueAvoided;
 
         using (FileStream fileStream = new FileStream(filename, FileMode.Append, FileAccess.Write))
         {

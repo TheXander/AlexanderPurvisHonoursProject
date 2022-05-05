@@ -56,7 +56,7 @@ public class MainMenuSetUp : MonoBehaviour
         playerProgress.levelTwoEventsComplete = 0;
 
 
-        playerProgress.levelOneEventsComplete =0;
+        playerProgress.levelOneEventsComplete = 0;
         playerProgress.levelTwoEventsComplete = 0;
 
         playerProgress.julietsReady = false;
