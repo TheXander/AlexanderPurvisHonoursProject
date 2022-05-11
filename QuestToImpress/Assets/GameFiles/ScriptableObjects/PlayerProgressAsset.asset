@@ -14,23 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lakeCardGameComplete: 0
   tavernFCardGameComplete: 0
-  cityCardGameComplete: 0
+  cityCardGameComplete: 1
   tavernVCardGameComplete: 0
   forestCardGameComplete: 0
   tybaltCardGameComplete: 0
   castleCombatCompelte: 0
-  forestKCombatCompelte: 0
-  gravyardCombatCompelte: 0
+  forestKCombatCompelte: 1
+  gravyardCombatCompelte: 1
   forestRHCombatCompelte: 0
   churchCombatCompelte: 0
   tybaltCombatCompelte: 0
   castleDialogCompelte: 0
   tavernDialogCompelte: 0
-  gravyardTDialogCompelte: 0
+  gravyardTDialogCompelte: 1
   gravyardMDialogCompelte: 0
   churchDialogCompelte: 0
   tybaltDialogCompelte: 0
-  levelOneEventsComplete: 3
+  levelOneEventsComplete: 6
   levelTwoEventsComplete: 0
   julietsReady: 1
   invitedToJuliets: 1

@@ -170,6 +170,7 @@ public class TavernDialoges : MonoBehaviour
         {
             //----------Record in player model-------------
             playerModel.NewDialogueEngagement();
+            playerModel.StandardUpdate(true, "Tavern");
         }     
     }
 

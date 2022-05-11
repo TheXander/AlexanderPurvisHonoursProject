@@ -75,9 +75,7 @@ public class MainMenuSetUp : MonoBehaviour
         romeoData.previousLocation = LevelLoader.Levels.MainMenu;
 
 
-        playerModel.reset();
-
-
-        playerModel.CreateFile();
+        playerModel.CreateBlankPlayerModel();
+        playerModel.StandardUpdate(true, "Main Menu");
     }
 }

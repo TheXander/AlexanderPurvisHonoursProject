@@ -19,14 +19,17 @@ public class LeavingTrigger : MonoBehaviour
         {
             leavingRegistered = true;
             Debug.Log("Beep");
+
             if (!playerProgress.tavernDialogCompelte)
             {
                 playerModel.NewDialogueAvoided();
+                playerModel.StandardUpdate(true, "Tavern");
             }
 
             if (!playerProgress.tavernFCardGameComplete)
             {
                 playerModel.NewCardGameAvoided();
+                playerModel.StandardUpdate(true, "Tavern");
             }
         }
     }

@@ -17,6 +17,7 @@ public class DoorTransporter : MonoBehaviour
             romeoData.previousLocation = gatewayOrigin;
             romeoData.currentLocation = doorDestination;
             playerScript.locationSet = true;
+            romeoData.currentEvent = RomeoData.Events.None;
         }
     }
 

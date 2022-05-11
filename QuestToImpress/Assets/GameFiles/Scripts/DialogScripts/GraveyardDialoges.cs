@@ -165,6 +165,7 @@ public class GraveyardDialoges : MonoBehaviour
         {
             //----------Record in player model-------------
             playerModel.NewDialogueEngagement();
+            playerModel.StandardUpdate(true, "Graveyard");
         }
     }
 

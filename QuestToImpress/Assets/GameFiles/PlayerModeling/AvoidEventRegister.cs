@@ -18,7 +18,23 @@ public class AvoidEventRegister : MonoBehaviour
         if (collision.name == "Player" && !registerCanceled)
         {
 
-           
+
+            switch (typeOfEvent)
+            {
+                case EventTypes.Combat:
+                    playerModel.NewCombatAvoided();
+                    break;
+                case EventTypes.CardGame:
+                    playerModel.NewCardGameAvoided();
+                    break;
+                case EventTypes.Dialogue:
+                    playerModel.NewDialogueAvoided();
+                    break;
+                default:
+
+                    break;
+            }
+
             switch (thisLocation)
             {
                 case Locations.City:
@@ -35,23 +51,6 @@ public class AvoidEventRegister : MonoBehaviour
                     break;
                 default:
 
-                    break;
-            }
-
-
-            switch (typeOfEvent)
-            {            
-                case EventTypes.Combat:
-                    playerModel.NewCombatAvoided();
-                    break;
-                case EventTypes.CardGame:
-                    playerModel.NewCardGameAvoided();
-                    break;
-                case EventTypes.Dialogue:
-                    playerModel.NewDialogueAvoided();
-                    break;
-                default:
-                   
                     break;
             }
         }

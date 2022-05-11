@@ -470,10 +470,7 @@ public class CardGameManager : MonoBehaviour
                     }
                     break;
 
-                case RomeoData.CardgameEvents.TavernFighter:
-
-                    playerModel.StandardUpdate(true, "Tavern");
-
+                case RomeoData.CardgameEvents.TavernFighter:                  
                     switch (gameOutcome)
                     {
                         case GameOutcomes.Win:
@@ -486,7 +483,7 @@ public class CardGameManager : MonoBehaviour
                             eventResults.tavernFCardGame = PlayerEventResults.EventResults.Loss;
                             Debug.Log("loss ");
                             //Player Model update                        
-                            playerModel.NewCardGameEngagement(false, false);
+                            playerModel.NewCardGameEngagement(false, false);                      
                             break;
                         case GameOutcomes.Draw:
                             eventResults.tavernFCardGame = PlayerEventResults.EventResults.Draw;
@@ -497,23 +494,24 @@ public class CardGameManager : MonoBehaviour
                         default:
                             break;
                     }
+                    playerModel.StandardUpdate(true, "Tavern");
+
                     break;
 
                 case RomeoData.CardgameEvents.CityKnight:
-
-                    playerModel.StandardUpdate(true, "City");
-
                     switch (gameOutcome)
                     {
                         case GameOutcomes.Win:
                             eventResults.cityCardGame = PlayerEventResults.EventResults.Win;
                             //Player Model update                      
                             playerModel.NewCardGameEngagement(true, false);
+                       
                             break;
                         case GameOutcomes.Lose:
                             eventResults.cityCardGame = PlayerEventResults.EventResults.Loss;
                             //Player Model update                        
                             playerModel.NewCardGameEngagement(false, false);
+                     
                             break;
                         case GameOutcomes.Draw:
                             eventResults.cityCardGame = PlayerEventResults.EventResults.Draw;
@@ -523,14 +521,15 @@ public class CardGameManager : MonoBehaviour
                         default:
                             break;
                     }
+
+                    playerModel.StandardUpdate(true, "City");
+                    
                     break;
                 default:
                     break;
             }
         }
-
         
-      
         switch (gameOutcome)
         {
             case GameOutcomes.Win:

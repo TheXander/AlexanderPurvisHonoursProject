@@ -7,10 +7,12 @@ using System.IO;
 public class PlayerModel : ScriptableObject
 {
     // Data
-
     // player ID Made up of day month year hour minute and seconds - column 1
     [SerializeField]
     string playerID = "";
+
+    [SerializeField]
+    string csvHeaderPlayerID = "";
 
     // game state data - column 2 to 4
     [SerializeField]
@@ -44,8 +46,11 @@ public class PlayerModel : ScriptableObject
     [SerializeField]
     public int dialogueAvoided = 0;
 
+    [SerializeField]
+    List<string> csvPlayerModelRecordings = new List<string>();
+
     // CSVFile data
-    string filename = "Player Model";
+    string filename = "Error";
     string headers = "PlayerID," +
             "Time Stamp, Game Running, Current Location," +
             "Combats Engaged In, Combat Wins, Combats Avoided," +
@@ -53,10 +58,10 @@ public class PlayerModel : ScriptableObject
             "Dialog Engaged In, Dialog Avoided";
 
     // reset
-    public void reset()
-    {
-    
+    public void resetScriptableObject()
+    {   
         playerID = "";
+        csvHeaderPlayerID = "";
         time = "";    
         gameRunning = false;      
         currentLocation = "";            
@@ -73,23 +78,24 @@ public class PlayerModel : ScriptableObject
         dialogueAvoided = 0;
 
         // CSVFile data
-         filename = "Player Model";
+         filename = "Error";
          headers = "PlayerID," +
                 "Time Stamp, Game Running, Current Location," +
                 "Combats Engaged In, Combat Wins, Combats Avoided," +
                 "Card Games Engaged In, Card Game Wins, Card Game Draws, Card Games Avoided," +
                 "Dialog Engaged In, Dialog Avoided";
+
+        csvPlayerModelRecordings.Clear();
     }
 
-
     // --Setters--
-
     // game state data
     public void StandardUpdate(bool GameState, string location)
     {
         time = System.DateTime.UtcNow.ToLocalTime().ToString("HH:mm");
         gameRunning = GameState;
         currentLocation = location;
+        UpdatePlayerModelRecords();
     }
 
     public void LastUpdate(string location)
@@ -97,8 +103,11 @@ public class PlayerModel : ScriptableObject
         time = System.DateTime.UtcNow.ToLocalTime().ToString("HH:mm");
         gameRunning = false;
         currentLocation = location;
+        UpdatePlayerModelRecords();
         WriteToCSV();
     }
+
+
     // Created by ALexander Purvis copyright Alexander Purvis
     // Combat Event data
     public void NewCombatEngagement(bool playerWon)
@@ -109,15 +118,11 @@ public class PlayerModel : ScriptableObject
         {
             combatWins++;
         }
-
-        WriteToCSV();
     }
 
     public void NewCombatAvoided()
     {
         combatsAvoided++;
-
-        WriteToCSV();
     }
 
     // Card Game Event data
@@ -134,58 +139,33 @@ public class PlayerModel : ScriptableObject
         {
             cardGameDraws++;
         }
-
-        WriteToCSV();
     }
 
     public void NewCardGameAvoided()
     {
         cardGamesAvoided++;
-
-        WriteToCSV();
     }
-
 
     // dialogue Event data
     public void NewDialogueEngagement()
     {
         dialogueEngagedIn++;
-
-        WriteToCSV();
     }
 
     public void NewDialogueAvoided()
     {
         dialogueAvoided++;
-
-        WriteToCSV();
     }
-
-    
+  
     // -----------------CSVFile Functions-----------------------------
-
     // called first in main menu to begin the file
-    public void CreateFile()
+    public void CreateBlankPlayerModel()
     {
-        ClearAllData();
-        CreateUniqueEnoughPlayerID();
-
-        filename = Application.dataPath + "Player " + playerID + " PlayerModel.csv";
-       // filename = Application.dataPath + "/PlayerModel.csv";
-        TextWriter tw = new StreamWriter(filename, false);
-        tw.WriteLine(headers);
-        tw.Close();
-
-        playerID = playerID.Insert(0, "|");
-        playerID = playerID.Insert(15, "|");
-
-        // first write to csv
-        StandardUpdate(true, "Main Menu");
-        WriteToCSV();
+        resetScriptableObject();
+        CreatePlayerID();
     }
 
-
-    void CreateUniqueEnoughPlayerID()
+    void CreatePlayerID()
     {
         // Create Player ID from date and time of game launch down to the second
         playerID = System.DateTime.UtcNow.ToLocalTime().ToString("dd-MM-yyyyHH:mm:ss");
@@ -194,42 +174,17 @@ public class PlayerModel : ScriptableObject
         playerID = playerID.Remove(12,1);
         playerID = playerID.Remove(5,1);
         playerID = playerID.Remove(2,1);
-    }
 
-    void ClearAllData()
-    {
-
-       // player ID Made up of day month year hour minute and seconds - column 1
-       playerID = "";
-
-       // game state data - column 2 to 4
-       time = "";
-       gameRunning = false;
-       currentLocation = "";
-
-       // Combat Event data - column 5 to 7
-       combatsEngagedIn = 0;
-       combatWins = 0;
-       combatsAvoided = 0;
-
-       // Card game Event data - column 8 to 11
-       cardGamesEngagedIn = 0;
-       cardGameWins = 0;
-       cardGameDraws = 0;
-       cardGamesAvoided = 0;
-
-       // Dialog Event data - column 12 to 13
-       dialogueEngagedIn = 0;
-       dialogueAvoided = 0;
+        csvHeaderPlayerID = playerID;
+       
+        playerID = playerID.Insert(0, "|");
+        playerID = playerID.Insert(15, "|");
     }
 
 
-
-
-    public void WriteToCSV()
+    public void UpdatePlayerModelRecords()
     {
-
-        string modelUpdate =
+        string newModelRecord =
                 playerID + "," +
                     time + "," +
                     gameRunning + "," +
@@ -243,33 +198,22 @@ public class PlayerModel : ScriptableObject
                      cardGamesAvoided + "," +
                      dialogueEngagedIn + "," +
                      dialogueAvoided;
-
-        using (FileStream fileStream = new FileStream(filename, FileMode.Append, FileAccess.Write))
-        {
-            using (StreamWriter writer = new StreamWriter(fileStream))
-            {
-                writer.WriteLine(modelUpdate);
-            }
-        }
-
-
-        //TextWriter tw = new StreamWriter(filename, true);
-
-        //tw.WriteLine(playerID + "," +
-        //    time + "," + 
-        //    gameRunning + "," + 
-        //    currentLocation + "," +
-        //     combatsEngagedIn + "," + 
-        //     combatWins + "," + 
-        //     combatsAvoided + "," +
-        //     cardGamesEngagedIn + "," +
-        //     cardGameWins + "," +
-        //     cardGameDraws + "," + 
-        //     cardGamesAvoided + "," +
-        //     dialogueEngagedIn + "," + 
-        //     dialogueAvoided);
-
-        //tw.Close();                    
+        csvPlayerModelRecordings.Add(newModelRecord);
+        Debug.Log(newModelRecord);
     }
 
+
+    void WriteToCSV()
+    {
+        filename = Application.dataPath + "Player" + csvHeaderPlayerID + " PlayerModel.csv";
+  
+        TextWriter tw = new StreamWriter(filename, true);
+        tw.WriteLine(headers);
+       
+        foreach (string record in csvPlayerModelRecordings) 
+        {
+            tw.WriteLine(record);
+        }
+        tw.Close();
+    }
 }

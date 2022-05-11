@@ -104,7 +104,6 @@ public class CombatManager : MonoBehaviour
                 case RomeoData.CombatEvents.ForestKnight:
                     playerProgress.forestKCombatCompelte = true;
                     playerProgress.levelOneEventsComplete++;
-                    playerModel.StandardUpdate(true, "Forest");
                     switch (combatResult)
                     {
                         case CombatResults.Win:
@@ -120,11 +119,12 @@ public class CombatManager : MonoBehaviour
                             break;
                     }
 
+                    playerModel.StandardUpdate(true, "Forest");
+
                     break;
                 case RomeoData.CombatEvents.CultistPriest:
                     playerProgress.gravyardCombatCompelte = true;
                     playerProgress.levelOneEventsComplete++;
-                    playerModel.StandardUpdate(true, "Graveyard");
                     switch (combatResult)
                     {
                         case CombatResults.Win:
@@ -139,6 +139,8 @@ public class CombatManager : MonoBehaviour
                             Debug.Log("Error no result");
                             break;
                     }
+
+                    playerModel.StandardUpdate(true, "Graveyard");
 
                     break;
                 case RomeoData.CombatEvents.RedHood:
