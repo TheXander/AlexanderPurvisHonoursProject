@@ -57,9 +57,10 @@ public class PlayerModel : ScriptableObject
             "Card Games Engaged In, Card Game Wins, Card Game Draws, Card Games Avoided," +
             "Dialog Engaged In, Dialog Avoided";
 
+    
     // reset
     public void resetScriptableObject()
-    {   
+    {
         playerID = "";
         csvHeaderPlayerID = "";
         time = "";    
@@ -128,7 +129,7 @@ public class PlayerModel : ScriptableObject
     // Card Game Event data
 
     public void NewCardGameEngagement(bool playerWon, bool playerDrew)
-    {       
+    {
         cardGamesEngagedIn++;
 
         if (playerWon)

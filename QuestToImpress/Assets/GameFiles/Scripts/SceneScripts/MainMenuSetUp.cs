@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class MainMenuSetUp : MonoBehaviour
 {
-
     public PlayerModel playerModel;
 
     public PlayerEventResults eventResults;
     public PlayerProgress playerProgress;
     public RomeoData romeoData;
-
 
     // Start is called before the first frame update
     void Start()
