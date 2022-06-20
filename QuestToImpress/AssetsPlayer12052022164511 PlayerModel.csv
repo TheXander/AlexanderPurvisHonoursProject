@@ -1,6 +1,0 @@
-PlayerID,Time Stamp, Game Running, Current Location,Combats Engaged In, Combat Wins, Combats Avoided,Card Games Engaged In, Card Game Wins, Card Game Draws, Card Games Avoided,Dialog Engaged In, Dialog Avoided
-|12052022164511|,16:45,True,Main Menu,0,0,0,0,0,0,0,0,0
-|12052022164511|,16:52,True,Tavern,0,0,0,0,0,0,0,1,0
-|12052022164511|,16:55,True,Tavern,0,0,0,1,0,1,0,1,0
-|12052022164511|,16:58,True,City,0,0,0,2,1,1,0,1,0
-|12052022164511|,16:59,False,JulietsHouse,0,0,0,2,1,1,0,1,0

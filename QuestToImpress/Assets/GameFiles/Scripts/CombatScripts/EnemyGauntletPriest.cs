@@ -24,11 +24,11 @@ public class EnemyGauntletPriest : MonoBehaviour
 
     Transform attackPoint;
     LayerMask playerLayeres;
-    int attackDamage = 5;
+    int attackDamage = 4;
     float attackRange = 2f;
 
-    float attackLongCooldown = 4.4f;
-    float attackShortCooldown = 1.4f;
+    float attackLongCooldown = 4.2f;
+    float attackShortCooldown = 0.5f;
     float cooldownCounter = 0f;
 
     float walkingTime = 5f;

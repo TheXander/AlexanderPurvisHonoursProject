@@ -12,8 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f71d0f8092de9d44e8935f486bc1b501, type: 3}
   m_Name: PlayerModelAsset
   m_EditorClassIdentifier: 
-  combatsEngagedIn: 8
-  combatWins: 4
+  saveDataManager: {fileID: 11400000, guid: 7ab3f1d9c6f888449be0de2bb1f55b64, type: 2}
+  playerID: 
+  csvHeaderPlayerID: 
+  time: 
+  gameRunning: 0
+  currentLocation: 
+  combatsEngagedIn: 0
+  combatWins: 0
   combatsAvoided: 0
   cardGamesEngagedIn: 0
   cardGameWins: 0
@@ -21,3 +27,4 @@ MonoBehaviour:
   cardGamesAvoided: 0
   dialogueEngagedIn: 0
   dialogueAvoided: 0
+  csvPlayerModelRecordings: []

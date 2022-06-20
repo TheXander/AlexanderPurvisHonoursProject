@@ -14,15 +14,15 @@ Romeo: Yes yes Mercutio but tell me please. Who be this fair maid over there?
 <<HideRomeo (Player)>>
 
 <<DisplayMercutio (Player)>>
-Mercutio: Juliet? But dont tho know she be a Capulet! Speak not with her I beg you please.
+Mercutio: Juliet? But don't thou know she be a Capulet! Speak not with her I beg you please.
 <<HideMercutio (Player)>>
 
 <<DisplayRomeo (Player)>>
-Romeo: Somthing tells me I must, for why or what reason I do not know but I must.
+Romeo: Something tells me I must, for why or what reason I do not know but I must.
 <<HideRomeo (Player)>>
 
 <<DisplayMercutio (Player)>>
-Mercutio: I will not stop tho Romeo but know that I have given the fair warning.
+Mercutio: I will not stop thou Romeo but know that I have given the fair warning.
 <<HideMercutio (Player)>>
 
 <<ReactivatePlayerMovment (Player)>>
@@ -121,7 +121,7 @@ position: 860,368
 
 <<DisplayRomeo (Player)>>
 ROMEO: Pray then if thee dost feel this too, I do pronounce a love for thee faithfully.
-ROMEO: Juliet, by yonder blessed moon I swear That tips with silver all these fruit-tree tops--
+ROMEO: Juliet, by yonder blessed moon I swear that tips with silver all these fruit-tree tops--
 <<HideRomeo (Player)>>
 
 <<DisplayJuliet (Player)>>
@@ -187,7 +187,7 @@ ROMEO: Than twenty of their swords: look thou but sweet, And I am proof against 
 <<HideRomeo (Player)>>
 
 <<DisplayJuliet (Player)>>
-JULIET:By whose direction then dose thou seek me out?
+JULIET:By whose direction then does thou seek me out?
 <<HideJuliet (Player)>>
 
 <<DisplayRomeo (Player)>>
@@ -198,7 +198,7 @@ ROMEO: Well as  vast shore did wash with the farthest sea, I be not Capitan but 
 <<HideRomeo (Player)>>
 
 <<DisplayJuliet (Player)>>
-JULIET: You claim your Love is as boundless as the sea, your honour runs as deep.
+JULIET: You claim your love is as boundless as the sea, your honour runs as deep.
 JULIET: The doubt I have, for both is infinite.
 <<HideJuliet (Player)>>
 
@@ -220,11 +220,11 @@ ROMEO: Nor arm, nor face, nor any other part belonging to a man.
 <<HideRomeo (Player)>>
 
 <<DisplayJuliet (Player)>>
-JULIET: But then what possible reason dose thou have to speak with myself and put thee at risk. My kins men will surly slay thee if thou art caught speaking with me.
+JULIET: But then what possible reason does thou have to speak with myself and put thee at risk. My kins men will surely slay thee if thou art caught speaking with me.
 <<HideJuliet (Player)>>
 
 <<DisplayRomeo (Player)>>
-ROMEO:Surly it be love that make men do such things risk thy own life even for but a word with such a bright angel!
+ROMEO:Surely it be love that make men do such things risk thy own life even for but a word with such a bright angel!
 <<HideRomeo (Player)>>
 
 <<DisplayJuliet (Player)>>
@@ -284,7 +284,7 @@ position: 860,368
 <<DeactivatePlayerMovment (Player)>>
 <<DisplayCastleKnight (Player)>>
 Capulet Knight: I have wounded thee with my first blow Romeo! 
-Capulet Knight: But you need not bare that scar for long. My second Strike will finish Thee!
+Capulet Knight: But you need not bear that scar for long. My second strike will finish thee!
 <<HideCastleKnight (Player)>>
 <<SignalPlayerEventOver (Player)>>
 <<jump TheKingsSpeach>>
@@ -297,16 +297,16 @@ position: 860,368
 ---
 <<DisplayKing (Player)>>
 King Alexander: Rebellious subjects, enemies to peace,
-King Alexander: Will they not hear? What, you men, you beasts, That quench the fire of your pernicious rage.
+King Alexander: Will they not hear? What, you men, you beasts, that quench the fire of your pernicious rage.
 King Alexander: With purple fountains issuing from your veins, 
-King Alexander: On pain of torture, from those bloody hands Throw your mistemper'd weapons to the ground,
+King Alexander: On pain of torture, from those bloody hands throw your mistemper'd weapons to the ground,
 King Alexander: And hear the sentence of your moved prince.
-King Alexander: Three civil brawls, bred of an airy word, By thee, Capulets, and Montagues,
-King Alexander: Have thrice disturb'd the quiet of our streets, And made Verona's ancient citizens grieve for peace. 
-King Alexander: If ever you disturb our streets again, Your lives shall pay the forfeit of the peace.
+King Alexander: Three civil brawls, bred of an airy word, by thee, Capulets, and Montagues,
+King Alexander: Have thrice disturb'd the quiet of our streets, and made Verona's ancient citizens grieve for peace. 
+King Alexander: If ever you disturb our streets again, your lives shall pay the forfeit of the peace.
 King Alexander: For this time, all the rest. Montagues and Capulets depart away.
-King Alexander: The heads of Capulet house, shall go along with me And, The heads of Montague, come this afternoon,
-King Alexander: To know our further pleasure in this case, To old Free-town, our common judgment-place.
+King Alexander: The heads of Capulet house, shall go along with me and, the heads of Montague, come this afternoon,
+King Alexander: To know our further pleasure in this case, to old Free-town, our common judgment-place.
 King Alexander: Once more, on pain of death, all Montagues and Capulets depart.
 <<HideKing (Player)>>
 <<LeaveCastle (Player)>>

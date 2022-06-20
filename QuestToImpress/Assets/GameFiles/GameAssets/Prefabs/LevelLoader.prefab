@@ -44,7 +44,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5b30bb27de756154e895f11a8e6cc613, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  saveDataManager: {fileID: 11400000, guid: 7ab3f1d9c6f888449be0de2bb1f55b64, type: 2}
   transition: {fileID: 7643550430888073460}
+  Transporting: 0
 --- !u!1 &7643550430888073459
 GameObject:
   m_ObjectHideFlags: 0

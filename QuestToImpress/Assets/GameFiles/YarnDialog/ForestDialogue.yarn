@@ -20,7 +20,7 @@ BENVOLIO: Awwww Romeo, nothing just having a little fun.
 
 <<DisplayHuntress (Player)>>
 HUNTRESS: This man will not let me into the city. He declares there to be some kind of tax? But I was here last week and there was no such thing.
-HUNTRESS: Surly he be some kind of trickster!
+HUNTRESS: Surely he be some kind of trickster!
 <<HideHuntress (Player)>>
 
 <<DisplayRomeo (Player)>>
@@ -36,7 +36,7 @@ position: 860,368
 ---
 <<DeactivatePlayerMovment (Player)>>
 <<DisplayVai (Player)>>
-BENVOLIO: I  yield! Enough Romeo, I do see my wrong doing. I apologies madam.
+BENVOLIO: I yield! Enough Romeo, I do see my wrong doing. I apologies madam.
 <<HideVai (Player)>>
 
 <<DisplayRomeo (Player)>>
@@ -52,7 +52,7 @@ ROMEO: Then I do believe you do owe this dear woman 12 shillings along with your
 <<HideRomeo (Player)>>
 
 <<DisplayHuntress (Player)>>
-HUNTRESS: Why thank you Romoe. I will be watching you Benvolio.
+HUNTRESS: Why thank you Romeo. I will be watching you Benvolio.
 <<HideHuntress (Player)>>
 <<ReactivatePlayerMovment (Player)>>
 ===
@@ -65,7 +65,7 @@ position: 860,368
 ---
 <<DeactivatePlayerMovment (Player)>>
 <<DisplayVai (Player)>>
-BENVOLIO: Awww Romeo you have surly not be practicing. Thou should spend less time in the inn cousin.   
+BENVOLIO: Awww Romeo you have surely not be practicing. Thou should spend less time in the inn cousin.   
 <<HideVai (Player)>>
 
 <<DisplayRomeo (Player)>>
@@ -77,8 +77,8 @@ BENVOLIO: Indeed, I believe I have had all the entertainment I wanted today.
 <<HideVai (Player)>>
 
 <<DisplayHuntress (Player)>>
-HUNTRESS: Why thank you Romoe, for trying. I do think that thou has softend him up for me.
-HUNTRESS: I challange thee to a dule Benvolio, and I will surly defeat thee.
+HUNTRESS: Why thank you Romeo, for trying. I do think that thou has softened him up for me.
+HUNTRESS: I challenge thee to a duel Benvolio, and I will surely defeat thee.
 <<HideHuntress (Player)>>
 
 <<ReactivatePlayerMovment (Player)>>

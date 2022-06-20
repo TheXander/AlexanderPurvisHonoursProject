@@ -165,6 +165,8 @@ public class InstructionsManager : MonoBehaviour
         background.SetActive(false);
         bigBackground.SetActive(false);
         totorialRead = true;
+
+        playerControls.StartPlayer();
     }
 
     public void ExitTheGame()

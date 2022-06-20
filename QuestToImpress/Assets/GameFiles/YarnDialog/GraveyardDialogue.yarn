@@ -45,7 +45,7 @@ tags:
 ---
 
 <<DisplayRomeo (Player)>>
-ROMEO: Nay, as you dare. I will bite my at thumb you
+ROMEO: Nay, as you dare. I will bite my thumb at you
 ROMEO: which is a disgrace to you, if you bear it.
 <<HideRomeo (Player)>>
 
@@ -98,15 +98,15 @@ tags:
 <<DeactivatePlayerMovment (Player)>>
 
 <<DisplayGrocer (Player)>>
-GREEN GROCER: But please good father I cant pay you any more.
+GREEN GROCER: But please good father I can't pay you any more.
 <<HideGrocer (Player)>>
 
 <<DisplayCultist (Player)>>
-PRIEST: If you want your wifes grave to be cleaned and taken care off it shall be 10 shillings a week.
+PRIEST: If you want your wife's grave to be cleaned and taken care off it shall be 10 shillings a week.
 <<HideCardCultist (Player)>>
 
 <<DisplayGrocer (Player)>>
-GREEN GROCER: But the shop barly brings in that much.
+GREEN GROCER: But the shop barely brings in that much.
 <<HideGrocer (Player)>>
 
 <<DisplayCultist (Player)>>
@@ -114,7 +114,7 @@ PRIEST: Then maybe we should just take the head stone down and be done.
 <<HideCardCultist (Player)>>
 
 <<DisplayRomeo (Player)>>
-ROMEO: Priest far be it from me to know more then thou, but i think the lord not best served by taking money from the poor.
+ROMEO: Priest far be it from me to know more then thou, but I think the lord not best served by taking money from the poor.
 <<HideRomeo (Player)>>
 
 <<DisplayCultist (Player)>>
@@ -122,7 +122,7 @@ PRIEST: Yes indeed thou knowest nothing now begone.
 <<HideCardCultist (Player)>>
 
 <<DisplayRomeo (Player)>>
-ROMEO: Then I here by challenge thee to a dule father if god be on my side then I will surly out match thee.
+ROMEO: Then I here by challenge thee to a duel father if God be on my side then I will surely out match thee.
 <<HideRomeo (Player)>>
 
 <<DisplayCultist (Player)>>
@@ -139,8 +139,8 @@ tags:
 <<DeactivatePlayerMovment (Player)>>
 
 <<DisplayCultist (Player)>>
-PRIEST: My son, surly I have lost my way. I see you were right, and I am thankful god gave you the courage to stand up to me. 
-PRIEST: Forgive me my dear Grocer. You need not pay anything any more. Your dear wife will be taken care of I asure you.
+PRIEST: My son, surely I have lost my way. I see you were right, and I am thankful God gave you the courage to stand up to me. 
+PRIEST: Forgive me my dear grocer. You need not pay anything any more. Your dear wife will be taken care of I assure you.
 <<HideCardCultist (Player)>>
 
 <<DisplayGrocer (Player)>>
@@ -157,7 +157,7 @@ tags:
 <<DeactivatePlayerMovment (Player)>>
 
 <<DisplayCultist (Player)>>
-PRIEST: Ha ha it seems god is still on my side. See you next week grocer.
+PRIEST: Ha ha it seems God is still on my side. See you next week grocer.
 <<HideCardCultist (Player)>>
 
 <<DisplayGrocer (Player)>>
@@ -165,7 +165,7 @@ GREEN GROCER: Thank you for trying Romeo.
 <<HideGrocer (Player)>>
 
 <<DisplayRomeo (Player)>>
-ROMEO: I am sorry fair grocer, please allow me to pay for the upkeep of your wifes grave this is not fair.
+ROMEO: I am sorry fair grocer, please allow me to pay for the upkeep of your wife's grave this is not fair.
 <<HideRomeo (Player)>>
 
 <<DisplayGrocer (Player)>>

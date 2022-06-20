@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
 {
+    public SaveDataManager saveDataManager;
     public enum Levels { MainMenu, CardGame, City, Graveyard, Forest, Tavern, Lake, Church, Castle, Juliets, Combat};
     public Animator transition;
     float transitionTime = 1f;
@@ -15,6 +16,7 @@ public class LevelLoader : MonoBehaviour
     public void LoadLevel(Levels levelToLoad)
     {
         Transporting = true;
+        saveDataManager.LoadPlayerModelData();
 
         switch (levelToLoad)
         {

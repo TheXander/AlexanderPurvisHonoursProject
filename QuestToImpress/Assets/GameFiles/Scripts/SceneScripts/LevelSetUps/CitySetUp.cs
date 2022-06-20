@@ -49,6 +49,8 @@ public class CitySetUp : MonoBehaviour
     public InstructionsManager instructionsManager;
     public MapManager mapManager;
 
+    public PostToutorialScreenControls postToutorialScreenControls;
+
     private void Awake()
     {
         switch (romeoData.previousLocation)
@@ -72,6 +74,8 @@ public class CitySetUp : MonoBehaviour
                 player.transform.position = lakeSpawnPoint.position;
                 playerCam.transform.position = lakeCamPos.position;
                 playerCam.GetComponent<CamPlayerTracking>().trackingActive = true;
+                postToutorialScreenControls.OpenPostToutorialScreen();
+                player.GetComponent<SceneBasedPlayerControls>().LockPlayerMovement();
                 break;
             case LevelLoader.Levels.Juliets:
                 player.transform.position = julietsSpawnPoint.position;
@@ -131,7 +135,7 @@ public class CitySetUp : MonoBehaviour
         
         if (Input.GetKeyDown(KeyCode.Equals))
         {
-            levelOneBarriers.SetActive(false);
+            //levelOneBarriers.SetActive(false);
         }
     }
 }

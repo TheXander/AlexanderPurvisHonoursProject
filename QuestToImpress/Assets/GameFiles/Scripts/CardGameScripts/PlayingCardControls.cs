@@ -38,7 +38,7 @@ public class PlayingCardControls : MonoBehaviour
         cardName.color = new Vector4(1, 1, 1, 0.4f);
         cardCost.color = new Vector4(1, 1, 1, 0.4f);
         cardDamage.color = new Vector4(1, 1, 1, 0.4f);
-        cardQuote.color = new Vector4(1, 1, 1, 0.4f);
+        cardQuote.color = new Vector4(1, 1, 1, 0.0f);
         cardSource.color = new Vector4(1, 1, 1, 0.4f);
     }
 
@@ -48,7 +48,7 @@ public class PlayingCardControls : MonoBehaviour
         cardName.color = new Vector4(0, 0, 0, 1);
         cardCost.color = new Vector4(0, 0, 0, 1);
         cardDamage.color = new Vector4(0, 0, 0, 1);
-        cardQuote.color = new Vector4(0, 0, 0, 1);
+        cardQuote.color = new Vector4(0, 0, 0, 0);
         cardSource.color = new Vector4(0, 0, 0, 1);
     }
 }

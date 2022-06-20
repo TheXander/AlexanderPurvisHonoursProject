@@ -6,13 +6,15 @@ using System.IO;
 [CreateAssetMenu]
 public class PlayerModel : ScriptableObject
 {
+    public SaveDataManager saveDataManager;
+
     // Data
     // player ID Made up of day month year hour minute and seconds - column 1
     [SerializeField]
-    string playerID = "";
+    public string playerID = "";
 
     [SerializeField]
-    string csvHeaderPlayerID = "";
+    public string csvHeaderPlayerID = "";
 
     // game state data - column 2 to 4
     [SerializeField]
@@ -47,7 +49,7 @@ public class PlayerModel : ScriptableObject
     public int dialogueAvoided = 0;
 
     [SerializeField]
-    List<string> csvPlayerModelRecordings = new List<string>();
+    public List<string> csvPlayerModelRecordings = new List<string>();
 
     // CSVFile data
     string filename = "Error";
@@ -200,7 +202,7 @@ public class PlayerModel : ScriptableObject
                      dialogueEngagedIn + "," +
                      dialogueAvoided;
         csvPlayerModelRecordings.Add(newModelRecord);
-        Debug.Log(newModelRecord);
+        UpdateSavePlayerModelData();
     }
 
 
@@ -216,5 +218,34 @@ public class PlayerModel : ScriptableObject
             tw.WriteLine(record);
         }
         tw.Close();
+    }
+
+    void UpdateSavePlayerModelData()
+    {
+        PlayerModelSaveData activeSave = saveDataManager.activePlayerModelSave;
+
+        // player ID Made up of day month year hour minute and seconds - column 1
+        activeSave.playerID = playerID;
+        activeSave.csvHeaderPlayerID = csvHeaderPlayerID;
+
+        // Combat Event data - column 5 to 7
+        activeSave.combatsEngagedIn = combatsEngagedIn;
+        activeSave.combatWins = combatWins;
+        activeSave.combatsAvoided = combatsAvoided;
+
+        // Card game Event data - column 8 to 11
+        activeSave.cardGamesEngagedIn = cardGamesEngagedIn;
+        activeSave.cardGameWins = cardGameWins;
+        activeSave.cardGameDraws = cardGameDraws;
+        activeSave.cardGamesAvoided = cardGamesAvoided;
+
+        // Dialog Event data - column 12 to 13
+        activeSave.dialogueEngagedIn = dialogueEngagedIn;
+
+        activeSave.dialogueAvoided = dialogueAvoided;
+
+        activeSave.csvPlayerModelRecordings = csvPlayerModelRecordings;
+
+        saveDataManager.SavePlayerModelData();
     }
 }

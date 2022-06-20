@@ -8,11 +8,14 @@ public class ExitGameButton : MonoBehaviour
     bool shutingDown = false;
     float cooldownCounter = 0;
     float shutdownTime = 0.8f;
+   
     public void ExitTheGame()
     {
-        playerModel.LastUpdate("JulietsHouse");
-        shutingDown = true;
-      
+        if (!shutingDown)
+        {
+            playerModel.LastUpdate("JulietsHouse");
+            shutingDown = true;
+        }     
     }
 
     private void Update()

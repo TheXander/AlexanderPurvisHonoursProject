@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MainMenuSetUp : MonoBehaviour
 {
+    public SaveDataManager saveDataManager;
     public PlayerModel playerModel;
 
     public PlayerEventResults eventResults;
@@ -13,6 +14,8 @@ public class MainMenuSetUp : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        saveDataManager.DeletePlayerModelData();
+
         // EventResults resets
         // reset Level One Card Games resluts 
         eventResults.lakeCardGame = PlayerEventResults.EventResults.None;

@@ -20,7 +20,7 @@ tags:
 ---
 <<DisplayRomeo (Player)>>
 ROMEO: Consort? 
-ROMEO: what, dost thou make me a minstrel? 
+ROMEO: What, dost thou make me a minstrel? 
 ROMEO: And thou make a minstrel out of me?
 <<HideRomeo (Player)>>
 
@@ -60,11 +60,11 @@ title: BarkeepHonesty
 tags:
 ---
 <<DisplayRomeo (Player)>>
-ROMEO: I can not lie, for my heart indeed sores upon wings of love for dear Juliet.
+ROMEO: I cannot lie, for my heart indeed soars upon wings of love for dear Juliet.
 <<HideRomeo (Player)>>
 
 <<DisplayBarkeep (Player)>>
-BARMAN: Ow no Romeo if thou heart dose sore it must surely fall, and be impaled upon the many swords of her kin. 
+BARMAN: Ow no Romeo if thou heart does soar it must surely fall, and be impaled upon the many swords of her kin. 
 BARMAN: Nothing good can come of the Capulets, or even your Montagues learning of this doomed love of yours.
 <<HideBarkeep (Player)>>
 
@@ -92,7 +92,7 @@ tags:
 ---
 
 <<DisplayRomeo (Player)>>
-I do not know what reactions my any of my kin of hers may have, but if a man will not risk his life for a chance at true love what would he risk it for?
+I do not know what reactions my kin or hers may have, but if a man will not risk his life for a chance at true love what would he risk it for?
 <<HideRomeo (Player)>>
 <<jump BarkeepHonestEnding>>
 ===
@@ -102,8 +102,8 @@ title: BarkeepHonestEnding
 tags:
 ---
 <<DisplayBarkeep (Player)>>
-BARMAN: I have to warn the Romeo. I have already heard stirrings from Capulets. 
-BARMAN: If thou dose speak to Juliet again then they will surly have your head. 
+BARMAN: I have to warn thee Romeo. I have already heard stirrings from Capulets. 
+BARMAN: If thou does speak to Juliet again then they will surely have your head. 
 BARMAN: I give thee this cup of wine so thee may sip and think a while.
 <<HideBarkeep (Player)>>
 <<SignalPlayerEventOver (Player)>>

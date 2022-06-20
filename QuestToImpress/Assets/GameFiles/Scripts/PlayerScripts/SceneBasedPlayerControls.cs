@@ -26,12 +26,10 @@ public class SceneBasedPlayerControls : MonoBehaviour
     public bool eventConfirmed = false;
     bool eventActivated = false;
 
-   
     public PlayerProgress playerProgress;
     public GameObject invitation;
     float counterForMarcutioPopUp = 0;
     float MarcutioPopUpTime = 1.2f;
-
 
 
     private void Awake()
@@ -160,7 +158,7 @@ public class SceneBasedPlayerControls : MonoBehaviour
 
     private void EnterDoor()
     {
-        if (locationSet)
+        if (locationSet && romeoData.currentEvent == RomeoData.Events.None)
         {
             levelLoader.LoadLevel(newDestination);
         }       
@@ -175,12 +173,9 @@ public class SceneBasedPlayerControls : MonoBehaviour
     }
 
     void StopEvent()
-    {
-        
-            eventReady = false;
-        
+    {      
+           eventReady = false;     
     }
-
 
     public void StartDialog()
     {
@@ -193,14 +188,12 @@ public class SceneBasedPlayerControls : MonoBehaviour
         print("Dialog Ended!");
         movmentLocked = false;
     }
-
    
     public void TurnPlayerLeft()
     {
         transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
         playerFacingRight = false;
     }
-
 
     public void TurnPlayerRight()
     {
@@ -210,7 +203,6 @@ public class SceneBasedPlayerControls : MonoBehaviour
         }
         playerFacingRight = true;
     }
-
 
     private void OnEnable()
     {
@@ -231,8 +223,12 @@ public class SceneBasedPlayerControls : MonoBehaviour
     }
 
     public void StartPlayer()
-    {
-       
+    {      
         movmentLocked = false;
+    }
+
+    public void LockPlayerMovement()
+    {
+        movmentLocked = true;
     }
 }
