@@ -1,5 +1,385 @@
-﻿title: JulietsHouse
+﻿title: Juliet
+tags:
+---
+<<DeactivatePlayerMovment (Player)>>
+<<DisplayJuliet (Player)>>
+Juliet: Good evning to thee, Romeo.
+Juliet: I have heard word of your deeds and I must say I am impressed
+<<HideJuliet (Player)>>
+
+
+<<DisplayRomeo (Player)>>
+Romeo:Why thank you Juliet I admit that I did not quite believe that you would even hear of my deeds
+<<HideRomeo (Player)>>
+
+<<DisplayJuliet (Player)>>
+Juliet: Ow I did indeed.
+<<HideJuliet (Player)>>
+
+<<jump JulietsProposal>>
+===
+
+
+title: JulietSpeedRun
+tags:
+---
+<<DeactivatePlayerMovment (Player)>>
+<<DisplayJuliet (Player)>>
+Juliet: Good evning to thee, Romeo.
+Juliet: I have heard word of your deeds and I must say I am impressed
+<<HideJuliet (Player)>>
+
+
+<<DisplayRomeo (Player)>>
+Romeo:Why thank you Juliet I admit that I did not quite believe that you would even hear of my deeds
+<<HideRomeo (Player)>>
+
+
+<<DisplayJuliet (Player)>>
+Juliet: Ow I did indeed and I noticed you came to see me as soon as you could
+<<HideJuliet (Player)>>
+
+<<jump JulietsProposal>>
+===
+
+
+title: JulietCompletionist
 tags:
 ---
 
+<<AddCombatBonus (Player)>>
+<<AddHonourBonus (Player)>>
+
+
+<<DeactivatePlayerMovment (Player)>>
+<<DisplayJuliet (Player)>>
+Juliet: Good evning to thee, Romeo.
+Juliet: I have heard word of your deeds and I must say I am impressed
+<<HideJuliet (Player)>>
+
+
+<<DisplayRomeo (Player)>>
+Romeo:Why thank you Juliet I admit that I did not quite believe that you would even hear of my deeds
+<<HideRomeo (Player)>>
+
+
+<<DisplayJuliet (Player)>>
+Juliet: Ow I did indeed and I noticed that tho has done everything that thou could to gain my attention.
+
+Juliet: I am very impressed with your efforts Romeo but more so I can see how much you want to help people, deffend your honour and that of your house, and how much of a conversationalist you are.
+Juliet: As such I have a few gifts for you.
+Juliet: Here a sword and shield that would grant you greater damage and health
+Juliet: I gift you this amulet of valour that will grant you increased honour
+Juliet: Take this a ring of luck, so that you may have good fortunes
+<<HideJuliet (Player)>>
+
+<<DisplayRomeo (Player)>>
+Romeo: O thank you.. but I dont know what i have done to deserve gifts. I mearly hoped to talk with you
+<<HideRomeo (Player)>>
+
+<<DisplayJuliet (Player)>>
+Juliet: Well Romeo I must tell you that I am not only flattered by your efforts, they have also given me an idea.
+<<HideJuliet (Player)>>
+
+<<jump JulietsProposal>>
+===
+
+
+title: JulietDisinterested
+tags:
+---
+<<DeactivatePlayerMovment (Player)>>
+<<DisplayJuliet (Player)>>
+Juliet: Good evning to thee, Romeo.
+Juliet: I have heard word of your deeds and I must say I am impressed
+<<HideJuliet (Player)>>
+
+
+<<DisplayRomeo (Player)>>
+Romeo:Why thank you Juliet I admit that I did not quite believe that you would even hear of my deeds
+<<HideRomeo (Player)>>
+
+<<jump JulietsProposal>>
+===
+
+
+title: JulietIntrested
+tags:
+---
+<<DeactivatePlayerMovment (Player)>>
+<<DisplayJuliet (Player)>>
+Juliet: Good evning to thee, Romeo.
+Juliet: I have heard word of your deeds and I must say I am impressed
+<<HideJuliet (Player)>>
+
+
+<<DisplayRomeo (Player)>>
+Romeo:Why thank you Juliet I admit that I did not quite believe that you would even hear of my deeds
+<<HideRomeo (Player)>>
+
+<<jump JulietsProposal>>
+===
+
+
+
+title: JulietMajorCombatsMajorCardGames
+tags:
+---
+
+<<AddCombatBonus (Player)>>
+<<AddHonourBonus (Player)>>
+
+
+<<DeactivatePlayerMovment (Player)>>
+<<DisplayJuliet (Player)>>
+Juliet: Good evning to thee, Romeo.
+Juliet: I have heard word of your deeds and I must say I am impressed
+<<HideJuliet (Player)>>
+
+
+<<DisplayRomeo (Player)>>
+Romeo:Why thank you Juliet I admit that I did not quite believe that you would even hear of my deeds
+<<HideRomeo (Player)>>
+
+<<DisplayJuliet (Player)>>
+Juliet: Ow I did indeed and I noticed that tho has a great fondness for dueling and your gift for insults.
+Juliet: I am very impressed with your efforts Romeo but more so I can see how much you want to help people and deffend your honour and that of your house.
+Juliet: As such I have a few gifts for you.
+Juliet: Here a sword and shield that would grant you greater damage and health
+Juliet: I gift you this amulet of valour that will grant you increased honour
+<<HideJuliet (Player)>>
+
+<<DisplayRomeo (Player)>>
+Romeo: O thank you.. but I dont know what i have done to deserve gifts. I mearly hoped to talk with you
+<<HideRomeo (Player)>>
+
+<<DisplayJuliet (Player)>>
+Juliet: Well Romeo I must tell you that I am not only flattered by your efforts, they have also given me an idea.
+<<HideJuliet (Player)>>
+
+<<jump JulietsProposal>>
+===
+
+title: JulietsMajorCardGamesMajorDialogs
+tags:
+---
+
+<<AddHonourBonus (Player)>>
+
+<<DeactivatePlayerMovment (Player)>>
+<<DisplayJuliet (Player)>>
+Juliet: Good evning to thee, Romeo.
+Juliet: I have heard word of your deeds and I must say I am impressed
+<<HideJuliet (Player)>>
+
+
+<<DisplayRomeo (Player)>>
+Romeo:Why thank you Juliet I admit that I did not quite believe that you would even hear of my deeds
+<<HideRomeo (Player)>>
+
+
+<<DisplayJuliet (Player)>>
+Juliet: Ow I did indeed and I noticed that tho has a great fondness for insults and conversation 
+
+Juliet: I am very impressed with your efforts Romeo but more so, I can see how much care about defending your honour and that of your house, and how much of a conversationalist you are.
+Juliet: As such I have a few gifts for you.
+Juliet: I gift you this amulet of valour that will grant you increased honour
+Juliet: Take this a ring of luck, so that you may have good fortunes
+<<HideJuliet (Player)>>
+
+<<DisplayRomeo (Player)>>
+Romeo: O thank you.. but I dont know what i have done to deserve gifts. I mearly hoped to talk with you
+<<HideRomeo (Player)>>
+
+<<DisplayJuliet (Player)>>
+Juliet: Well Romeo I must tell you that I am not only flattered by your efforts, they have also given me an idea.
+<<HideJuliet (Player)>>
+
+<<jump JulietsProposal>>
+===
+
+title: JulietsMajorCombatsMajorDialogs
+tags:
+---
+
+<<AddCombatBonus (Player)>>
+
+<<DeactivatePlayerMovment (Player)>>
+<<DisplayJuliet (Player)>>
+Juliet: Good evning to thee, Romeo.
+Juliet: I have heard word of your deeds and I must say I am impressed
+<<HideJuliet (Player)>>
+
+
+<<DisplayRomeo (Player)>>
+Romeo:Why thank you Juliet I admit that I did not quite believe that you would even hear of my deeds
+<<HideRomeo (Player)>>
+
+<<DisplayJuliet (Player)>>
+Juliet: Ow I did indeed and I noticed that tho has a great fondness for dueling and conversation
+
+Juliet: I am very impressed with your efforts Romeo but more so I can see how much you want to help people, and how much of a conversationalist you are.
+Juliet: As such I have a few gifts for you.
+Juliet: Here a sword and shield that would grant you greater damage and health
+Juliet: Take this a ring of luck, so that you may have good fortunes
+<<HideJuliet (Player)>>
+
+<<DisplayRomeo (Player)>>
+Romeo: O thank you.. but I dont know what I have done to deserve gifts. I mearly hoped to talk with you
+<<HideRomeo (Player)>>
+
+<<DisplayJuliet (Player)>>
+Juliet: Well Romeo I must tell you that I am not only flattered by your efforts, they have also given me an idea.
+<<HideJuliet (Player)>>
+
+
+<<jump JulietsProposal>>
+===
+
+
+title: JulietMajorCombats
+tags:
+---
+
+<<AddCombatBonus (Player)>>
+
+<<DeactivatePlayerMovment (Player)>>
+<<DisplayJuliet (Player)>>
+Juliet: Good evning to thee, Romeo.
+Juliet: I have heard word of your deeds and I must say I am impressed
+<<HideJuliet (Player)>>
+
+
+<<DisplayRomeo (Player)>>
+Romeo:Why thank you Juliet I admit that I did not quite believe that you would even hear of my deeds
+<<HideRomeo (Player)>>
+
+
+<<DisplayJuliet (Player)>>
+Juliet: Ow I did indeed and I noticed that tho has such a great fondness for dueling
+
+Juliet: I am very impressed with your efforts Romeo but more so I can see how much you want to help people and deffend them
+Juliet: As such I have a gift for you.
+Juliet: Here a sword and shield that would grant you greater damage and health
+<<HideJuliet (Player)>>
+
+<<DisplayRomeo (Player)>>
+Romeo: O thank you.. but I dont know what i have done to deserve gifts. I mearly hoped to talk with you
+<<HideRomeo (Player)>>
+
+<<DisplayJuliet (Player)>>
+Juliet: Well Romeo I must tell you that I am not only flattered by your efforts, they have also given me an idea.
+<<HideJuliet (Player)>>
+
+<<jump JulietsProposal>>
+===
+
+
+title: JulietMajorCardGames
+tags:
+---
+
+<<AddHonourBonus (Player)>>
+
+<<DeactivatePlayerMovment (Player)>>
+<<DisplayJuliet (Player)>>
+Juliet: Good evning to thee, Romeo.
+Juliet: I have heard word of your deeds and I must say I am impressed
+<<HideJuliet (Player)>>
+
+
+<<DisplayRomeo (Player)>>
+Romeo:Why thank you Juliet I admit that I did not quite believe that you would even hear of my deeds
+<<HideRomeo (Player)>>
+
+
+<<DisplayJuliet (Player)>>
+Juliet: Ow I did indeed and I noticed that tho has such a great fondness for insults.
+
+Juliet: I am very impressed with your efforts Romeo but more so I can see how much you care about deffending your honour and that of your house
+Juliet: As such I have a gift for you
+Juliet: I gift you this amulet of valour that will grant you increased honour
+<<HideJuliet (Player)>>
+
+<<DisplayRomeo (Player)>>
+Romeo: O thank you.. but I dont know what i have done to deserve gifts. I mearly hoped to talk with you
+<<HideRomeo (Player)>>
+
+<<DisplayJuliet (Player)>>
+Juliet: Well Romeo I must tell you that I am not only flattered by your efforts, they have also given me an idea.
+<<HideJuliet (Player)>>
+<<jump JulietsProposal>>
+===
+
+
+title: JulietMajorDialogs
+tags:
+---
+<<DeactivatePlayerMovment (Player)>>
+<<DisplayJuliet (Player)>>
+Juliet: Good evning to thee, Romeo.
+Juliet: I have heard word of your deeds and I must say I am impressed
+<<HideJuliet (Player)>>
+
+
+<<DisplayRomeo (Player)>>
+Romeo:Why thank you Juliet I admit that I did not quite believe that you would even hear of my deeds
+<<HideRomeo (Player)>>
+
+
+<<DisplayJuliet (Player)>>
+Juliet: Ow I did indeed and I noticed that tho has such a great fondness for converesing with people
+
+Juliet: I am very impressed with your efforts Romeo but more so, I can see how much of a conversationalist you are.
+Juliet: As such I have a gift for you.
+Juliet: Take this a ring of luck, so that you may have good fortunes
+<<HideJuliet (Player)>>
+
+<<DisplayRomeo (Player)>>
+Romeo: O thank you.. but I dont know what i have done to deserve gifts. I mearly hoped to talk with you
+<<HideRomeo (Player)>>
+
+<<DisplayJuliet (Player)>>
+Juliet: Well Romeo I must tell you that I am not only flattered by your efforts, they have also given me an idea.
+<<HideJuliet (Player)>>
+<<jump JulietsProposal>>
+===
+
+
+
+
+title: JulietsProposal
+tags:
+---
+
+<<DisplayJuliet (Player)>>
+Juliet: I am not the only one that has heard of all you have done
+Juliet: Despite how angry they are the heads on my family and yours are talking to eachother for the first time in centuries
+Juliet: I do wonder....
+Juliet: If we were to wed then perhaps we might finaly bring peace to Verona?
+<<HideJuliet (Player)>>
+
+<<DisplayRomeo (Player)>>
+Romeo: A wedding, are you certain? This is perhaps too big a disision to make in haste.  
+<<HideRomeo (Player)>>
+
+<<DisplayJuliet (Player)>>
+Juliet: This is bigger then just the two of us Romeo it could mean the end to centuries of blood shield
+Juliet: And you do like me dont you, this is why you have done all you have?
+<<HideJuliet (Player)>>
+
+<<DisplayRomeo (Player)>>
+Romeo: I do dear Juliet  
+<<HideRomeo (Player)>>
+
+<<DisplayJuliet (Player)>>
+Juliet: Then make haste to the church so that tho may ask the priest there if we may wed
+
+Juliet:If you dont know where the church is go back to the city and use you map to find your way to the church
+<<HideJuliet (Player)>>
+
+<<DisplayRomeo (Player)>>
+Romeo: I will my love, fair thee well
+<<HideRomeo (Player)>>
+<<ReactivatePlayerMovment (Player)>>
 ===

@@ -43,7 +43,6 @@ public class VaiDrogulCombat : MonoBehaviour
         GetComponent<Rigidbody2D>().bodyType = RigidbodyType2D.Static;
     }
 
-
     void Update()
     {
         if (enemyAlive && !teleporting && enemyActive)
@@ -110,14 +109,12 @@ public class VaiDrogulCombat : MonoBehaviour
         }       
     }
 
-
     public void ResetTeleport()
     {
         teleportCounter = 0f;
         teleporting = false;
         teleportInProgress = false;      
     }
-
 
     public void FlipSprite()
     {
@@ -136,7 +133,6 @@ public class VaiDrogulCombat : MonoBehaviour
         }       
     }
 
-
     void Attack()
     {
         animator.SetTrigger("attack");
@@ -144,12 +140,10 @@ public class VaiDrogulCombat : MonoBehaviour
         attacks++;
     }
 
-
     public void LaunchFireballs()
     {
         vaiDrogulFireball.SpawnFireball();
     }
-
 
     public void FireballAttack()
     {
@@ -174,7 +168,6 @@ public class VaiDrogulCombat : MonoBehaviour
             }
         }
     }
-
 
     public void DamageReaction(float currentHealth)
     {

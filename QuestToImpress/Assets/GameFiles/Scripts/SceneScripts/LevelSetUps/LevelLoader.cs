@@ -16,7 +16,16 @@ public class LevelLoader : MonoBehaviour
     public void LoadLevel(Levels levelToLoad)
     {
         Transporting = true;
-        saveDataManager.LoadPlayerModelData();
+        
+        if (levelToLoad != Levels.MainMenu)
+        {
+            saveDataManager.LoadPlayerModelData();
+        }
+        else
+        {
+            saveDataManager.DeletePlayerModelData();
+        }
+       
 
         switch (levelToLoad)
         {

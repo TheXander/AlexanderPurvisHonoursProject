@@ -1,11 +1,135 @@
 ﻿title: EvilSpiritStart
 tags:
 ---
-Evil Spirit: HI
+<<DeactivatePlayerMovment (Player)>>
+<<TurnOffEvilSpiritCombat (Player)>>
+<<TurnOnEvilSpiritIdel (Player)>>
+<<DisplayEvilSpirt (Player)>>
+Evil Spirit: You
+Evil Spirit: Shall
+Evil Spirit: Burn!!!!!
+<<HideEvilSpirt (Player)>>
+<<SignalPlayerToStartEvent (Player)>>
+<<ReactivatePlayerMovment (Player)>>
 ===
 
 title: PriestStart
 tags:
 ---
-Priest: HI
+<<DeactivatePlayerMovment (Player)>>
+<<TurnOffClericPreCombat (Player)>>
+<<TurnOnClericFighting (Player)>>
+
+<<DisplayPriest (Player)>>
+Priest: Romeo!! Help!!!
+Priest: This demond just spawned from no where!! Help!!!
+<<HidePriest (Player)>>
+
+-> Wait how did this happen?
+    <<jump What>>
+
+-> Jump in to action?
+    <<jump Action>>
+===
+
+title: What
+tags:
+---
+<<DisplayPriest (Player)>>
+Priest: Theres no time... Please Hurry I cant hold him for long!
+<<HidePriest (Player)>>
+<<ReactivatePlayerMovment (Player)>>
+===
+
+title: Action
+tags:
+---
+<<DisplayPriest (Player)>>
+Priest: Thank you Romeo!! hurry please!!!
+<<HidePriest (Player)>>
+<<ReactivatePlayerMovment (Player)>>
+===
+
+title: EvilSpiritCombatWin
+tags:
+---
+<<DeactivatePlayerMovment (Player)>>
+<<SignalPlayerEventOver (Player)>>
+<<DisplayEvilSpirt (Player)>>
+Evil Spirit: What you have bested me??
+Evil Spirit: This can not be I....
+<<VanishEvilSpiritIdel (Player)>>
+Evil Spirit: I will be back
+<<HideEvilSpirt (Player)>>
+<<jump PriestPostCombat>>
+===
+
+title: EvilSpiritCombatLoss
+tags:
+---
+<<DeactivatePlayerMovment (Player)>>
+<<SignalPlayerEventOver (Player)>>
+<<DisplayEvilSpirt (Player)>>
+Evil Spirit: ha ha ha 
+<<VanishEvilSpiritIdel (Player)>>
+Evil Spirit: Your pain has sustaind me for now but I will be back latter......
+<<HideEvilSpirt (Player)>>
+<<jump PriestPostCombat>>
+===
+
+title: PriestPostCombat
+tags:
+---
+<<DisplayPriest (Player)>>
+Priest: Ow thank you, thank you Romeo
+Priest: I dont know what I would have done if you had not come along
+<<HidePriest (Player)>>
+<<ReactivatePlayerMovment (Player)>>
+===
+
+title: PriestStartEnding
+tags:
+---
+<<TurnOffClericEnding (Player)>>
+<<TurnOnClericIdel (Player)>>
+<<DeactivatePlayerMovment (Player)>>
+<<DisplayPriest (Player)>>
+Priest: Now Romeo, what pray tell did you come hear to talk with me about?
+<<HidePriest (Player)>>
+
+<<DisplayRomeo (Player)>>
+Romeo: I am here to ask that you do join my hand with that of dear Juliets
+<<HideRomeo (Player)>>
+
+<<DisplayPriest (Player)>>
+Priest: Romeo what you ask. Surely you know you know that it would enrage the hearts of both your houses?
+<<HidePriest (Player)>>
+
+<<DisplayRomeo (Player)>>
+Romeo: But my dear Preist we hope that it will do just the oposite.
+<<HideRomeo (Player)>>
+
+<<DisplayPriest (Player)>>
+Priest: Aww I see, the two of you seek to unite your houses with thy true love
+<<HidePriest (Player)>>
+
+<<DisplayRomeo (Player)>>
+Romeo: How come you seem to know our plan so weel
+<<HideRomeo (Player)>>
+
+<<DisplayPriest (Player)>>
+Priest: I do but see things that the lord wishes and I do see that thy plan could work
+Priest: Alright return tomorrow with Juliet and thee shall be wed.
+<<HidePriest (Player)>>
+
+<<DisplayRomeo (Player)>>
+Romeo: Why thank you father I had thought it would take more convincing 
+<<HideRomeo (Player)>>
+
+<<DisplayPriest (Player)>>
+Priest: hush now chiled, now go be young and enjoy your love threat not
+<<HidePriest (Player)>>
+
+<<ReactivatePlayerMovment (Player)>>
+<<StartGameEnding (Player)>>
 ===

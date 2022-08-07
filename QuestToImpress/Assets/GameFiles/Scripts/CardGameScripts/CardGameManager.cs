@@ -572,7 +572,6 @@ public class CardGameManager : MonoBehaviour
                 break;
             case RomeoData.CardgameEvents.ForestGhoul:
                 playerProgress.forestCardGameComplete = true;
-                playerProgress.levelTwoEventsComplete++;
                 break;
             case RomeoData.CardgameEvents.Tybalt:
                 playerProgress.tybaltCardGameComplete = true;
@@ -642,7 +641,19 @@ public class CardGameManager : MonoBehaviour
               
                 break;
             case RomeoData.CardgameEvents.ForestGhoul:
-             
+                List<Dictionary<string, object>> GhoulData = CSVReader.Read("GhoulDeckList");
+                for (var i = 0; i < GhoulData.Count; i++)
+                {
+                    string nameData = GhoulData[i]["Name"].ToString();
+                    int cost = int.Parse(GhoulData[i]["Cost"].ToString(), System.Globalization.NumberStyles.Integer);
+                    int damage = int.Parse(GhoulData[i]["Damage"].ToString(), System.Globalization.NumberStyles.Integer);
+                    string quote = GhoulData[i]["Quote"].ToString();
+                    string source = GhoulData[i]["Source"].ToString();
+
+                    CardInfo newCard = new CardInfo(nameData, cost, damage, quote, source);
+                    enemyDecklist.Add(newCard);
+                }
+                enemyHonour = 33;
                 break;
             case RomeoData.CardgameEvents.Tybalt:
               

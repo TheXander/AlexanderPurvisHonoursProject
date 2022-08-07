@@ -13,7 +13,7 @@ public class ExitGameButton : MonoBehaviour
     {
         if (!shutingDown)
         {
-            playerModel.LastUpdate("JulietsHouse");
+           // playerModel.LastUpdate("JulietsHouse");
             shutingDown = true;
         }     
     }

@@ -28,6 +28,7 @@ public class CombatManager : MonoBehaviour
 
     public void ActivateFighters()
     {
+        //Debug.Log(romeoData.CurrentCombat);
         playerInputControls.playerActive = true;
 
         switch (romeoData.CurrentCombat)
@@ -150,10 +151,10 @@ public class CombatManager : MonoBehaviour
                     switch (combatResult)
                     {
                         case CombatResults.Win:
-
+                           
                             break;
                         case CombatResults.Lose:
-
+                           
                             break;
                         default:
                             Debug.Log("Error no result");
@@ -162,15 +163,14 @@ public class CombatManager : MonoBehaviour
                     break;
                 case RomeoData.CombatEvents.EvilSpirt:
                     playerProgress.churchCombatCompelte = true;
-                    playerProgress.levelTwoEventsComplete++;
-
+                  
                     switch (combatResult)
                     {
                         case CombatResults.Win:
-
+                            eventResults.churchCombat = PlayerEventResults.EventResults.Win;
                             break;
                         case CombatResults.Lose:
-
+                            eventResults.churchCombat = PlayerEventResults.EventResults.Loss;
                             break;
                         default:
                             Debug.Log("Error no result");

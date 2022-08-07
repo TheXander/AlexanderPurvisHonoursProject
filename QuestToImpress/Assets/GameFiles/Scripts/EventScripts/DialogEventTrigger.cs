@@ -20,7 +20,6 @@ public class DialogEventTrigger : MonoBehaviour
         }
     }
 
- 
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (!triggered)

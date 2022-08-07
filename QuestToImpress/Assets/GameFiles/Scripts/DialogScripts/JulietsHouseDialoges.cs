@@ -5,9 +5,10 @@ using Yarn.Unity;
 
 public class JulietsHouseDialoges : MonoBehaviour
 {
-
     public GameObject romeoPortrait, julietPortrait;
     public SceneBasedPlayerControls playerControls;
+
+    public Bonuses bonusManagment;
 
     // Dialogue Runner ivariable for yarn spinner control.
     public DialogueRunner dialogueRunner;
@@ -55,8 +56,31 @@ public class JulietsHouseDialoges : MonoBehaviour
         dialogueRunner.AddCommandHandler<GameObject>(
         "SignalPlayerEventOver",
         SignalPlayerEventOver
-        );   
+        );
+
+        dialogueRunner.AddCommandHandler<GameObject>(
+        "AddCombatBonus",
+        AddCombatBonus
+        );
+
+        dialogueRunner.AddCommandHandler<GameObject>(
+        "AddHonourBonus",
+        AddHonourBonus
+        );
     }
+
+    void AddCombatBonus(GameObject Player)
+    {
+        bonusManagment.attackBonus += 5;
+        bonusManagment.healthBonus += 5;
+        
+    }
+
+    void AddHonourBonus(GameObject Player)
+    {
+        bonusManagment.honourBonus += 5;
+    }
+
 
     // Show Portraits
     void DisplayRomeo(GameObject Player)
@@ -68,8 +92,7 @@ public class JulietsHouseDialoges : MonoBehaviour
     {
         julietPortrait.SetActive(true);
     }
-
-   
+  
     // Hide Portraits
     void HideRomeo(GameObject Player)
     {

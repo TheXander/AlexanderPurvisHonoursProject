@@ -30,4 +30,10 @@ public class PlayerProgress : ScriptableObject
 
     [SerializeField]
     public bool invitedToJuliets = false;
+
+    [SerializeField]
+    public bool part2Active = false;
+
+    [SerializeField]
+    public bool part2EndActive = false;
 }

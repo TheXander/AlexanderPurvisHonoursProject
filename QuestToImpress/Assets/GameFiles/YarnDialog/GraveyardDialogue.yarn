@@ -181,6 +181,267 @@ title: MercutioQuestStart
 tags:
 ---
 <<DeactivatePlayerMovment (Player)>>
-Mercutio: Hi
-<<SignalPlayerToStartEvent (Player)>>
+<<DisplayMercutio (Player)>>
+
+<<SetMercutioDialogueComplete (Player)>>
+
+Mercutio: Vapours, sighs, darken the day!.....
+
+Mercutio: No no thats not it...
+
+Mercutio: I do wander everywhere,....
+
+Mercutio: No I dont think she will like that either.
+
+Mercutio: Oww.. Aww Romeo I did not see you, did thee fair well with Juliet?
+<<HideMercutio (Player)>>
+
+<<DisplayRomeo (Player)>>
+Romeo: Yes I did indeed, but tell me Mercutio what are you doing here?
+<<HideRomeo (Player)>>
+
+<<DisplayMercutio (Player)>>
+Mercutio: Aww well emm.
+
+Mercutio: Well me and fair Rosaline talked at the party and we are set to meet tonight. However I do believe she is uninpressed with my efforts to win her afections.  
+
+Mercutio: So I am endeavoring to write her a poem. 
+
+Mercutio: I do have the start... It goes... 
+
+Mercutio: Since I left you, mine eye is in my mind, And that which governs me to go about, Doth part his function, and is partly blind.
+<<HideMercutio (Player)>>
+
+<<DisplayRomeo (Player)>>
+Romeo: I must say that is quite nice.
+<<HideRomeo (Player)>>
+
+<<DisplayMercutio (Player)>>
+Mercutio:Hmmm maybe but I cant think of any more verses, would you help me?
+<<HideMercutio (Player)>>
+
+<<DisplayRomeo (Player)>>
+Romeo:Let me think... What about...
+
+-> Seems seeing, but effectually is out?
+    <<jump PoemOption1>>
+
+-> Of bird, of flower, or shape which it doth latch?
+    <<jump PoemOption2>>
+
+===
+
+
+title: PoemOption1
+tags:
+---
+Romeo: Seems seeing, but effectually is out, For it no form delivers to the heart
+
+<<chosePoemOption1 (Player)>>
+<<ActivateRelic1 (Player)>>
+<<jump PoemNextChoice1>>
+===
+
+
+title: PoemOption2
+tags:
+---
+Romeo: Of bird, of flower, or shape which it doth latch, Of his quick objects hath the mind no part,
+<<chosePoemOption2 (Player)>>
+<<ActivateRelic1 (Player)>>
+<<jump PoemNextChoice1>>
+===
+
+
+title: PoemNextChoice1
+tags:
+---
+<<HideRomeo (Player)>>
+<<DisplayMercutio (Player)>>
+Mercutio:O that is quite excellent
+Mercutio:Yes I do think that will work nicely, Do you have any idea for the next line?
+<<HideMercutio (Player)>>
+
+<<DisplayRomeo (Player)>>
+Romeo:What do you think of....
+-> Nor his own vision holds what it doth catch?
+    <<jump PoemOption3>>
+
+-> The most sweet-favour or deformed'st creature?
+    <<jump PoemOption4>>
+===
+
+title: PoemOption3
+tags:
+---
+Romeo: Nor his own vision holds what it doth catch
+Romeo: For if it see the rud'st or gentlest sight,
+<<chosePoemOption3 (Player)>>
+<<ActivateRelic2 (Player)>>
+<<jump PoemNextChoice2>>
+===
+
+
+title: PoemOption4
+tags:
+---
+Romeo: The most sweet-favour or deformed'st creature
+Romeo: The mountain or the sea, the day or night,
+<<chosePoemOption4 (Player)>>
+<<ActivateRelic2 (Player)>>
+<<jump PoemNextChoice2>>
+===
+
+
+title: PoemNextChoice2
+tags:
+---
+<<HideRomeo (Player)>>
+<<DisplayMercutio (Player)>>
+Mercutio:That is wonderful and I think I have the perfect way to end it.
+Mercutio:Ok lets see....
+<<ProducePoemn (Player)>>
+===
+
+
+title:RecitePoemV1
+tags:
+---
+Mercutio:Since I left you, mine eye is in my mind,
+Mercutio:And that which governs me to go about, Doth part his function, and is partly blind,
+Mercutio:Seems seeing, but effectually is out, For it no form delivers to the heart, Nor his own vision holds what it doth catch, For if it see the rud'st or gentlest sight,
+Mercutio:The crow or dove, it shapes them to your feature.
+Mercutio:Incapable of more, replete with you, My most true mind thus maketh mine untrue.
+<<ActivateRelic3 (Player)>>
+<<jump PoemEnd>>
+===
+
+title:RecitePoemV2
+tags:
+---
+Mercutio:Since I left you, mine eye is in my mind,
+Mercutio:And that which governs me to go about, Doth part his function, and is partly blind,
+Mercutio:Seems seeing, but effectually is out, For it no form delivers to the heart, The most sweet-favour or deformed'st creature
+Mercutio:The mountain or the sea, the day or night, The crow or dove, it shapes them to your feature.
+Mercutio:Incapable of more, replete with you, My most true mind thus maketh mine untrue.
+<<ActivateRelic3 (Player)>>
+<<jump PoemEnd>>
+===
+
+title:RecitePoemV3
+tags:
+---
+Mercutio:Since I left you, mine eye is in my mind,
+Mercutio:And that which governs me to go about, Doth part his function, and is partly blind,
+Mercutio:Of bird, of flower, or shape which it doth latch, Of his quick objects hath the mind no part,
+Mercutio:Nor his own vision holds what it doth catch, For if it see the rud'st or gentlest sight, The crow or dove, it shapes them to your feature.
+Mercutio:Incapable of more, replete with you, My most true mind thus maketh mine untrue.
+<<ActivateRelic3 (Player)>>
+<<jump PoemEnd>>
+===
+
+title:RecitePoemV4
+tags:
+---
+Mercutio:Since I left you, mine eye is in my mind,
+Mercutio:And that which governs me to go about
+Mercutio:Doth part his function, and is partly blind, Of bird, of flower, or shape which it doth latch, Of his quick objects hath the mind no part,
+Mercutio:The most sweet-favour or deformed'st creature
+Mercutio:The mountain or the sea, the day or night, The crow or dove, it shapes them to your feature.
+Mercutio:Incapable of more, replete with you, My most true mind thus maketh mine untrue.
+<<ActivateRelic3 (Player)>>
+<<jump PoemEnd>>
+===
+
+
+title: PoemEnd
+tags:
+---
+<<HideMercutio (Player)>>
+<<DisplayRomeo (Player)>>
+Romeo:I think that sounds very nice Mercutio. I am sure Rosaline will appreciate your efforts. 
+<<HideRomeo (Player)>>
+
+<<DisplayMercutio (Player)>>
+Mercutio:Do you really think so? Oww I do hope so. I am going to pratice till this evening. I wish to preform my very best for her.
+<<HideMercutio (Player)>>
+<<DisplayRomeo (Player)>>
+Romeo: Good luck dear cousin.
+<<HideRomeo (Player)>>
+<<CompleteRelics (Player)>>
+<<ResolveRelecs (Player)>>
+===
+
+
+
+title: BlessingCombatAndCardGame
+tags:
+---
+
+......
+Helping Mercutio write his love poem has activated these long forgoten relics
+The Relics have blessed Romeo and as a result his honour has increesed by +5 and his health and damage have each increased by +5!
+
+<<ReactivatePlayerMovment (Player)>>
+===
+
+
+
+title: BlessingCombat
+tags:
+---
+
+
+......
+Helping Mercutio write his love poem has activated these long forgoten relics
+The Relics have blessed Romeo and as a result his health and damage have each increased by +5!
+
+<<ReactivatePlayerMovment (Player)>>
+===
+
+
+title: BlessingCardGame
+tags:
+---
+......
+Helping Mercutio write his love poem has activated these long forgoten relics
+The Relics have blessed Romeo and as a result his honour has increesed by +5! 
+
+<<ReactivatePlayerMovment (Player)>>
+===
+
+
+title: BlessingDefault
+tags:
+---
+......
+Helping Mercutio write his love poem has activated these long forgoten relics
+The Relics have blessed Romeo! 
+
+<<ReactivatePlayerMovment (Player)>>
+===
+
+
+
+title: WarnRomeo
+tags:
+---
+
+Juliet:Wait!!!!
+
+
+Juliet:Romeo You have to come quick!
+
+Juliet: Its Tybalt!
+
+Juliet:He is going to kill him!
+
+Juliet:He is going to kill Mercutio!
+
+Romeo:What?!?!?
+
+Juliet:You Have to come with me Now!
+
+<<MoveJulietToTown (Player)>>
+<<ReactivatePlayerMovment (Player)>>
 ===

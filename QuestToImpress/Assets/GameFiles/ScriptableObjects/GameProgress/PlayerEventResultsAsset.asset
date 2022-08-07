@@ -18,6 +18,7 @@ MonoBehaviour:
   castleCombat: 0
   forestKCombat: 0
   gravyardCombat: 0
+  churchCombat: 0
   julietDialogue: 0
   barmanDialogue: 0
   tybaltDialogue: 0
