@@ -9,13 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa118590f57aff24ba4324045dbd05b8, type: 3}
-  m_Name: RomeoDataAsset
+  m_Script: {fileID: 11500000, guid: 3952d5667e8a045478f729a6f2d163b6, type: 3}
+  m_Name: BonusesAsset
   m_EditorClassIdentifier: 
-  previousLocation: 6
-  currentLocation: 0
-  currentEvent: 0
-  previousPlayerCoordinates: {x: 0, y: 0, z: 0}
-  CurrentCardgame: 0
-  CurrentCombat: 0
-  CurrentDialog: 0
+  healthBonus: 0
+  attackBonus: 0
+  honourBonus: 0

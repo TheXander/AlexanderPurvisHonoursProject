@@ -108,3 +108,60 @@ Capulet Knight: Tybalt is on the hunt for you too and mark my words he will do m
 <<HideCardGameKnight (Player)>>
 <<ReactivatePlayerMovment (Player)>>
 ===
+
+
+
+
+
+
+
+
+
+
+
+
+title: TownGhoulStart
+tags: 
+colorID: 0
+position: 860,368
+---
+<<DeactivatePlayerMovment (Player)>>
+Ghoul: The Underworld has heard of your plan Romeo, you and Juliets Families must war untill the end of time!
+Ghoul: You are both fullish to try and stop it
+
+<<DisplayRomeo (Player)>>
+Romeo: Ow really?.
+<<HideRomeo (Player)>>
+
+<<SignalPlayerToStartEvent (Player)>>
+===
+
+title: TownGhoulWin
+tags: 
+colorID: 0
+position: 860,368
+---
+<<DeactivatePlayerMovment (Player)>>
+Ghoul: Curse you both..... I will see you in Hell Romeo!
+<<ReactivatePlayerMovment (Player)>>
+===
+
+title: TownGhoulLoss
+tags: 
+colorID: 0
+position: 860,368
+---
+<<DeactivatePlayerMovment (Player)>>
+Ghoul: Ha ha I have struck a blow to your honour Romeo now you will never have enough to be worthy of Juliet.... Think on that, See you in Hell
+<<ReactivatePlayerMovment (Player)>>
+===
+
+title: TownGhoulDraw
+tags: 
+colorID: 0
+position: 860,368
+---
+<<DeactivatePlayerMovment (Player)>>
+Ghoul: Curse you both..... I will see you in Hell Romeo!
+<<ReactivatePlayerMovment (Player)>>
+===

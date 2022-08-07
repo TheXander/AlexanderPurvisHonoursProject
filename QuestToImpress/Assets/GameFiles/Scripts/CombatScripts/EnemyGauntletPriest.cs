@@ -112,7 +112,6 @@ public class EnemyGauntletPriest : MonoBehaviour
         if (enemyAlive && enemyActive)
         {
             
-
             walkingCounter += Time.deltaTime;
             if (walkingCounter >= walkingTime)
             {

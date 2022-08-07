@@ -34,3 +34,5 @@ MonoBehaviour:
   levelTwoEventsComplete: 0
   julietsReady: 0
   invitedToJuliets: 0
+  part2Active: 0
+  part2EndActive: 0

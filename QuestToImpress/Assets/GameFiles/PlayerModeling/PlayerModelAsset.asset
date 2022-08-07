@@ -13,18 +13,31 @@ MonoBehaviour:
   m_Name: PlayerModelAsset
   m_EditorClassIdentifier: 
   saveDataManager: {fileID: 11400000, guid: 7ab3f1d9c6f888449be0de2bb1f55b64, type: 2}
-  playerID: 
-  csvHeaderPlayerID: 
-  time: 
+  playerID: '|07082022105943|'
+  csvHeaderPlayerID: 07082022105943
+  time: 15:55
   gameRunning: 0
-  currentLocation: 
-  combatsEngagedIn: 0
+  currentLocation: JulietsHouse
+  combatsEngagedIn: 2
   combatWins: 0
   combatsAvoided: 0
-  cardGamesEngagedIn: 0
+  cardGamesEngagedIn: 2
   cardGameWins: 0
   cardGameDraws: 0
   cardGamesAvoided: 0
-  dialogueEngagedIn: 0
+  dialogueEngagedIn: 2
   dialogueAvoided: 0
-  csvPlayerModelRecordings: []
+  predictedPlayerCombatPreference: Unassigned
+  predictedPlayerCareGamePreference: Unassigned
+  predictedPlayerDialoguePreference: Unassigned
+  predictedPlayerType: Completionist
+  csvPlayerModelRecordings:
+  - '|07082022105943|,10:59,True,Main Menu,0,0,0,0,0,0,0,0,0'
+  - '|07082022105943|,11:01,True,City,2,0,0,2,0,0,1,2,0'
+  - '|07082022105943|,11:01,True,Graveyard,2,0,1,2,0,0,1,2,0'
+  - '|07082022105943|,11:02,True,City,2,0,1,2,0,0,2,2,0'
+  - '|07082022105943|,12:58,False,JulietsHouse,2,0,0,1,0,0,0,1,0'
+  - '|07082022105943|,13:18,False,JulietsHouse,2,0,0,2,0,0,0,2,0'
+  - '|07082022105943|,14:39,False,JulietsHouse,2,0,0,2,0,0,0,2,0'
+  - '|07082022105943|,14:45,False,JulietsHouse,1,0,6,1,0,0,6,1,6'
+  - '|07082022105943|,15:55,False,JulietsHouse,2,0,0,2,0,0,0,2,0'

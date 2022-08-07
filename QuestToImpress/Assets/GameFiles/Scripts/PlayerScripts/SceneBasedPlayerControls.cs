@@ -96,7 +96,8 @@ public class SceneBasedPlayerControls : MonoBehaviour
         }
       
         if (eventConfirmed && !eventActivated)
-        {          
+        {
+                
             switch (romeoData.currentEvent)
             {                
                 case RomeoData.Events.CardGame:
@@ -108,7 +109,9 @@ public class SceneBasedPlayerControls : MonoBehaviour
                     break;
                 case RomeoData.Events.Combat:                 
                     if (locationSet)
-                    {       
+                    {
+                       
+
                         romeoData.previousPlayerCoordinates = transform.position;
                         levelLoader.LoadLevel(newDestination);
                     }
@@ -117,6 +120,7 @@ public class SceneBasedPlayerControls : MonoBehaviour
                     StartDialog();
                     break;
                 default:
+                    
                     break;
             }
             eventActivated = true;

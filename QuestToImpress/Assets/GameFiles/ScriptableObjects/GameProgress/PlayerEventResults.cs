@@ -14,7 +14,7 @@ public class PlayerEventResults : ScriptableObject
 
     // Level One Combats
     [SerializeField]
-    public EventResults castleCombat, forestKCombat, gravyardCombat = EventResults.None;
+    public EventResults castleCombat, forestKCombat, gravyardCombat, churchCombat = EventResults.None;
 
     // Level One Dialogues
     [SerializeField]

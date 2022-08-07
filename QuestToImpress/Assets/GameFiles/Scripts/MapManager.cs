@@ -11,6 +11,8 @@ public class MapManager : MonoBehaviour
     public GameObject level1Map;
     public GameObject Level1EndMap;
 
+    public GameObject Level2EndMap;
+
     public bool preTutorial = false;
     bool enoughQuestsComplete = false;
     public bool totorialMaps = false;
@@ -65,19 +67,28 @@ public class MapManager : MonoBehaviour
         maps.SetActive(true);
         background.SetActive(true);
 
-        if (preTutorial)
+        if (!playerProgress.part2Active)
         {
-            tutorialMap.SetActive(true);
-        }
-        else if (enoughQuestsComplete)
-        {
-            Level1EndMap.SetActive(true);
+            if (preTutorial)
+            {
+                tutorialMap.SetActive(true);
+            }
+            else if (enoughQuestsComplete)
+            {
+                Level1EndMap.SetActive(true);
+            }
+            else
+            {
+                level1Map.SetActive(true);
+            }
         }
         else
         {
-            level1Map.SetActive(true);
-
+            Level2EndMap.SetActive(true);
         }
+        
+
+
         mapsBackButton.gameObject.SetActive(true);
     }
  
@@ -100,7 +111,7 @@ public class MapManager : MonoBehaviour
             level1Map.SetActive(false);
             
         }
-
+        Level2EndMap.SetActive(false);
         maps.SetActive(false);
         mapsBackButton.gameObject.SetActive(false);
         background.SetActive(false);
@@ -110,66 +121,71 @@ public class MapManager : MonoBehaviour
 
     void SetUpIcons()
     {
-        if (!playerProgress.forestKCombatCompelte)
+        if (!playerProgress.part2Active)
         {
-            L1ForestCombat.SetActive(true);
 
-            Debug.Log("!forestKCombatCompelte");
-        }
-        else
-        {
-            L1ForestCombat.SetActive(false);
+            if (!playerProgress.forestKCombatCompelte)
+            {
+                L1ForestCombat.SetActive(true);
+
+                Debug.Log("!forestKCombatCompelte");
+            }
+            else
+            {
+                L1ForestCombat.SetActive(false);
+            }
+
+            if (!playerProgress.cityCardGameComplete)
+            {
+                L1CityCombat.SetActive(true);
+                Debug.Log("!cityCardGameComplete");
+            }
+            else
+            {
+                L1CityCombat.SetActive(false);
+            }
+
+            if (!playerProgress.tavernFCardGameComplete)
+            {
+                L1TavernCardgame.SetActive(true);
+                Debug.Log("!tavernFCardGameComplete");
+            }
+            else
+            {
+                L1TavernCardgame.SetActive(false);
+            }
+
+            if (!playerProgress.tavernDialogCompelte)
+            {
+                L1TavernDialoge.SetActive(true);
+                Debug.Log("!tavernDialogCompelte");
+            }
+            else
+            {
+                L1TavernDialoge.SetActive(false);
+            }
+
+            if (!playerProgress.gravyardCombatCompelte)
+            {
+                L1GraveyardCombat.SetActive(true);
+                Debug.Log("!gravyardCombatCompelte");
+            }
+            else
+            {
+                L1GraveyardCombat.SetActive(false);
+            }
+
+            if (!playerProgress.gravyardTDialogCompelte)
+            {
+                L1GraveyardDialoge.SetActive(true);
+                Debug.Log("!gravyardTDialogCompelte");
+            }
+            else
+            {
+                L1GraveyardDialoge.SetActive(false);
+            }
         }
 
-        if (!playerProgress.cityCardGameComplete)
-        {
-            L1CityCombat.SetActive(true);
-            Debug.Log("!cityCardGameComplete");
-        }
-        else
-        {
-            L1CityCombat.SetActive(false);
-        }
-
-        if (!playerProgress.tavernFCardGameComplete)
-        {
-            L1TavernCardgame.SetActive(true);
-            Debug.Log("!tavernFCardGameComplete");
-        }
-        else
-        {
-            L1TavernCardgame.SetActive(false);
-        }
-
-        if (!playerProgress.tavernDialogCompelte)
-        {
-            L1TavernDialoge.SetActive(true);
-            Debug.Log("!tavernDialogCompelte");
-        }
-        else
-        {
-            L1TavernDialoge.SetActive(false);
-        }
-
-        if (!playerProgress.gravyardCombatCompelte)
-        {
-            L1GraveyardCombat.SetActive(true);
-            Debug.Log("!gravyardCombatCompelte");
-        }
-        else
-        {
-            L1GraveyardCombat.SetActive(false);
-        }
-
-        if (!playerProgress.gravyardTDialogCompelte)
-        {
-            L1GraveyardDialoge.SetActive(true);
-            Debug.Log("!gravyardTDialogCompelte");
-        }
-        else
-        {
-            L1GraveyardDialoge.SetActive(false);
-        }
     }
 
     void ShutDownIcons()

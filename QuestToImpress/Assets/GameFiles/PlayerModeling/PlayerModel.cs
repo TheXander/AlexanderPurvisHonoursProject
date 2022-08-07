@@ -7,7 +7,6 @@ using System.IO;
 public class PlayerModel : ScriptableObject
 {
     public SaveDataManager saveDataManager;
-
     // Data
     // player ID Made up of day month year hour minute and seconds - column 1
     [SerializeField]
@@ -48,6 +47,20 @@ public class PlayerModel : ScriptableObject
     [SerializeField]
     public int dialogueAvoided = 0;
 
+    // Player Type prediction variables
+    [SerializeField]
+    public string predictedPlayerCombatPreference = "Unset";
+
+    [SerializeField]
+    public string predictedPlayerCareGamePreference = "Unset";
+
+    [SerializeField]
+    public string predictedPlayerDialoguePreference = "Unset";
+
+    [SerializeField]
+    public string predictedPlayerType = "Unset";
+
+
     [SerializeField]
     public List<string> csvPlayerModelRecordings = new List<string>();
 
@@ -58,8 +71,7 @@ public class PlayerModel : ScriptableObject
             "Combats Engaged In, Combat Wins, Combats Avoided," +
             "Card Games Engaged In, Card Game Wins, Card Game Draws, Card Games Avoided," +
             "Dialog Engaged In, Dialog Avoided";
-
-    
+ 
     // reset
     public void resetScriptableObject()
     {
@@ -184,7 +196,6 @@ public class PlayerModel : ScriptableObject
         playerID = playerID.Insert(15, "|");
     }
 
-
     public void UpdatePlayerModelRecords()
     {
         string newModelRecord =
@@ -205,7 +216,6 @@ public class PlayerModel : ScriptableObject
         UpdateSavePlayerModelData();
     }
 
-
     void WriteToCSV()
     {
         filename = Application.dataPath + "Player" + csvHeaderPlayerID + " PlayerModel.csv";
@@ -220,7 +230,7 @@ public class PlayerModel : ScriptableObject
         tw.Close();
     }
 
-    void UpdateSavePlayerModelData()
+    public void UpdateSavePlayerModelData()
     {
         PlayerModelSaveData activeSave = saveDataManager.activePlayerModelSave;
 
@@ -246,6 +256,16 @@ public class PlayerModel : ScriptableObject
 
         activeSave.csvPlayerModelRecordings = csvPlayerModelRecordings;
 
+        activeSave.predictedPlayerCombatPreference = predictedPlayerCombatPreference;
+        activeSave.predictedPlayerCareGamePreference = predictedPlayerCareGamePreference;
+        activeSave.predictedPlayerDialoguePreference = predictedPlayerDialoguePreference;
+        activeSave.predictedPlayerType = predictedPlayerType;
+
         saveDataManager.SavePlayerModelData();
+    }
+
+    public void deleteOldData()
+    {
+        saveDataManager.DeletePlayerModelData();
     }
 }

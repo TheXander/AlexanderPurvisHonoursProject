@@ -7,7 +7,7 @@ public class OnStartDialogueTrigger : MonoBehaviour
 {
     public DialogueRunner dialogueRunner;
     public string conversationStartNode;
-    float startDialogueCooldown = 1f;
+    float startDialogueCooldown = 1.4f;
     float cooldownCounter = 0f;
 
     bool StartCountdown = false;

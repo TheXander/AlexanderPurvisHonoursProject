@@ -18,6 +18,7 @@ public class HealthBarManager : MonoBehaviour
     public Slider enemyHealthSlider;
     public Animator enemyHealthAnimator;
 
+
     float playerStartingHealth = 100.0f;
 
 
@@ -32,8 +33,7 @@ public class HealthBarManager : MonoBehaviour
     public bool enemyIsVulnerable = true;
 
     private void Awake()
-    {
-       
+    {      
         switch (romeoData.CurrentCombat)
         {
             case RomeoData.CombatEvents.CastleKnight:
@@ -58,11 +58,11 @@ public class HealthBarManager : MonoBehaviour
                 break;
             case RomeoData.CombatEvents.Tybalt:
 
-
                 break;
             default:
-                Debug.Log("Error no CurrentCombat");
-                SetUpHealth(80.0f);
+                //Debug.Log("Error no CurrentCombat");
+                romeoData.CurrentCombat = RomeoData.CombatEvents.EvilSpirt;
+                SetUpHealth(200.0f);
                 break;
         }
     }

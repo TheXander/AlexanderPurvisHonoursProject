@@ -21,6 +21,7 @@ public class MainMenuSetUp : MonoBehaviour
         eventResults.lakeCardGame = PlayerEventResults.EventResults.None;
         eventResults.tavernFCardGame = PlayerEventResults.EventResults.None;
         eventResults.cityCardGame = PlayerEventResults.EventResults.None;
+        eventResults.churchCombat = PlayerEventResults.EventResults.None;
 
         // reset Level One Combats resluts 
         eventResults.castleCombat = PlayerEventResults.EventResults.None;
@@ -63,6 +64,9 @@ public class MainMenuSetUp : MonoBehaviour
         playerProgress.julietsReady = false;
         playerProgress.invitedToJuliets = false;
 
+        playerProgress.part2Active = false;
+        playerProgress.part2EndActive = false;
+
 
         // RomeoData resets
         // rest Current Events 
@@ -74,7 +78,6 @@ public class MainMenuSetUp : MonoBehaviour
 
         romeoData.currentLocation = LevelLoader.Levels.MainMenu;
         romeoData.previousLocation = LevelLoader.Levels.MainMenu;
-
 
         playerModel.CreateBlankPlayerModel();
         playerModel.StandardUpdate(true, "Main Menu");
